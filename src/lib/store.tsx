@@ -1,31 +1,9 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-// eslint-disable-next-line no-unused-vars
 import React, { createContext, useReducer, Dispatch } from 'react';
 
 import { Declension, Gender, GrammaticalNumber } from './grammarCategories';
-
-interface Action {
-  type: string;
-  payload?: any;
-  error: boolean;
-  meta?: any;
-}
-
-interface AppState {
-  word: {
-    english: string;
-    lemma: string;
-    options: string[];
-    number: GrammaticalNumber;
-    declension: Declension;
-    gender: Gender;
-  }
-}
-
-interface AppStateWithDispatch {
-  state: AppState;
-  dispatch?: Dispatch<Action>;
-}
+import { AppState, AppStateWithDispatch, Action } from './types';
 
 const initialState: AppState = {
   word: {
