@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
+// eslint-disable-next-line no-unused-vars
 import React, { createContext, useReducer, Dispatch } from 'react';
 
 import { Declension, Gender, GrammaticalNumber } from './grammarCategories';
 
-interface MyAction {
+interface Action {
   type: string;
   payload?: any;
   error: boolean;
@@ -23,7 +24,7 @@ interface AppState {
 
 interface AppStateWithDispatch {
   state: AppState;
-  dispatch?: Dispatch<MyAction>;
+  dispatch?: Dispatch<Action>;
 }
 
 const initialState: AppState = {
@@ -37,13 +38,12 @@ const initialState: AppState = {
   },
 };
 
-const store = createContext<AppStateWithDispatch>({ state: initialState });
-const { Provider } = store;
+const Store = createContext<AppStateWithDispatch>({ state: initialState });
 
 const StateProvider: React.FunctionComponent = (props) => {
   const { children } = props;
-  const [state, dispatch]: [AppState, Dispatch<MyAction>] = useReducer(
-    (currentState: AppState, action: MyAction) => {
+  const [state, dispatch]: [AppState, Dispatch<Action>] = useReducer(
+    (currentState: AppState, action: Action) => {
       switch (action.type) {
         case 'identity action':
           return currentState;
@@ -55,7 +55,7 @@ const StateProvider: React.FunctionComponent = (props) => {
 
   const value: AppStateWithDispatch = { state, dispatch };
 
-  return <Provider value={value}>{children}</Provider>;
+  return <Store.Provider value={value}>{children}</Store.Provider>;
 };
 
-export { store, StateProvider };
+export { Store as store, StateProvider };

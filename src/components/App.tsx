@@ -7,7 +7,7 @@ const buttonize = (list: string[]) => list
   .map((word) => <button type="button">{word}</button>);
 
 function App() {
-  const { word } = useContext(store).state;
+  const { state: { word }, dispatch } = useContext(store);
   const optsWithLemma = buttonize(word.options.concat([word.lemma]));
   const declensionEndings = buttonize(['-ae', '-ī', 'is', '-ūs', '-eī']);
   const gendersAndNumbers = buttonize(
