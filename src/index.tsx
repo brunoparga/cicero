@@ -1,23 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
-import App from './App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-
-import { Declension, Gender, GrammaticalNumber } from './grammarCategories';
-
-const word = {
-  english: 'boy',
-  lemma: 'puer',
-  options: ['vir', 'puella', 'mundus'],
-  number: GrammaticalNumber.Singular,
-  declension: Declension.Second,
-  gender: Gender.Masculine,
-};
+import { StateProvider } from './lib/store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App word={word} />
+    <StateProvider>
+      <App />
+    </StateProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
