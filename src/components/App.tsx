@@ -2,25 +2,18 @@ import React, { useContext } from 'react';
 import './App.css';
 
 import { store } from '../lib/store';
-
-const buttonize = (list: string[]) => list
-  .map((word) => <button type="button">{word}</button>);
+import Buttons from './Buttons';
 
 function App() {
-  const { state: { word }, dispatch } = useContext(store);
-  const optsWithLemma = buttonize(word.options.concat([word.lemma]));
-  const declensionEndings = buttonize(['-ae', '-ī', 'is', '-ūs', '-eī']);
-  const gendersAndNumbers = buttonize(
-    ['masc. sg', 'masc. pl', 'fem. sg', 'fem. pl', 'n. sg', 'n. pl'],
-  );
+  const { state: { word } } = useContext(store);
   return (
     <div className="App">
       <h1>{word.english}</h1>
-      {optsWithLemma}
+      <Buttons items={word.options.concat([word.lemma])} />
       <hr />
-      {declensionEndings}
+      <Buttons items={['-ae', '-ī', 'is', '-ūs', '-eī']} />
       <br />
-      {gendersAndNumbers}
+      <Buttons items={['masc. sg', 'masc. pl', 'fem. sg', 'fem. pl', 'n. sg', 'n. pl']} />
     </div>
   );
 }
