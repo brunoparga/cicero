@@ -26,6 +26,7 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
     'import/no-unresolved': 'off',
-    'import/extensions': 'off'
+    'import/extensions': 'off',
+    'react/prop-types': 'off'
   },
 };
