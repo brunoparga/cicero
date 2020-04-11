@@ -1,0 +1,19 @@
+.item {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+.label { color: black; }
+
+.btn {
+  border-radius: 3px;
+  color: white;
+}
+
+.inactive { background-color: #D22; }
+
+.active {  background-color: #B11; }
+
+.btn:hover {  background-color: #F33; }

@@ -9,11 +9,12 @@ function App() {
   return (
     <div className="App">
       <h1>{word.english}</h1>
-      <Buttons items={word.options.concat([word.lemma])} />
-      <hr />
-      <Buttons items={['-ae', '-ī', 'is', '-ūs', '-eī']} />
-      <br />
-      <Buttons items={['masc. sg', 'masc. pl', 'fem. sg', 'fem. pl', 'n. sg', 'n. pl']} />
+      <Buttons label="Latin" items={word.options.concat([word.lemma])} shuffle />
+      <Buttons label="Genitive" items={['-ae', '-ī', '-is', '-ūs', '-eī']} />
+      <Buttons
+        label="Gender"
+        items={['masc. sg', 'masc. pl', 'fem. sg', 'fem. pl', 'n. sg', 'n. pl']}
+      />
     </div>
   );
 }
