@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <h1>{word.english}</h1>
-      <Buttons label="Latin" items={word.options.concat([word.lemma])} shuffle />
+      <Buttons label="Latin" items={word.options.concat([word.lemma])} mustShuffle />
       <Buttons label="Genitive" items={['-ae', '-ī', '-is', '-ūs', '-eī']} />
       <Buttons
         label="Gender"
