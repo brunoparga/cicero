@@ -3,6 +3,7 @@ import './App.css';
 
 import { store } from '../lib/store';
 import Buttons from './Buttons';
+import WordButtons from './WordButtons';
 
 function App() {
   const { state: { word, pluralSelected } } = useContext(store);
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <h1>{word.english}</h1>
-      <Buttons label="Latin" items={word.options.concat([word.lemma])} mustShuffle />
+      <WordButtons />
       <Buttons label="Genitive" items={genitiveSuffixes} />
       <Buttons label="Gender" items={['masculine', 'feminine', 'neuter', 'masc./fem.']} />
     </div>
