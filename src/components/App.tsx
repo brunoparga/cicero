@@ -5,16 +5,17 @@ import { store } from '../lib/store';
 import Buttons from './Buttons';
 
 function App() {
-  const { state: { word } } = useContext(store);
+  const { state: { word, pluralSelected } } = useContext(store);
+  let genitiveSuffixes = ['-ae', '-ī', '-is', '-ūs', '-eī'];
+  if (pluralSelected) {
+    genitiveSuffixes = ['-ārum', '-ōrum', '-(i)um', '-uum', '-ērum'];
+  }
   return (
     <div className="App">
       <h1>{word.english}</h1>
       <Buttons label="Latin" items={word.options.concat([word.lemma])} mustShuffle />
-      <Buttons label="Genitive" items={['-ae', '-ī', '-is', '-ūs', '-eī']} />
-      <Buttons
-        label="Gender"
-        items={['masc. sg', 'masc. pl', 'fem. sg', 'fem. pl', 'n. sg', 'n. pl']}
-      />
+      <Buttons label="Genitive" items={genitiveSuffixes} />
+      <Buttons label="Gender" items={['masculine', 'feminine', 'neuter', 'masc./fem.']} />
     </div>
   );
 }

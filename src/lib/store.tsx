@@ -14,6 +14,7 @@ const initialState: AppState = {
     declension: Declension.Second,
     gender: Gender.Masculine,
   },
+  pluralSelected: false,
 };
 
 const Store = createContext<AppStateWithDispatch>({ state: initialState });

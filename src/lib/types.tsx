@@ -18,6 +18,7 @@ export interface AppState {
     declension: Declension;
     gender: Gender;
   };
+  pluralSelected: boolean;
 }
 export interface AppStateWithDispatch {
   state: AppState;
