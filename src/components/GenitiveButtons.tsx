@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Buttons from './Buttons';
 import { store } from '../store';
+import Buttons from './Buttons';
+import Checkbox from './Checkbox';
 import genitiveSuffixes from '../lib/grammarData';
 import './Buttons.css';
-import './GenitiveButtons.css';
 
 export default () => {
   const { state: { pluralSelected }, dispatch } = React.useContext(store);
@@ -22,18 +22,7 @@ export default () => {
   return (
     <div className="buttons">
       <Buttons label="Genitive" items={suffixes} />
-      <div>
-        <div
-          role="checkbox"
-          aria-label="Plural"
-          aria-checked={pluralSelected}
-          tabIndex={0}
-          className="checkbox"
-          onClick={() => dispatch(action)}
-          onKeyDown={() => dispatch(action)}
-        />
-        Plural
-      </div>
+      <Checkbox checked={pluralSelected} handler={() => dispatch(action)} label="Plural" />
     </div>
   );
 };
