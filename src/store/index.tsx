@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import React, { createContext, useReducer, Dispatch } from 'react';
 
-import { Declension, Gender, GrammaticalNumber } from './grammarCategories';
+import { Declension, Gender, GrammaticalNumber } from '../lib/grammarCategories';
 import { AppState, AppStateWithDispatch, Action } from './types';
 import reducer from './reducer';
 

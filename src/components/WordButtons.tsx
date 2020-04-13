@@ -2,7 +2,7 @@ import React from 'react';
 
 import Buttons from './Buttons';
 import shuffle from '../lib/shuffle';
-import { store } from '../lib/store';
+import { store } from '../store';
 
 export default () => {
   const { state: { word } } = React.useContext(store);

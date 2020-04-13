@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Dispatch } from 'react';
 
-import { Declension, Gender, GrammaticalNumber } from './grammarCategories';
+import { Declension, Gender, GrammaticalNumber } from '../lib/grammarCategories';
 
 export interface Action {
   type: string;

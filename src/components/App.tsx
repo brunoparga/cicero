@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './App.css';
 
-import { store } from '../lib/store';
+import { store } from '../store';
 import Buttons from './Buttons';
 import WordButtons from './WordButtons';
 import GenitiveButtons from './GenitiveButtons';

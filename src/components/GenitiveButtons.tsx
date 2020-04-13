@@ -3,7 +3,7 @@
 import React from 'react';
 
 import Buttons from './Buttons';
-import { store } from '../lib/store';
+import { store } from '../store';
 import genitiveSuffixes from '../lib/grammarData';
 import './Buttons.css';
 import './GenitiveButtons.css';

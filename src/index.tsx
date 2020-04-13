@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-import { StateProvider } from './lib/store';
+import { StateProvider } from './store';
 
 ReactDOM.render(
   <React.StrictMode>
