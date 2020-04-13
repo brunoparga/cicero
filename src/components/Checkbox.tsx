@@ -9,7 +9,7 @@ type Props = {
 }
 
 export default ({ checked, handler, label }: Props) => (
-  <div>
+  <div className="checkbox-container">
     <div
       role="checkbox"
       aria-label={label}
@@ -18,7 +18,11 @@ export default ({ checked, handler, label }: Props) => (
       className="checkbox"
       onClick={handler}
       onKeyDown={handler}
-    />
-    {label}
+    >
+      <div className={checked ? 'checked' : 'unchecked'}>X</div>
+    </div>
+    <div>
+      {label}
+    </div>
   </div>
 );
