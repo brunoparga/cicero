@@ -20,7 +20,7 @@ export default () => {
 
   const action = { type: 'TOGGLE_PLURAL' };
   return (
-    <div className="buttons">
+    <div className="buttons pink-background">
       <Buttons label="Genitive" items={suffixes} />
       <Checkbox checked={pluralSelected} handler={() => dispatch(action)} label="Plural" />
     </div>
