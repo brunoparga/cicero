@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 
 import Buttons from './Buttons';
@@ -25,7 +23,15 @@ export default () => {
     <div className="buttons">
       <Buttons label="Genitive" items={suffixes} />
       <div>
-        <div className="checkbox" onClick={() => dispatch(action)} />
+        <div
+          role="checkbox"
+          aria-label="Plural"
+          aria-checked={pluralSelected}
+          tabIndex={0}
+          className="checkbox"
+          onClick={() => dispatch(action)}
+          onKeyDown={() => dispatch(action)}
+        />
         Plural
       </div>
     </div>
