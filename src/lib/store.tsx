@@ -4,6 +4,7 @@ import React, { createContext, useReducer, Dispatch } from 'react';
 
 import { Declension, Gender, GrammaticalNumber } from './grammarCategories';
 import { AppState, AppStateWithDispatch, Action } from './types';
+import reducer from './reducer';
 
 const initialState: AppState = {
   word: {
@@ -17,24 +18,14 @@ const initialState: AppState = {
   pluralSelected: false,
 };
 
-const Store = createContext<AppStateWithDispatch>({ state: initialState });
+const store = createContext<AppStateWithDispatch>({ state: initialState, dispatch: () => {} });
 
 const StateProvider: React.FunctionComponent = (props) => {
   const { children } = props;
-  const [state, dispatch]: [AppState, Dispatch<Action>] = useReducer(
-    (currentState: AppState, action: Action) => {
-      switch (action.type) {
-        case 'identity action':
-          return currentState;
-        default:
-          throw new Error();
-      }
-    }, initialState,
-  );
-
+  const [state, dispatch]: [AppState, Dispatch<Action>] = useReducer(reducer, initialState);
   const value: AppStateWithDispatch = { state, dispatch };
 
-  return <Store.Provider value={value}>{children}</Store.Provider>;
+  return <store.Provider value={value}>{children}</store.Provider>;
 };
 
-export { Store as store, StateProvider };
+export { store, StateProvider };

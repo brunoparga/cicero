@@ -6,7 +6,7 @@ import { Declension, Gender, GrammaticalNumber } from './grammarCategories';
 export interface Action {
   type: string;
   payload?: any;
-  error: boolean;
+  error?: boolean;
   meta?: any;
 }
 export interface AppState {
@@ -22,5 +22,5 @@ export interface AppState {
 }
 export interface AppStateWithDispatch {
   state: AppState;
-  dispatch?: Dispatch<Action>;
+  dispatch: Dispatch<Action>;
 }
