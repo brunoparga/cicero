@@ -5,12 +5,13 @@ import React, { createContext, useReducer, Dispatch } from 'react';
 import { Declension, Gender, GrammaticalNumber } from '../lib/grammarCategories';
 import { AppState, AppStateWithDispatch, Action } from './types';
 import reducer from './reducer';
+import shuffle from '../lib/shuffle';
 
 const initialState: AppState = {
   word: {
     english: 'boy',
     lemma: 'puer',
-    options: ['vir', 'puella', 'mundus'],
+    options: shuffle(['vir', 'puella', 'mundus', 'puer']),
     number: GrammaticalNumber.Singular,
     declension: Declension.Second,
     gender: Gender.Masculine,
