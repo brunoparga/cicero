@@ -4,15 +4,19 @@ import './Button.css';
 
 type Props = {
   content: string;
-} & Partial<DefaultProps>
+}
 
-const defaultProps = { clicked: false };
-
-type DefaultProps = Readonly<typeof defaultProps>;
-
-const Button: React.FunctionComponent<Props> = ({ content, clicked }) => {
-  const className = `item btn ${clicked ? 'active' : 'inactive'}`;
-  return <div className={className}>{content}</div>;
+const Button: React.FunctionComponent<Props> = ({ content }) => {
+  const [clicked, setClicked] = React.useState(false);
+  return (
+    <button
+      type="button"
+      className={`item btn ${clicked ? 'active' : 'inactive'}`}
+      onClick={() => setClicked(!clicked)}
+    >
+      {content}
+    </button>
+  );
 };
 
 export default Button;
