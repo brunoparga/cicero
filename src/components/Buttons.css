@@ -2,6 +2,7 @@
   max-width: fit-content;
   display: flex;
   vertical-align: middle;
-  justify-content: center;
   width: 100%;
 }
+
+.spaced { justify-content: space-between; }

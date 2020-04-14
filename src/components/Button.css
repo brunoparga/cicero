@@ -5,7 +5,11 @@
   font-weight: bold;
 }
 
-.label { color: black; }
+.label {
+  color: black;
+  min-width: 80px;
+  text-align: end;
+}
 
 .btn {
   border-radius: 3px;

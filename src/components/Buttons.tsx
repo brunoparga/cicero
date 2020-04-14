@@ -12,7 +12,6 @@ const Buttons: React.FunctionComponent<Props> = ({ label, items }) => (
   <div className="buttons">
     <div className="item label">
       {label}
-      {': '}
     </div>
     {items.map((item) => <Button content={item} clicked={false} key={item} />)}
   </div>

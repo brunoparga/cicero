@@ -27,7 +27,7 @@ export default () => {
   };
 
   return (
-    <div className="buttons pink-background">
+    <div className="buttons pink-background spaced">
       <Buttons label="Genitive" items={suffixes} />
       <Checkbox
         checked={pluralSelected}
