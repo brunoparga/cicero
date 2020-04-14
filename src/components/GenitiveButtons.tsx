@@ -19,10 +19,22 @@ export default () => {
   }, [pluralSelected]);
 
   const action = { type: 'TOGGLE_PLURAL' };
+
+  const keyUpHandler = (event: any) => {
+    if (event.key.toUpperCase() === 'P') {
+      dispatch(action);
+    }
+  };
+
   return (
     <div className="buttons pink-background">
       <Buttons label="Genitive" items={suffixes} />
-      <Checkbox checked={pluralSelected} handler={() => dispatch(action)} label="Plural" />
+      <Checkbox
+        checked={pluralSelected}
+        clickHandler={() => dispatch(action)}
+        keyUpHandler={keyUpHandler}
+        label="Plural"
+      />
     </div>
   );
 };

@@ -4,11 +4,14 @@ import './Checkbox.css';
 
 type Props = {
   checked: boolean,
-  handler: () => any,
+  clickHandler: React.MouseEventHandler,
+  keyUpHandler: any,
   label: string
 }
 
-export default ({ checked, handler, label }: Props) => (
+export default ({
+  checked, clickHandler, keyUpHandler, label,
+}: Props) => (
   <div className="checkbox-container">
     <div
       role="checkbox"
@@ -16,8 +19,8 @@ export default ({ checked, handler, label }: Props) => (
       aria-checked={checked}
       tabIndex={0}
       className="checkbox"
-      onClick={handler}
-      onKeyDown={handler}
+      onClick={clickHandler}
+      onKeyUp={keyUpHandler}
     >
       <div className={checked ? 'checked' : 'unchecked'}>X</div>
     </div>
