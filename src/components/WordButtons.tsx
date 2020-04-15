@@ -4,7 +4,6 @@ import Buttons from './Buttons';
 import { store } from '../store';
 
 export default () => {
-  const { state: { word } } = React.useContext(store);
-  const items = word.options;
-  return <Buttons label="Latin" items={items} />;
+  const { state: { word: { lemma, options } } } = React.useContext(store);
+  return <Buttons label="Latin" items={options} correctAnswer={lemma} />;
 };

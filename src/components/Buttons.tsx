@@ -6,9 +6,10 @@ import './Buttons.css';
 type Props = {
   label: string;
   items: string[];
+  correctAnswer: string;
 }
 
-const Buttons: React.FunctionComponent<Props> = ({ label, items }) => {
+const Buttons: React.FunctionComponent<Props> = ({ label, items, correctAnswer }) => {
   const [selected, setSelected] = React.useState('');
 
   // Ensure at most one button per row is selected
@@ -19,6 +20,9 @@ const Buttons: React.FunctionComponent<Props> = ({ label, items }) => {
       setSelected('');
     } else if (elt.tagName === 'BUTTON') {
       setSelected(elt.innerText);
+      if (elt.innerText === correctAnswer) {
+        console.log('Correct answer!');
+      }
     }
   };
 

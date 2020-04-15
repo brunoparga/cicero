@@ -7,7 +7,16 @@ import genitiveSuffixes from '../lib/grammarData';
 import './Buttons.css';
 
 export default () => {
-  const { state: { pluralSelected }, dispatch } = React.useContext(store);
+  const {
+    state: {
+      word: {
+        number,
+        declension,
+      },
+      pluralSelected,
+    },
+    dispatch,
+  } = React.useContext(store);
   const [suffixes, setSuffixes] = React.useState(genitiveSuffixes.singular);
 
   React.useEffect(() => {
@@ -28,7 +37,7 @@ export default () => {
 
   return (
     <div className="buttons pink-background spaced">
-      <Buttons label="Genitive" items={suffixes} />
+      <Buttons label="Genitive" items={suffixes} correctAnswer="-is" />
       <Checkbox
         checked={pluralSelected}
         clickHandler={() => dispatch(action)}

@@ -16,7 +16,11 @@ function App() {
       </div>
       <GenitiveButtons />
       <div className="pink-background">
-        <Buttons label="Gender" items={['masculine', 'feminine', 'neuter', 'masc./fem.']} />
+        <Buttons
+          label="Gender"
+          items={['masculine', 'feminine', 'neuter', 'masc./fem.']}
+          correctAnswer="masculine"
+        />
       </div>
     </div>
   );
