@@ -7,7 +7,7 @@ import GenitiveButtons from './GenitiveButtons';
 import './App.css';
 
 function App() {
-  const { state: { word: { english } } } = useContext(store);
+  const { state: { word: { english, gender } } } = useContext(store);
   return (
     <div className="App">
       <h1>{english}</h1>
@@ -19,7 +19,7 @@ function App() {
         <Buttons
           label="Gender"
           items={['masculine', 'feminine', 'neuter', 'masc./fem.']}
-          correctAnswer="masculine"
+          correctAnswer={gender}
         />
       </div>
     </div>

@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 export enum Declension {
-  First = 1,
+  First,
   Second,
   Third,
   Fourth,
@@ -9,7 +9,6 @@ export enum Declension {
 
 export enum GrammaticalNumber {
   Singular = 'singular',
-  Dual = 'dual',
   Plural = 'plural'
 }
 

@@ -9,22 +9,16 @@ import './Buttons.css';
 export default () => {
   const {
     state: {
-      word: {
-        number,
-        declension,
-      },
+      word: { number, declension },
       pluralSelected,
     },
     dispatch,
   } = React.useContext(store);
+
   const [suffixes, setSuffixes] = React.useState(genitiveSuffixes.singular);
 
   React.useEffect(() => {
-    if (pluralSelected) {
-      setSuffixes(genitiveSuffixes.plural);
-    } else {
-      setSuffixes(genitiveSuffixes.singular);
-    }
+    setSuffixes(pluralSelected ? genitiveSuffixes.plural : genitiveSuffixes.singular);
   }, [pluralSelected]);
 
   const action = { type: 'TOGGLE_PLURAL' };
@@ -35,9 +29,11 @@ export default () => {
     }
   };
 
+  const correctAnswer = genitiveSuffixes[number][declension];
+
   return (
     <div className="buttons pink-background spaced">
-      <Buttons label="Genitive" items={suffixes} correctAnswer="-is" />
+      <Buttons label="Genitive" items={suffixes} correctAnswer={correctAnswer} />
       <Checkbox
         checked={pluralSelected}
         clickHandler={() => dispatch(action)}
