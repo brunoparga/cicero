@@ -5,5 +5,9 @@ import { store } from '../store';
 
 export default () => {
   const { state: { word: { lemma, options } } } = React.useContext(store);
-  return <Buttons label="Latin" items={options} correctAnswer={lemma} />;
+  return (
+    <div className="pink-background">
+      <Buttons label="Latin" items={options} correctAnswer={lemma} />
+    </div>
+  );
 };

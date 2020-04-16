@@ -3,7 +3,7 @@ import React from 'react';
 import { store } from '../store';
 import Buttons from './Buttons';
 import Checkbox from './Checkbox';
-import genitiveSuffixes from '../lib/grammarData';
+import { singular, plural } from '../lib/genitiveSuffixes';
 import './Buttons.css';
 
 export default () => {
@@ -15,10 +15,10 @@ export default () => {
     dispatch,
   } = React.useContext(store);
 
-  const [suffixes, setSuffixes] = React.useState(genitiveSuffixes.singular);
+  const [suffixes, setSuffixes] = React.useState(singular);
 
   React.useEffect(() => {
-    setSuffixes(pluralSelected ? genitiveSuffixes.plural : genitiveSuffixes.singular);
+    setSuffixes(pluralSelected ? plural : singular);
   }, [pluralSelected]);
 
   const action = { type: 'TOGGLE_PLURAL' };
@@ -29,7 +29,7 @@ export default () => {
     }
   };
 
-  const correctAnswer = genitiveSuffixes[number][declension];
+  const correctAnswer = { singular, plural }[number][declension];
 
   return (
     <div className="buttons pink-background spaced">
