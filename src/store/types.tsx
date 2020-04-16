@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Dispatch } from 'react';
 
-import { Declension, Gender, GrammaticalNumber } from '../lib/grammarCategories';
+import { Declension, Gender, GrammaticalNumber } from '../grammar/grammarCategories';
 
 export interface Action {
   type: string;
@@ -9,6 +9,7 @@ export interface Action {
   error?: boolean;
   meta?: any;
 }
+
 export interface AppState {
   word: {
     english: string;
@@ -20,6 +21,7 @@ export interface AppState {
   };
   pluralSelected: boolean;
 }
+
 export interface AppStateWithDispatch {
   state: AppState;
   dispatch: Dispatch<Action>;

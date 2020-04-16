@@ -2,10 +2,10 @@
 /* eslint-disable react/prop-types */
 import React, { createContext, useReducer, Dispatch } from 'react';
 
-import { Declension, Gender, GrammaticalNumber } from '../lib/grammarCategories';
+import { Declension, Gender, GrammaticalNumber } from '../grammar/grammarCategories';
 import { AppState, AppStateWithDispatch, Action } from './types';
 import reducer from './reducer';
-import shuffle from '../lib/shuffle';
+import shuffle from '../helpers/shuffle';
 
 const initialState: AppState = {
   word: {

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { store } from '../store';
-import Buttons from './Buttons';
-import Checkbox from './Checkbox';
-import { singular, plural } from '../lib/genitiveSuffixes';
+import { store } from '../../store';
+import Buttons from '../shared/Buttons';
+import Checkbox from '../shared/Checkbox';
+import { singular, plural } from '../../grammar/genitiveSuffixes';
 import './Buttons.css';
 
 export default () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Buttons from './Buttons';
-import { store } from '../store';
+import Buttons from '../shared/Buttons';
+import { store } from '../../store';
 
 export default () => {
   const { state: { word: { gender } } } = React.useContext(store);
