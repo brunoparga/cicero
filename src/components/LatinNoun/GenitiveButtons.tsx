@@ -4,7 +4,6 @@ import { store } from '../../store';
 import Buttons from '../shared/Buttons';
 import Checkbox from '../shared/Checkbox';
 import { singular, plural } from '../../grammar/genitiveSuffixes';
-import './Buttons.css';
 
 export default () => {
   const {
