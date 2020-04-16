@@ -1,5 +1,8 @@
 import React from 'react';
 
+// eslint-disable-next-line no-unused-vars
+import { Action } from '../../store/types';
+import { store } from '../../store';
 import Button from './Button';
 import './Buttons.css';
 
@@ -7,9 +10,13 @@ type Props = {
   label: string;
   items: string[];
   correctAnswer: string;
+  action: Action
 }
 
-const Buttons: React.FunctionComponent<Props> = ({ label, items, correctAnswer }) => {
+const Buttons: React.FunctionComponent<Props> = ({
+  label, items, correctAnswer, action,
+}) => {
+  const { dispatch } = React.useContext(store);
   const [selected, setSelected] = React.useState('');
 
   // Ensure at most one button per row is selected
@@ -21,7 +28,7 @@ const Buttons: React.FunctionComponent<Props> = ({ label, items, correctAnswer }
     } else if (elt.tagName === 'BUTTON') {
       setSelected(elt.innerText);
       if (elt.innerText === correctAnswer) {
-        console.log('Correct answer!');
+        dispatch(action);
       }
     }
   };

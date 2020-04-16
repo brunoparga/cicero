@@ -20,6 +20,11 @@ export interface AppState {
     gender: Gender;
   };
   pluralSelected: boolean;
+  guess: {
+    word: boolean;
+    genitive: boolean;
+    gender: boolean;
+  }
 }
 
 export interface AppStateWithDispatch {

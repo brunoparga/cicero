@@ -1,9 +1,11 @@
 import React from 'react';
 
 import { store } from '../../store';
+import { singular, plural } from '../../grammar/genitiveSuffixes';
+import { types } from '../../store/reducer';
+
 import Buttons from '../shared/Buttons';
 import Checkbox from '../shared/Checkbox';
-import { singular, plural } from '../../grammar/genitiveSuffixes';
 
 export default () => {
   const {
@@ -20,11 +22,11 @@ export default () => {
     setSuffixes(pluralSelected ? plural : singular);
   }, [pluralSelected]);
 
-  const action = { type: 'TOGGLE_PLURAL' };
+  const togglePlural = { type: types.TOGGLE_PLURAL };
 
   const keyUpHandler = (event: any) => {
     if (event.key.toUpperCase() === 'P') {
-      dispatch(action);
+      dispatch(togglePlural);
     }
   };
 
@@ -32,10 +34,15 @@ export default () => {
 
   return (
     <div className="buttons pink-background spaced">
-      <Buttons label="Genitive" items={suffixes} correctAnswer={correctAnswer} />
+      <Buttons
+        label="Genitive"
+        items={suffixes}
+        correctAnswer={correctAnswer}
+        action={{ type: types.TOGGLE_GENITIVE }}
+      />
       <Checkbox
         checked={pluralSelected}
-        clickHandler={() => dispatch(action)}
+        clickHandler={() => dispatch(togglePlural)}
         keyUpHandler={keyUpHandler}
         label="Plural"
       />
