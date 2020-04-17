@@ -3,26 +3,21 @@ import { AppState, Action } from './types';
 
 export const types = {
   TOGGLE_PLURAL: 'TOGGLE_PLURAL',
-  TOGGLE_WORD: 'TOGGLE_WORD',
-  TOGGLE_GENITIVE: 'TOGGLE_GENITIVE',
-  TOGGLE_GENDER: 'TOGGLE_GENDER',
+  SET_GUESS: 'SET_GUESS',
 };
 
-export default (state: AppState, action: Action): AppState => {
-  switch (action.type) {
+export default (state: AppState, { type, payload }: Action): AppState => {
+  switch (type) {
     case types.TOGGLE_PLURAL:
       return { ...state, pluralSelected: !state.pluralSelected };
-    case types.TOGGLE_WORD: {
-      const newGuess = { ...state.guess, word: !state.guess.word };
-      return { ...state, guess: newGuess };
-    }
-    case types.TOGGLE_GENITIVE: {
-      const newGuess = { ...state.guess, genitive: !state.guess.genitive };
-      return { ...state, guess: newGuess };
-    }
-    case types.TOGGLE_GENDER: {
-      const newGuess = { ...state.guess, gender: !state.guess.gender };
-      return { ...state, guess: newGuess };
+    case types.SET_GUESS: {
+      const { guess } = state;
+      const { property, value } = payload as {
+        property: 'latin' | 'genitive' | 'gender',
+        value: boolean,
+      };
+      guess[property] = value;
+      return { ...state, guess };
     }
     default:
       throw new Error();

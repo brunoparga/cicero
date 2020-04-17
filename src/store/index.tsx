@@ -18,7 +18,7 @@ const initialState: AppState = {
   },
   pluralSelected: false,
   guess: {
-    word: false,
+    latin: false,
     genitive: false,
     gender: false,
   },
@@ -28,14 +28,6 @@ const store = createContext<AppStateWithDispatch>({ state: initialState, dispatc
 
 const StateProvider: React.FunctionComponent = ({ children }) => {
   const [state, dispatch]: [AppState, Dispatch<Action>] = useReducer(reducer, initialState);
-
-  React.useEffect(
-    () => {
-      console.log({ newState: state });
-    },
-    [state],
-  );
-
   return <store.Provider value={{ state, dispatch }}>{children}</store.Provider>;
 };
 

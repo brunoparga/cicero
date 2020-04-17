@@ -21,7 +21,7 @@ export interface AppState {
   };
   pluralSelected: boolean;
   guess: {
-    word: boolean;
+    latin: boolean;
     genitive: boolean;
     gender: boolean;
   }

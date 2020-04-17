@@ -34,12 +34,7 @@ export default () => {
 
   return (
     <div className="buttons pink-background spaced">
-      <Buttons
-        label="Genitive"
-        items={suffixes}
-        correctAnswer={correctAnswer}
-        action={{ type: types.TOGGLE_GENITIVE }}
-      />
+      <Buttons label="Genitive" items={suffixes} correctAnswer={correctAnswer} />
       <Checkbox
         checked={pluralSelected}
         clickHandler={() => dispatch(togglePlural)}

@@ -1,8 +1,7 @@
 import React from 'react';
 
-// eslint-disable-next-line no-unused-vars
-import { Action } from '../../store/types';
 import { store } from '../../store';
+import { types } from '../../store/reducer';
 import Button from './Button';
 import './Buttons.css';
 
@@ -10,12 +9,9 @@ type Props = {
   label: string;
   items: string[];
   correctAnswer: string;
-  action: Action
 }
 
-const Buttons: React.FunctionComponent<Props> = ({
-  label, items, correctAnswer, action,
-}) => {
+const Buttons: React.FunctionComponent<Props> = ({ label, items, correctAnswer }) => {
   const { dispatch } = React.useContext(store);
   const [selected, setSelected] = React.useState('');
 
@@ -27,9 +23,9 @@ const Buttons: React.FunctionComponent<Props> = ({
       setSelected('');
     } else if (elt.tagName === 'BUTTON') {
       setSelected(elt.innerText);
-      if (elt.innerText === correctAnswer) {
-        dispatch(action);
-      }
+      const property = label.toLowerCase();
+      const value = elt.innerText === correctAnswer;
+      dispatch({ type: types.SET_GUESS, payload: { property, value } });
     }
   };
 
