@@ -11,6 +11,8 @@ type Props = {
   correctAnswer: string;
 }
 
+// I expect this button set to be reused for other types of quiz (Latin to English noun, verbs,
+// adjectives, invariable words)
 const Buttons: React.FunctionComponent<Props> = ({ label, items, correctAnswer }) => {
   const { dispatch } = React.useContext(store);
   const [selected, setSelected] = React.useState('');

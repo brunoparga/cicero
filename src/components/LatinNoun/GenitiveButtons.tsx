@@ -7,6 +7,8 @@ import { types } from '../../store/reducer';
 import Buttons from '../shared/Buttons';
 import Checkbox from '../shared/Checkbox';
 
+// Buttons to select the genitive suffix, which indicates how the word is inflected, changing
+// according to its role in the sentence (subject, object...)
 export default () => {
   const {
     state: {
@@ -24,7 +26,7 @@ export default () => {
 
   const togglePlural = { type: types.TOGGLE_PLURAL };
 
-  const keyUpHandler = (event: any) => {
+  const keyUpHandler = (event: React.KeyboardEvent) => {
     if (event.key.toUpperCase() === 'P') {
       dispatch(togglePlural);
     }

@@ -5,7 +5,7 @@ import './Checkbox.css';
 type Props = {
   checked: boolean,
   clickHandler: React.MouseEventHandler,
-  keyUpHandler: any,
+  keyUpHandler: React.KeyboardEventHandler,
   label: string
 }
 

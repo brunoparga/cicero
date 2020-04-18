@@ -8,6 +8,7 @@ import { StateProvider } from './store';
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* This app uses a no-Redux approach to state management, with Context and Hooks */}
     <StateProvider>
       <App />
     </StateProvider>

@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+// This leverages TS Enums to keep these categories neat and tidy.
 export enum Declension {
   First,
   Second,
