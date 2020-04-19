@@ -1,0 +1,25 @@
+.answer-container {
+  width: 650px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answer {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.next {
+  width: 80px;
+  height: 80px;
+  background-color: #2D2;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.big {
+  font-size: 40px;
+  font-weight: bolder;
+}
