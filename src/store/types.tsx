@@ -3,14 +3,14 @@ import { Dispatch } from 'react';
 
 import { Declension, Gender, GrammaticalNumber } from '../grammar/grammarCategories';
 
-export interface Action {
+export type Action = {
   type: string;
   payload?: any;
   error?: boolean;
   meta?: any;
 }
 
-export interface AppState {
+export type AppState = {
   word: {
     english: string;
     lemma: string;
@@ -24,10 +24,11 @@ export interface AppState {
     latin: boolean;
     genitive: boolean;
     gender: boolean;
-  }
+  },
+  revealAnswer: boolean;
 }
 
-export interface AppStateWithDispatch {
+export type AppStateWithDispatch = {
   state: AppState;
   dispatch: Dispatch<Action>;
 }

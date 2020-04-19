@@ -4,6 +4,7 @@ import { AppState, Action } from './types';
 export const types = {
   TOGGLE_PLURAL: 'TOGGLE_PLURAL',
   SET_GUESS: 'SET_GUESS',
+  REVEAL_ANSWER: 'REVEAL_ANSWER',
 };
 
 export default (state: AppState, { type, payload }: Action): AppState => {
@@ -19,6 +20,8 @@ export default (state: AppState, { type, payload }: Action): AppState => {
       guess[property] = value;
       return { ...state, guess };
     }
+    case types.REVEAL_ANSWER:
+      return { ...state, revealAnswer: true };
     default:
       throw new Error();
   }
