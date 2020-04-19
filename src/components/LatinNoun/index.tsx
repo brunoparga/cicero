@@ -1,39 +1,11 @@
 import React from 'react';
 
 import { store } from '../../store';
-import WordButtons from './WordButtons';
-import GenitiveButtons from './GenitiveButtons';
-import GenderButtons from './GenderButtons';
+import Answer from './Answer';
+import Question from './Question';
 
+// Just select, based on whether word was guessed, whether to show question or answer.
 export default () => {
-  const {
-    state: {
-      word: {
-        english, lemma, declension, gender, number,
-      }, revealAnswer,
-    },
-  } = React.useContext(store);
-  const question = (
-    <>
-      <WordButtons />
-      <GenitiveButtons />
-      <GenderButtons />
-    </>
-  );
-  if (!revealAnswer) {
-    return (
-      <>
-        <h1>{english}</h1>
-        {question}
-      </>
-    );
-  }
-  const ordinals = ['1st', '2nd', '3rd', '4th', '5th'];
-  const plural = number === 'plural' ? ' plural' : '';
-  return (
-    <>
-      <h1>{english}</h1>
-      <span>{`${lemma}, ${ordinals[declension]} declension, ${gender}${plural}`}</span>
-    </>
-  );
+  const { state: { revealAnswer } } = React.useContext(store);
+  return revealAnswer ? <Answer /> : <Question />;
 };
