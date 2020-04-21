@@ -3,6 +3,8 @@ import React from 'react';
 import { store } from '../../store';
 import { singular, plural } from '../../grammar/genitiveSuffixes';
 import { types } from '../../store/reducer';
+// eslint-disable-next-line no-unused-vars
+import { Word } from '../../store/types';
 
 import Buttons from '../shared/Buttons';
 import Checkbox from '../shared/Checkbox';
@@ -14,10 +16,6 @@ export default () => {
     state: { word, pluralSelected },
     dispatch,
   } = React.useContext(store);
-
-  if (!word) {
-    return <></>;
-  }
 
   const [suffixes, setSuffixes] = React.useState(singular);
 
@@ -33,7 +31,8 @@ export default () => {
     }
   };
 
-  const correctAnswer = { singular, plural }[word.number][word.declension];
+  const { number, declension } = word as Word;
+  const correctAnswer = { singular, plural }[number][declension];
 
   return (
     <div className="buttons pink-background spaced">

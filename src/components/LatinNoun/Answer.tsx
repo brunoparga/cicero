@@ -1,9 +1,11 @@
 import React from 'react';
 
 import { store } from '../../store';
+// eslint-disable-next-line no-unused-vars
+import { Word } from '../../store/types';
 import { singular, plural } from '../../grammar/genitiveSuffixes';
-import './Answer.css';
 import setWord from '../../store/setWordAction';
+import './Answer.css';
 
 // Confirm the correct answer, which the user has already guessed.
 // This will evolve toward asking for a new word and possibly rating how well
@@ -11,16 +13,11 @@ import setWord from '../../store/setWordAction';
 export default () => {
   const { state: { word }, dispatch } = React.useContext(store);
 
-  // Before loading, word is null. This shouldn't happen if the answer is being shown.
-  if (!word) {
-    return <>If you are seeing this, something has gone horribly wrong.</>;
-  }
-
   const {
     english, lemma, declension, gender, number,
-  } = word;
+  } = word as Word;
 
-  // Pick the correct element (based on declension) from the correct suffixes (based on number)
+  // Pick the correct declension ending from the suffixes of the correct number
   const genitive = (number === 'singular' ? singular : plural)[declension];
 
   const clickHandler = () => setWord(dispatch, 2);
