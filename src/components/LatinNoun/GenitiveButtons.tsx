@@ -11,12 +11,13 @@ import Checkbox from '../shared/Checkbox';
 // according to its role in the sentence (subject, object...)
 export default () => {
   const {
-    state: {
-      word: { number, declension },
-      pluralSelected,
-    },
+    state: { word, pluralSelected },
     dispatch,
   } = React.useContext(store);
+
+  if (!word) {
+    return <></>;
+  }
 
   const [suffixes, setSuffixes] = React.useState(singular);
 
@@ -32,7 +33,7 @@ export default () => {
     }
   };
 
-  const correctAnswer = { singular, plural }[number][declension];
+  const correctAnswer = { singular, plural }[word.number][word.declension];
 
   return (
     <div className="buttons pink-background spaced">

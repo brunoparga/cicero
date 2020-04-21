@@ -10,15 +10,16 @@ export type Action = {
   meta?: any;
 }
 
-export type AppState = {
-  word: {
-    english: string;
-    lemma: string;
-    options: string[];
-    number: GrammaticalNumber;
-    declension: Declension;
-    gender: Gender;
-  };
+export type Word = {
+  english: string;
+  lemma: string;
+  options: string[];
+  number: GrammaticalNumber;
+  declension: Declension;
+  gender: Gender;
+}
+
+type BaseAppState = {
   pluralSelected: boolean;
   guess: {
     latin: boolean;
@@ -27,6 +28,10 @@ export type AppState = {
   },
   revealAnswer: boolean;
 }
+
+export type AppState = {
+  word: Word | null;
+} & BaseAppState
 
 export type AppStateWithDispatch = {
   state: AppState;
