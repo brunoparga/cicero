@@ -4,7 +4,7 @@ import React, { createContext, useReducer, Dispatch } from 'react';
 
 import { AppState, AppStateWithDispatch, Action } from './types';
 import reducer, { types } from './reducer';
-import setWord from './setWord';
+import setWord from './setWordAction';
 
 const initialState: AppState = {
   word: null,

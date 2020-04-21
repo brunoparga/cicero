@@ -3,7 +3,7 @@ import React from 'react';
 import { store } from '../../store';
 import { singular, plural } from '../../grammar/genitiveSuffixes';
 import './Answer.css';
-import setWord from '../../store/setWord';
+import setWord from '../../store/setWordAction';
 
 // Confirm the correct answer, which the user has already guessed.
 // This will evolve toward asking for a new word and possibly rating how well
