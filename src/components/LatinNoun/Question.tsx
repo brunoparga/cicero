@@ -12,7 +12,7 @@ export default () => {
 
   // Before loading, word is null.
   if (!word) {
-    return <>Loading...</>;
+    return <h1>Onerans (loading)...</h1>;
   }
 
   return (
