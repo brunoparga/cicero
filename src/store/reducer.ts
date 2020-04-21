@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { AppState, Action, Word } from './types';
-import shuffle from '../helpers/shuffle';
+import setOptions from '../helpers/setOptions';
 
 export const types = {
   REVEAL_ANSWER: 'REVEAL_ANSWER',
@@ -24,7 +24,7 @@ export default (state: AppState, { type, payload }: Action): AppState => {
     }
     case types.SET_WORD: {
       const word = payload as Word;
-      word.options = shuffle(word.options.concat([word.lemma]));
+      word.options = setOptions(word.options, word.lemma);
       const guess = { latin: false, genitive: false, gender: false };
       return {
         word, guess, pluralSelected: false, revealAnswer: false,
