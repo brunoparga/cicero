@@ -15,6 +15,7 @@ const initialState: AppState = {
     gender: false,
   },
   revealAnswer: false,
+  passiveSelected: false,
 };
 
 const store = createContext<AppStateWithDispatch>({ state: initialState, dispatch: () => {} });

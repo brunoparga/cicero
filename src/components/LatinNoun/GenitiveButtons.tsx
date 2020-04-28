@@ -17,7 +17,7 @@ export default () => {
     dispatch,
   } = React.useContext(store);
 
-  const { correctGenitive, declension, number } = word as Word;
+  const { properties: { correctGenitive, declension, number } } = word as Word;
 
   const [suffixes, setSuffixes] = React.useState(singular);
 

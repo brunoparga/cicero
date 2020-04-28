@@ -13,7 +13,7 @@ export default () => {
 
   return (
     <div className="pink-background">
-      <Buttons label="Gender" items={items} correctAnswer={word.gender} />
+      <Buttons label="Gender" items={items} correctAnswer={word.properties.gender} />
     </div>
   );
 };

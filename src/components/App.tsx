@@ -4,6 +4,7 @@ import { store } from '../store';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../store/types';
 import LatinNoun from './LatinNoun';
+import LatinVerb from './LatinVerb';
 import './App.css';
 
 export default () => {
@@ -21,6 +22,9 @@ export default () => {
   switch (questionType) {
     case 'LatinNoun':
       question = LatinNoun;
+      break;
+    case 'LatinVerb':
+      question = LatinVerb;
       break;
     default:
       throw new Error();

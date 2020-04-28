@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { Dispatch } from 'react';
 
-import { Declension, Gender, GrammaticalNumber } from '../grammar/grammarCategories';
+import {
+  Declension, Gender, GrammaticalNumber, Conjugation,
+} from '../grammar/grammarCategories';
 
 export type Action = {
   type: string;
@@ -11,7 +13,23 @@ export type Action = {
 }
 
 enum QuestionType {
-  LatinNoun = 'LatinNoun'
+  LatinNoun = 'LatinNoun',
+  LatinVerb = 'LatinVerb'
+}
+
+type NounProperties = {
+  number: GrammaticalNumber;
+  declension: Declension;
+  gender: Gender;
+  correctGenitive: string;
+}
+
+type VerbProperties = {
+  conjugation: Conjugation;
+  perfect: string;
+  supine: string;
+  deponent: boolean;
+  correctInfinitive: string;
 }
 
 export type Word = {
@@ -19,10 +37,7 @@ export type Word = {
   english: string;
   lemma: string;
   options: string[];
-  number: GrammaticalNumber;
-  declension: Declension;
-  gender: Gender;
-  correctGenitive: string;
+  properties: NounProperties & VerbProperties
 }
 
 type BaseAppState = {
@@ -33,6 +48,7 @@ type BaseAppState = {
     gender: boolean;
   },
   revealAnswer: boolean;
+  passiveSelected: boolean;
 }
 
 export type AppState = {

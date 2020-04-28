@@ -7,6 +7,6 @@ export default (payload: Word) => {
   word.options = setOptions(word.options, word.lemma);
   const guess = { latin: false, genitive: false, gender: false };
   return {
-    word, guess, pluralSelected: false, revealAnswer: false,
+    word, guess, pluralSelected: false, revealAnswer: false, passiveSelected: false,
   };
 };

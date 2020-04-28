@@ -5,22 +5,26 @@
       "questionType": "LatinNoun",
       "english": "boy",
       "lemma": "puer",
-      "correctGenitive": "-erī",
       "options": ["vir", "puella", "mundus"],
-      "number": "singular",
-      "declension": 1,
-      "gender": "masculine"
+      "properties": {
+        "correctGenitive": "-erī",
+        "number": "singular",
+        "declension": 1,
+        "gender": "masculine"
+      }
     },
     {
       "id": 2,
-      "questionType": "LatinNoun",
-      "english": "time",
-      "lemma": "tempus",
-      "correctGenitive": "-oris",
-      "options": ["corpus", "templum", "marmor"],
-      "number": "singular",
-      "declension": 2,
-      "gender": "neuter"
+      "questionType": "LatinVerb",
+      "english": "rule, reign",
+      "lemma": "regō",
+      "options": ["regiō", "ferō", "putō"],
+      "properties": {
+        "conjugation": 2,
+        "perfect": "rēxī",
+        "supine": "rēctum",
+        "deponent": false
+      }
     }
   ]
 }

@@ -19,3 +19,10 @@ export enum Gender {
   Neuter = 'neuter',
   'Masculine/Feminine' = 'masculine/feminine'
 }
+
+export enum Conjugation {
+  First,
+  Second,
+  Third,
+  Fourth
+}
