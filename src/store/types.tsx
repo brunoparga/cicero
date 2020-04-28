@@ -10,7 +10,12 @@ export type Action = {
   meta?: any;
 }
 
+enum QuestionType {
+  LatinNoun = 'LatinNoun'
+}
+
 export type Word = {
+  questionType: QuestionType;
   english: string;
   lemma: string;
   options: string[];
