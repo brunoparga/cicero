@@ -3,6 +3,8 @@ import React from 'react';
 import { store } from '../../store';
 import { singular, plural } from '../../grammar/genitiveSuffixes';
 import { types } from '../../store/reducer';
+// eslint-disable-next-line no-unused-vars
+import { Word } from '../../store/types';
 
 import Buttons from '../shared/Buttons';
 import Checkbox from '../shared/Checkbox';
@@ -15,9 +17,7 @@ export default () => {
     dispatch,
   } = React.useContext(store);
 
-  if (!word) { return null; }
-
-  const { correctGenitive, declension, number } = word;
+  const { correctGenitive, declension, number } = word as Word;
 
   const [suffixes, setSuffixes] = React.useState(singular);
 
