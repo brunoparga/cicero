@@ -7,7 +7,8 @@
       "options": ["vir", "puella", "mundus"],
       "number": "singular",
       "declension": 1,
-      "gender": "masculine"
+      "gender": "masculine",
+      "correctGenitive": "-erī"
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "options": ["corpus", "templum", "marmor"],
       "number": "singular",
       "declension": 2,
-      "gender": "neuter"
+      "gender": "neuter",
+      "correctGenitive": "-oris"
     }
   ]
 }

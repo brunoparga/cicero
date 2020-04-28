@@ -17,6 +17,7 @@ export type Word = {
   number: GrammaticalNumber;
   declension: Declension;
   gender: Gender;
+  correctGenitive: string;
 }
 
 type BaseAppState = {

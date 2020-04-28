@@ -3,8 +3,6 @@ import React from 'react';
 import { store } from '../../store';
 import { singular, plural } from '../../grammar/genitiveSuffixes';
 import { types } from '../../store/reducer';
-// eslint-disable-next-line no-unused-vars
-import { Word } from '../../store/types';
 
 import Buttons from '../shared/Buttons';
 import Checkbox from '../shared/Checkbox';
@@ -17,11 +15,22 @@ export default () => {
     dispatch,
   } = React.useContext(store);
 
+  if (!word) { return null; }
+
+  const { correctGenitive, declension, number } = word;
+
   const [suffixes, setSuffixes] = React.useState(singular);
 
   React.useEffect(() => {
-    setSuffixes(pluralSelected ? plural : singular);
-  }, [pluralSelected]);
+    const correctSingular = [...singular];
+    const correctPlural = [...plural];
+    const correctNumberSelected = pluralSelected === (number === 'plural');
+    if (correctGenitive && correctNumberSelected) {
+      correctSingular[declension] = correctGenitive;
+      correctPlural[declension] = correctGenitive;
+    }
+    setSuffixes(pluralSelected ? correctPlural : correctSingular);
+  }, [pluralSelected, correctGenitive, declension, number]);
 
   const togglePlural = { type: types.TOGGLE_PLURAL };
 
@@ -31,8 +40,7 @@ export default () => {
     }
   };
 
-  const { number, declension } = word as Word;
-  const correctAnswer = { singular, plural }[number][declension];
+  const correctAnswer = correctGenitive || { singular, plural }[number][declension];
 
   return (
     <div className="buttons pink-background spaced">
