@@ -3,29 +3,18 @@
 import React, { createContext, useReducer, Dispatch } from 'react';
 
 import { AppState, AppStateWithDispatch, Action } from './types';
-import reducer, { types } from './reducer';
-import setWord from './setWordAction';
+import { reducer, types } from './reducer';
+import { setWordAction } from './setWordAction';
+import { initialAppState } from './initialState';
 
-const initialState: AppState = {
-  word: null,
-  pluralSelected: false,
-  guess: {
-    latin: false,
-    genitive: false,
-    gender: false,
-  },
-  revealAnswer: false,
-  passiveSelected: false,
-};
-
-const store = createContext<AppStateWithDispatch>({ state: initialState, dispatch: () => {} });
+const store = createContext<AppStateWithDispatch>({ state: initialAppState, dispatch: () => {} });
 
 const StateProvider: React.FunctionComponent = ({ children }) => {
-  const [state, dispatch]: [AppState, Dispatch<Action>] = useReducer(reducer, initialState);
+  const [state, dispatch]: [AppState, Dispatch<Action>] = useReducer(reducer, initialAppState);
 
   // Fetch the first word from the API
   if (!state.word) {
-    setWord(dispatch, 1);
+    setWordAction(dispatch, 1);
   }
 
   // Test if all values have been guessed correctly
