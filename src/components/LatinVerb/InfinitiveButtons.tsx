@@ -38,7 +38,7 @@ export const InfinitiveButtons: React.FunctionComponent = () => {
 
   return (
     <div className="buttons pink-background spaced">
-      <Buttons label="Genitive" items={suffixes} correctAnswer={correctAnswer} />
+      <Buttons label="Infinitive" items={suffixes} correctAnswer={correctAnswer} />
       <Checkbox
         checked={passiveSelected}
         clickHandler={() => dispatch(toggleDeponent)}
