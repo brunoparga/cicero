@@ -2,7 +2,7 @@ import React from 'react';
 
 import { store } from '../../store';
 import { types } from '../../store/reducer';
-import Button from './Button';
+import { Button } from './Button';
 import './Buttons.css';
 
 type Props = {
@@ -13,7 +13,7 @@ type Props = {
 
 // I expect this button set to be reused for other types of quiz (Latin to English noun, verbs,
 // adjectives, invariable words)
-const Buttons: React.FunctionComponent<Props> = ({ label, items, correctAnswer }) => {
+export const Buttons: React.FunctionComponent<Props> = ({ label, items, correctAnswer }) => {
   const { dispatch } = React.useContext(store);
   const [selected, setSelected] = React.useState('');
 
@@ -48,5 +48,3 @@ const Buttons: React.FunctionComponent<Props> = ({ label, items, correctAnswer }
     </div>
   );
 };
-
-export default Buttons;

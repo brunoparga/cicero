@@ -1,6 +1,6 @@
-import shuffle from './shuffle';
+import { shuffle } from './shuffle';
 
-export default (options: string[], lemma: string): string[] => {
+export const setOptions = (options: string[], lemma: string): string[] => {
   if (options.includes(lemma)) {
     return options;
   }

@@ -3,11 +3,11 @@ import React from 'react';
 import { store } from '../store';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../store/types';
-import LatinNoun from './LatinNoun';
-import LatinVerb from './LatinVerb';
+import { LatinNoun } from './LatinNoun';
+import { LatinVerb } from './LatinVerb';
 import './App.css';
 
-export default () => {
+export const App: React.FunctionComponent = () => {
   const { state: { word } } = React.useContext(store);
 
   // Before loading, word is null.

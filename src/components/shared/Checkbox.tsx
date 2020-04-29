@@ -9,9 +9,9 @@ type Props = {
   label: string
 }
 
-export default ({
+export const Checkbox: React.FunctionComponent<Props> = ({
   checked, clickHandler, keyUpHandler, label,
-}: Props) => (
+}) => (
   <div className="checkbox-container">
     <div
       role="checkbox"

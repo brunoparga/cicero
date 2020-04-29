@@ -6,12 +6,12 @@ import { types } from '../../store/reducer';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../../store/types';
 
-import Buttons from '../shared/Buttons';
-import Checkbox from '../shared/Checkbox';
+import { Buttons } from '../shared/Buttons';
+import { Checkbox } from '../shared/Checkbox';
 
 // Buttons to select the genitive suffix, which indicates how the word is inflected, changing
 // according to its role in the sentence (subject, object...)
-export default () => {
+export const GenitiveButtons: React.FunctionComponent = () => {
   const {
     state: { word, pluralSelected },
     dispatch,

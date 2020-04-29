@@ -6,7 +6,7 @@ type SetGuessPayload = {
   value: boolean,
 }
 
-export default (state: AppState, { property, value }: SetGuessPayload) => {
+export const setGuess = (state: AppState, { property, value }: SetGuessPayload) => {
   const { guess } = state;
   guess[property] = value;
   return { ...state, guess };

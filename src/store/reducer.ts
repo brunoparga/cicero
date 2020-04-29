@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { AppState, Action } from './types';
-import setGuess from './reducers/setGuess';
-import setWord from './reducers/setWord';
+import { setGuess } from './reducers/setGuess';
+import { setWord } from './reducers/setWord';
 
 export const types = {
   REVEAL_ANSWER: 'REVEAL_ANSWER',
@@ -11,7 +11,7 @@ export const types = {
   TOGGLE_PLURAL: 'TOGGLE_PLURAL',
 };
 
-export default (state: AppState, { type, payload }: Action): AppState => {
+export const reducer = (state: AppState, { type, payload }: Action): AppState => {
   switch (type) {
     case types.REVEAL_ANSWER:
       return { ...state, revealAnswer: true };
