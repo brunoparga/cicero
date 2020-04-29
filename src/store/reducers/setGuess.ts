@@ -2,8 +2,8 @@
 import { AppState } from '../types';
 
 type SetGuessPayload = {
-  property: 'latin' | 'genitive' | 'gender',
-  value: boolean,
+  property: string,
+  value: boolean
 }
 
 export const setGuess = (state: AppState, { property, value }: SetGuessPayload) => {

@@ -40,13 +40,20 @@ export type Word = {
   properties: NounProperties & VerbProperties
 }
 
+export type LatinNounGuess = {
+  latin: boolean;
+  genitive: boolean;
+  gender: boolean;
+}
+
+export type LatinVerbGuess = {
+  latin: boolean;
+  infinitive: boolean;
+}
+
 type BaseAppState = {
   pluralSelected: boolean;
-  guess: {
-    latin: boolean;
-    genitive: boolean;
-    gender: boolean;
-  },
+  guess: { [key: string]: boolean },
   revealAnswer: boolean;
   passiveSelected: boolean;
 }

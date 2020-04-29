@@ -4,11 +4,7 @@ import { AppState } from './types';
 export const initialAppState: AppState = {
   word: null,
   pluralSelected: false,
-  guess: {
-    latin: false,
-    genitive: false,
-    gender: false,
-  },
+  guess: {},
   revealAnswer: false,
   passiveSelected: false,
 };
