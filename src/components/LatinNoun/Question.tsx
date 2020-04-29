@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { store } from '../../store';
-import { WordButtons } from './WordButtons';
+import { WordButtons } from '../shared/WordButtons';
 import { GenitiveButtons } from './GenitiveButtons';
 import { GenderButtons } from './GenderButtons';
 // eslint-disable-next-line no-unused-vars

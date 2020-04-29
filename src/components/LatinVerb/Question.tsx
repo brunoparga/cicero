@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { store } from '../../store';
-import { WordButtons } from './WordButtons';
+import { WordButtons } from '../shared/WordButtons';
 import { InfinitiveButtons } from './InfinitiveButtons';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../../store/types';
