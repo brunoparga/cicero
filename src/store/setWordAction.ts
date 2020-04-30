@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import { Action } from '../types/types';
+import { Action } from '../types';
 import { types } from './reducer';
 
 export const setWordAction = (dispatch: React.Dispatch<Action>, id: number) => {

@@ -1,7 +1,7 @@
 import {
   // eslint-disable-next-line no-unused-vars
   AppState, LatinNounGuess, LatinVerbGuess, Word,
-} from '../../types/types';
+} from '../../types';
 import { setOptions } from '../../helpers/setOptions';
 import { initialAppState as defaultState } from '../initialState';
 

@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import { AppState } from '../../types/types';
+import { AppState } from '../../types';
 
 type SetGuessPayload = {
   property: string,
