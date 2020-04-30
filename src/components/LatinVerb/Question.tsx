@@ -4,7 +4,7 @@ import { store } from '../../store';
 import { WordButtons } from '../shared/WordButtons';
 import { InfinitiveButtons } from './InfinitiveButtons';
 // eslint-disable-next-line no-unused-vars
-import { Word } from '../../store/types';
+import { Word } from '../../types/types';
 
 // Present buttons for user to guess which word is the correct Latin translation,
 // its genitive suffix and grammatical number.

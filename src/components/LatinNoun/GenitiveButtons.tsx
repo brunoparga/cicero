@@ -4,7 +4,7 @@ import { store } from '../../store';
 import { singular, plural } from '../../grammar/genitiveSuffixes';
 import { types } from '../../store/reducer';
 // eslint-disable-next-line no-unused-vars
-import { Word } from '../../store/types';
+import { Word } from '../../types/types';
 
 import { Buttons } from '../shared/Buttons';
 import { Checkbox } from '../shared/Checkbox';

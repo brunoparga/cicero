@@ -2,7 +2,7 @@ import React from 'react';
 
 import { store } from '../store';
 // eslint-disable-next-line no-unused-vars
-import { Word } from '../store/types';
+import { Word } from '../types/types';
 import { LatinNoun } from './LatinNoun';
 import { LatinVerb } from './LatinVerb';
 import './App.css';

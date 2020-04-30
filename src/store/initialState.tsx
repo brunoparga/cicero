@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import { AppState } from './types';
+import { AppState } from '../types/types';
 
 export const initialAppState: AppState = {
   word: null,

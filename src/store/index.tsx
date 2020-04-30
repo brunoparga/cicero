@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import React, { createContext, useReducer, Dispatch } from 'react';
 
-import { AppState, AppStateWithDispatch, Action } from './types';
+import { AppState, AppStateWithDispatch, Action } from '../types/types';
 import { reducer, types } from './reducer';
 import { setWordAction } from './setWordAction';
 import { initialAppState } from './initialState';
