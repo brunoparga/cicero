@@ -2,10 +2,10 @@ import React from 'react';
 
 import { store } from '../../store';
 import { LatinVerbAnswer } from './LatinVerbAnswer';
-import { Question } from './Question';
+import { LatinVerbQuestion } from './LatinVerbQuestion';
 
-// Just select, based on whether word was guessed, whether to show question or answer.
+// Decide to show question or answer based on whether the word has already been guessed.
 export const LatinVerb: React.FunctionComponent = () => {
   const { state: { revealAnswer } } = React.useContext(store);
-  return revealAnswer ? <LatinVerbAnswer /> : <Question />;
+  return revealAnswer ? <LatinVerbAnswer /> : <LatinVerbQuestion />;
 };

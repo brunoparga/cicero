@@ -5,7 +5,6 @@ import { active, passive } from '../../grammar/infinitiveSuffixes';
 import { types } from '../../store/reducer';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../../types';
-
 import { Buttons } from '../shared/Buttons';
 import { Checkbox } from '../shared/Checkbox';
 
