@@ -2,7 +2,7 @@
 import { NounProperties } from './latinNoun';
 import { VerbProperties } from './latinVerb';
 
-enum QuestionType {
+export enum QuestionType {
   LatinNoun = 'LatinNoun',
   LatinVerb = 'LatinVerb'
 }

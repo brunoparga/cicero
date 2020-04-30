@@ -1,10 +1,7 @@
 import React from 'react';
 
 import { store } from '../store';
-// eslint-disable-next-line no-unused-vars
-import { Word } from '../types';
-import { LatinNoun } from './LatinNoun';
-import { LatinVerb } from './LatinVerb';
+import { Drill } from './Drill';
 import './App.css';
 
 export const App: React.FunctionComponent = () => {
@@ -14,20 +11,10 @@ export const App: React.FunctionComponent = () => {
   if (!word) {
     return <h1>Onerans (loading)...</h1>;
   }
-  const { questionType } = word as Word;
 
-  let question: React.FunctionComponent;
-
-  // I am actually in doubt about the best way to switch between the various exercise types...
-  switch (questionType) {
-    case 'LatinNoun':
-      question = LatinNoun;
-      break;
-    case 'LatinVerb':
-      question = LatinVerb;
-      break;
-    default:
-      throw new Error();
-  }
-  return React.createElement('div', { className: 'App' }, React.createElement(question));
+  return (
+    <div className="App">
+      {Drill(word.questionType)}
+    </div>
+  );
 };
