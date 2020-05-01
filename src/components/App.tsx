@@ -4,6 +4,7 @@ import { store } from '../store';
 import { Drill } from './Drill';
 import './App.css';
 
+// Either show a loading screen or the loaded app.
 export const App: React.FunctionComponent = () => {
   const { state: { word } } = React.useContext(store);
 
