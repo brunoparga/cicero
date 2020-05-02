@@ -25,6 +25,18 @@
         "supine": "rēctum",
         "deponent": false
       }
+    },
+    {
+      "id": 3,
+      "questionType": "LatinNoun",
+      "english": "girl",
+      "lemma": "puella",
+      "options": ["vir", "puer", "mundus"],
+      "properties": {
+        "number": "singular",
+        "declension": 0,
+        "gender": "feminine"
+      }
     }
   ]
 }
