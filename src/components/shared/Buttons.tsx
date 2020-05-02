@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { store } from '../../store';
-import { types } from '../../store/reducer';
+import { actionTypes } from '../../store/reducer';
 import { Button } from './Button';
 import './Buttons.css';
 
@@ -27,7 +27,7 @@ export const Buttons: React.FunctionComponent<Props> = ({ label, items, correctA
       setSelected(elt.innerText);
       const property = label.toLowerCase();
       const value = elt.innerText === correctAnswer;
-      dispatch({ type: types.SET_GUESS, payload: { property, value } });
+      dispatch({ type: actionTypes.SET_GUESS, payload: { property, value } });
     }
   };
 

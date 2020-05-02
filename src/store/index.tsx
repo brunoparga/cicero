@@ -3,9 +3,9 @@
 import React, { createContext, useReducer, Dispatch } from 'react';
 
 import { AppState, AppStateWithDispatch, Action } from '../types';
-import { reducer, types } from './reducer';
 import { setWordAction } from './setWordAction';
 import { initialAppState } from './initialState';
+import { reducer, actionTypes } from './reducer';
 
 const store = createContext<AppStateWithDispatch>({ state: initialAppState, dispatch: () => {} });
 

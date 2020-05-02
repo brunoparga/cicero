@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { store } from '../../store';
-import { setWordAction } from '../../store/setWordAction';
+import { actionTypes } from '../../store/reducer';
 import './Answer.css';
 
 type Props = { text: string }
@@ -12,7 +12,7 @@ type Props = { text: string }
 export const Answer: React.FunctionComponent<Props> = ({ text }) => {
   const { state: { word }, dispatch } = React.useContext(store);
 
-  const clickHandler = () => setWordAction(dispatch, 2);
+  const clickHandler = () => dispatch({ type: actionTypes.SET_WORD });
   return (
     <>
       <h1>{word?.english}</h1>

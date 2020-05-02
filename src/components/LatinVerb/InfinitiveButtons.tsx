@@ -2,7 +2,7 @@ import React from 'react';
 
 import { store } from '../../store';
 import { active, passive } from '../../grammar/infinitiveSuffixes';
-import { types } from '../../store/reducer';
+import { actionTypes } from '../../store/reducer';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../../types';
 import { Buttons } from '../shared/Buttons';
@@ -25,7 +25,7 @@ export const InfinitiveButtons: React.FunctionComponent = () => {
     setSuffixes(passiveSelected ? passive : active);
   }, [passiveSelected]);
 
-  const toggleDeponent = { type: types.TOGGLE_DEPONENT };
+  const toggleDeponent = { type: actionTypes.TOGGLE_DEPONENT };
 
   const keyUpHandler = (event: React.KeyboardEvent) => {
     if (event.key.toUpperCase() === 'P') {

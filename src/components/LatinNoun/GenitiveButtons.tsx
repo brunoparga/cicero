@@ -2,7 +2,7 @@ import React from 'react';
 
 import { store } from '../../store';
 import { singular, plural } from '../../grammar/genitiveSuffixes';
-import { types } from '../../store/reducer';
+import { actionTypes } from '../../store/reducer';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../../types';
 import { Buttons } from '../shared/Buttons';
@@ -31,7 +31,7 @@ export const GenitiveButtons: React.FunctionComponent = () => {
     setSuffixes(pluralSelected ? correctPlural : correctSingular);
   }, [pluralSelected, correctGenitive, declension, number]);
 
-  const togglePlural = { type: types.TOGGLE_PLURAL };
+  const togglePlural = { type: actionTypes.TOGGLE_PLURAL };
 
   const keyUpHandler = (event: React.KeyboardEvent) => {
     if (event.key.toUpperCase() === 'P') {

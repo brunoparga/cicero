@@ -3,7 +3,7 @@ import { Action, AppState } from '../types';
 import { setGuess } from './reducers/setGuess';
 import { setWord } from './reducers/setWord';
 
-export const types = {
+export const actionTypes = {
   REVEAL_ANSWER: 'REVEAL_ANSWER',
   SET_GUESS: 'SET_GUESS',
   SET_WORD: 'SET_WORD',
@@ -13,15 +13,15 @@ export const types = {
 
 export const reducer = (state: AppState, { type, payload }: Action): AppState => {
   switch (type) {
-    case types.REVEAL_ANSWER:
+    case actionTypes.REVEAL_ANSWER:
       return { ...state, revealAnswer: true };
-    case types.SET_GUESS:
+    case actionTypes.SET_GUESS:
       return setGuess(state, payload);
-    case types.SET_WORD:
+    case actionTypes.SET_WORD:
       return setWord(payload);
-    case types.TOGGLE_DEPONENT:
+    case actionTypes.TOGGLE_DEPONENT:
       return { ...state, passiveSelected: !state.passiveSelected };
-    case types.TOGGLE_PLURAL:
+    case actionTypes.TOGGLE_PLURAL:
       return { ...state, pluralSelected: !state.pluralSelected };
     default:
       throw new Error();
