@@ -3,6 +3,7 @@ import { AppState } from '../types';
 
 export const initialAppState: AppState = {
   word: null,
+  words: [],
   pluralSelected: false,
   guess: {},
   revealAnswer: false,

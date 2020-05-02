@@ -12,4 +12,5 @@ type BaseAppState = {
 
 export type AppState = {
   word: Word | null;
+  words: Word[]
 } & BaseAppState;
