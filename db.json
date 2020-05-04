@@ -16,7 +16,7 @@
     {
       "id": 2,
       "questionType": "LatinVerb",
-      "english": "rule, reign",
+      "english": "to rule, reign",
       "lemma": "regō",
       "options": ["regiō", "ferō", "putō"],
       "properties": {
@@ -36,6 +36,56 @@
         "number": "singular",
         "declension": 0,
         "gender": "feminine"
+      }
+    },
+    {
+      "id": 4,
+      "questionType": "LatinVerb",
+      "english": "to turn angry",
+      "lemma": "īrāscor",
+      "options": ["patior", "ira", "fūror"],
+      "properties": {
+        "conjugation": 2,
+        "perfect": "īrātus sum",
+        "deponent": true
+      }
+    },
+    {
+      "id": 5,
+      "questionType": "LatinNoun",
+      "english": "day",
+      "lemma": "diēs",
+      "options": ["spēs", "dīves", "forma"],
+      "properties": {
+        "number": "singular",
+        "declension": 4,
+        "gender": "masculine/feminine"
+      }
+    },
+    {
+      "id": 6,
+      "questionType": "LatinNoun",
+      "english": "sun",
+      "lemma": "sōl",
+      "options": ["soleō", "luna", "ferō"],
+      "properties": {
+        "number": "singular",
+        "declension": 2,
+        "gender": "masculine"
+      }
+    },
+    {
+      "id": 7,
+      "questionType": "LatinVerb",
+      "english": "to carry, bear",
+      "lemma": "ferō",
+      "options": ["amō", "nascor", "fūror"],
+      "properties": {
+        "conjugation": 2,
+        "correctInfinitive": "ferre",
+        "perfect": "tulī",
+        "supine": "lātum",
+        "deponent": false
       }
     }
   ]

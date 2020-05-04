@@ -22,8 +22,14 @@ export const InfinitiveButtons: React.FunctionComponent = () => {
   const [suffixes, setSuffixes] = React.useState(active);
 
   React.useEffect(() => {
-    setSuffixes(passiveSelected ? passive : active);
-  }, [passiveSelected]);
+    const correctActive = [...active];
+    const correctPassive = [...passive];
+    if (correctInfinitive && passiveSelected === deponent) {
+      correctActive[conjugation] = correctInfinitive;
+      correctPassive[conjugation] = correctInfinitive;
+    }
+    setSuffixes(passiveSelected ? correctPassive : correctActive);
+  }, [passiveSelected, conjugation, correctInfinitive, deponent]);
 
   const toggleDeponent = { type: actionTypes.TOGGLE_DEPONENT };
 

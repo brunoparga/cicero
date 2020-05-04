@@ -9,11 +9,13 @@ import { Word } from '../../types';
 // that it is not worth it coding this as checkboxes rather than radio buttons.
 export const GenderButtons: React.FunctionComponent = () => {
   const { state: { word } } = React.useContext(store) as { state: { word: Word }};
+  const { gender } = word.properties;
+  const answer = gender === 'masculine/feminine' ? 'masc./fem.' : gender;
   const items = ['masculine', 'feminine', 'neuter', 'masc./fem.'];
 
   return (
     <div className="pink-background">
-      <Buttons label="Gender" items={items} correctAnswer={word.properties.gender} />
+      <Buttons label="Gender" items={items} correctAnswer={answer} />
     </div>
   );
 };

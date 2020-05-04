@@ -24,7 +24,7 @@ export const LatinVerbAnswer: React.FunctionComponent = () => {
   // passive voice suffixes.
   const infinitive = correctInfinitive || (deponent ? passive : active)[conjugation];
   const typeOfVerb = deponent ? 'Deponent verb' : 'Verb';
-  const answer = `${typeOfVerb}: ${lemma}, ${infinitive}, ${perfect} ${supine}`;
+  const answer = `${typeOfVerb}: ${lemma}, ${infinitive}, ${perfect || '--'}, ${supine || '--'}`;
 
   return <Answer text={answer} />;
 };
