@@ -13,10 +13,8 @@ const StateProvider: React.FunctionComponent = ({ children }) => {
   const [state, dispatch]: [AppState, Dispatch<Action>] = useReducer(reducer, initialAppState);
 
   // Fetch the first word from the API
-  if (!state.word && state.words.length === 0) {
+  if (state.words.length === 0) {
     fetchWords(dispatch);
-  } else if (!state.word) {
-    dispatch({ type: actionTypes.SET_WORD });
   }
 
   // Test if all values have been guessed correctly (there has to be a word set)
