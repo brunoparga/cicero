@@ -5,6 +5,7 @@ import { singular, plural } from '../../grammar/genitiveSuffixes';
 import { actionTypes } from '../../store/reducer';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../../types';
+import { useSuffixes } from '../shared/useSuffixes';
 import { Buttons } from '../shared/Buttons';
 import { Checkbox } from '../shared/Checkbox';
 
@@ -18,18 +19,7 @@ export const GenitiveButtons: React.FunctionComponent = () => {
 
   const { properties: { correctGenitive, declension, number } } = word as Word;
 
-  const [suffixes, setSuffixes] = React.useState(singular);
-
-  React.useEffect(() => {
-    const correctSingular = [...singular];
-    const correctPlural = [...plural];
-    const correctNumberSelected = pluralSelected === (number === 'plural');
-    if (correctGenitive && correctNumberSelected) {
-      correctSingular[declension] = correctGenitive;
-      correctPlural[declension] = correctGenitive;
-    }
-    setSuffixes(pluralSelected ? correctPlural : correctSingular);
-  }, [pluralSelected, correctGenitive, declension, number]);
+  const suffixes = useSuffixes();
 
   const togglePlural = { type: actionTypes.TOGGLE_PLURAL };
 
