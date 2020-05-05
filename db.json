@@ -29,11 +29,11 @@
     {
       "id": 3,
       "questionType": "LatinNoun",
-      "english": "girl",
-      "lemma": "puella",
+      "english": "banquet",
+      "lemma": "epulae",
       "options": ["vir", "puer", "mundus"],
       "properties": {
-        "number": "singular",
+        "number": "plural",
         "declension": 0,
         "gender": "feminine"
       }
