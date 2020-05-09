@@ -6,6 +6,7 @@
       "english": "boy",
       "lemma": "puer",
       "options": ["vir", "puella", "mundus"],
+      "learned": false,
       "properties": {
         "correctGenitive": "-erī",
         "number": "singular",
@@ -19,6 +20,7 @@
       "english": "to rule, reign",
       "lemma": "regō",
       "options": ["regiō", "ferō", "putō"],
+      "learned": true,
       "properties": {
         "conjugation": 2,
         "perfect": "rēxī",
@@ -32,6 +34,7 @@
       "english": "banquet",
       "lemma": "epulae",
       "options": ["vir", "puer", "mundus"],
+      "learned": false,
       "properties": {
         "number": "plural",
         "declension": 0,
@@ -44,6 +47,7 @@
       "english": "to turn angry",
       "lemma": "īrāscor",
       "options": ["patior", "ira", "fūror"],
+      "learned": true,
       "properties": {
         "conjugation": 2,
         "perfect": "īrātus sum",
@@ -56,6 +60,7 @@
       "english": "day",
       "lemma": "diēs",
       "options": ["spēs", "dīves", "forma"],
+      "learned": false,
       "properties": {
         "number": "singular",
         "declension": 4,
@@ -68,6 +73,7 @@
       "english": "sun",
       "lemma": "sōl",
       "options": ["soleō", "luna", "ferō"],
+      "learned": true,
       "properties": {
         "number": "singular",
         "declension": 2,
@@ -80,6 +86,7 @@
       "english": "to carry, bear",
       "lemma": "ferō",
       "options": ["amō", "nascor", "fūror"],
+      "learned": false,
       "properties": {
         "conjugation": 2,
         "correctInfinitive": "ferre",

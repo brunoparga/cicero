@@ -4,6 +4,7 @@ import { setGuess } from './reducers/setGuess';
 import { setWord } from './reducers/setWord';
 
 export const actionTypes = {
+  LEARN_WORD: 'LEARN_WORD',
   REVEAL_ANSWER: 'REVEAL_ANSWER',
   SET_GUESS: 'SET_GUESS',
   SET_WORD: 'SET_WORD',
@@ -14,6 +15,8 @@ export const actionTypes = {
 
 export const reducer = (state: AppState, { type, payload }: Action): AppState => {
   switch (type) {
+    case actionTypes.LEARN_WORD:
+      return { ...state, word: { ...state.word, learned: true } } as AppState;
     case actionTypes.REVEAL_ANSWER:
       return { ...state, revealAnswer: true };
     case actionTypes.SET_GUESS:

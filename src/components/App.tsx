@@ -2,6 +2,7 @@ import React from 'react';
 
 import { store } from '../store';
 import { Drill } from './Drill';
+import { Teach } from './Teach';
 import './App.css';
 
 // Either show a loading screen or the loaded app.
@@ -15,7 +16,7 @@ export const App: React.FunctionComponent = () => {
 
   return (
     <div className="App">
-      {Drill(word.questionType)}
+      {(word.learned ? Drill(word.questionType) : <Teach />)}
     </div>
   );
 };

@@ -12,5 +12,6 @@ export type Word = {
   english: string;
   lemma: string;
   options: string[];
+  learned: boolean;
   properties: NounProperties & VerbProperties
 }
