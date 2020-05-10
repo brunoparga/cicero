@@ -2,15 +2,15 @@ import React from 'react';
 
 // eslint-disable-next-line no-unused-vars
 import { QuestionType } from '../types';
-import { EnglishWord } from './EnglishWord';
-import { LatinNoun } from './LatinNoun';
-import { LatinVerb } from './LatinVerb';
+import { Translation } from './Translation';
+import { Noun } from './Noun';
+import { Verb } from './Verb';
 
 type Drill = (drillProps: QuestionType) => React.ReactElement
 
 // Select the correct element to display based on question type
 export const Drill: Drill = (questionType) => {
-  const elements = { EnglishWord, LatinNoun, LatinVerb };
+  const elements = { Translation, Noun, Verb };
   return React.createElement(elements[questionType]);
 
   // The way above seems clear and simple. Its only disadvantage is that the elements object needs

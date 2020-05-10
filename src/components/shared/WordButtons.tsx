@@ -12,7 +12,7 @@ export const WordButtons: React.FunctionComponent<{ label: string }> = ({ label 
   const {
     questionType, english, lemma, options,
   } = word as Word;
-  const correctAnswer = questionType === 'EnglishWord' ? english : lemma;
+  const correctAnswer = questionType === 'Translation' ? english : lemma;
 
   return (
     <div className="pink-background">

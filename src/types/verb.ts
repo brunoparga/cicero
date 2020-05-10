@@ -9,7 +9,7 @@ export type VerbProperties = {
   correctInfinitive: string;
 }
 
-export type LatinVerbGuess = {
+export type VerbGuess = {
   latin: boolean;
   infinitive: boolean;
 }

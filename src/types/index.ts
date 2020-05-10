@@ -1,5 +1,5 @@
 export * from './action';
 export * from './appState';
-export type { LatinNounGuess } from './latinNoun';
-export type { LatinVerbGuess } from './latinVerb';
+export type { NounGuess } from './noun';
+export type { VerbGuess } from './verb';
 export * from './word';

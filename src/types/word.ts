@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
-import { EnglishWordProperties } from './englishWord';
-import { NounProperties } from './latinNoun';
-import { VerbProperties } from './latinVerb';
+import { TranslationProperties } from './translation';
+import { NounProperties } from './noun';
+import { VerbProperties } from './verb';
 
 export enum QuestionType {
-  EnglishWord = 'EnglishWord',
-  LatinNoun = 'LatinNoun',
-  LatinVerb = 'LatinVerb'
+  Translation = 'Translation',
+  Noun = 'Noun',
+  Verb = 'Verb'
 }
 
 export type Word = {
@@ -15,5 +15,5 @@ export type Word = {
   lemma: string;
   options: string[];
   learned: boolean;
-  properties: EnglishWordProperties & NounProperties & VerbProperties
+  properties: TranslationProperties & NounProperties & VerbProperties
 }

@@ -7,7 +7,7 @@ import { active, passive } from '../../grammar/infinitiveSuffixes';
 import { Answer } from '../shared/Answer';
 
 // Prepare the correct answer for presentation
-export const LatinVerbAnswer: React.FunctionComponent = () => {
+export const VerbAnswer: React.FunctionComponent = () => {
   const {
     state: {
       word: {

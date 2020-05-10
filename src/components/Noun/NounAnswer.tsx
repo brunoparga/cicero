@@ -7,7 +7,7 @@ import { singular, plural } from '../../grammar/genitiveSuffixes';
 import { Answer } from '../shared/Answer';
 
 // Prepare the correct answer for presentation
-export const LatinNounAnswer: React.FunctionComponent = () => {
+export const NounAnswer: React.FunctionComponent = () => {
   const {
     state: {
       word: {

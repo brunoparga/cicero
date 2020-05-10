@@ -1,8 +1,7 @@
 {
   "words": [
     {
-      "id": 1,
-      "questionType": "EnglishWord",
+      "questionType": "Translation",
       "english": "woman, female",
       "lemma": "femina",
       "options": ["man (as opposed to woman)", "port", "sun"],
@@ -12,8 +11,7 @@
       }
     },
     {
-      "id": 2,
-      "questionType": "LatinVerb",
+      "questionType": "Verb",
       "english": "to rule, reign",
       "lemma": "regō",
       "options": ["regiō", "ferō", "putō"],
@@ -26,8 +24,7 @@
       }
     },
     {
-      "id": 3,
-      "questionType": "LatinNoun",
+      "questionType": "Noun",
       "english": "banquet",
       "lemma": "epulae",
       "options": ["vir", "puer", "mundus"],
@@ -39,8 +36,7 @@
       }
     },
     {
-      "id": 4,
-      "questionType": "LatinVerb",
+      "questionType": "Verb",
       "english": "to turn angry",
       "lemma": "īrāscor",
       "options": ["patior", "ira", "fūror"],
@@ -52,8 +48,7 @@
       }
     },
     {
-      "id": 5,
-      "questionType": "LatinNoun",
+      "questionType": "Noun",
       "english": "day",
       "lemma": "diēs",
       "options": ["spēs", "dīves", "forma"],
@@ -65,8 +60,7 @@
       }
     },
     {
-      "id": 6,
-      "questionType": "LatinNoun",
+      "questionType": "Noun",
       "english": "sun",
       "lemma": "sōl",
       "options": ["soleō", "luna", "ferō"],
@@ -78,8 +72,7 @@
       }
     },
     {
-      "id": 7,
-      "questionType": "LatinVerb",
+      "questionType": "Verb",
       "english": "to carry, bear",
       "lemma": "ferō",
       "options": ["amō", "nascor", "fūror"],

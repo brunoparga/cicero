@@ -8,7 +8,7 @@ export type NounProperties = {
   correctGenitive: string;
 }
 
-export type LatinNounGuess = {
+export type NounGuess = {
   latin: boolean;
   genitive: boolean;
   gender: boolean;
