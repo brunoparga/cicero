@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
+import { AdjectiveProperties } from './adjective';
 import { TranslationProperties } from './translation';
 import { NounProperties } from './noun';
 import { VerbProperties } from './verb';
 
 export enum QuestionType {
-  Translation = 'Translation',
+  Adjective = 'Adjective',
   Noun = 'Noun',
+  Translation = 'Translation',
   Verb = 'Verb'
 }
 
@@ -15,5 +17,5 @@ export type Word = {
   lemma: string;
   options: string[];
   learned: boolean;
-  properties: TranslationProperties & NounProperties & VerbProperties
+  properties: AdjectiveProperties & NounProperties & TranslationProperties & VerbProperties
 }

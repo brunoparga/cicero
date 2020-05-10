@@ -1,6 +1,67 @@
 {
   "words": [
     {
+      "questionType": "Adjective",
+      "english": "good, kind",
+      "lemma": "bonus",
+      "options": ["āter", "Romanus", "pinguis"],
+      "learned": true,
+      "properties": {
+        "feminine": "bona",
+        "neuter": "bonum",
+        "suffixes": "1st/2nd (-us)"
+      }
+    },
+    {
+      "questionType": "Adjective",
+      "english": "black",
+      "lemma": "āter",
+      "options": ["viridis", "bonus", "ferōx"],
+      "learned": true,
+      "properties": {
+        "feminine": "ātra",
+        "neuter": "ātrum",
+        "suffixes": "1st/2nd (-er)"
+      }
+    },
+    {
+      "questionType": "Adjective",
+      "english": "quick, swift",
+      "lemma": "celer",
+      "options": ["viridis", "bonus", "ferōx"],
+      "learned": true,
+      "properties": {
+        "feminine": "celeris",
+        "neuter": "celere",
+        "suffixes": "3rd (-er/-ris/-re)"
+      }
+    },
+    {
+      "questionType": "Adjective",
+      "english": "green",
+      "lemma": "viridis",
+      "options": ["sapiens", "Romanus", "pinguis"],
+      "learned": true,
+      "properties": {
+        "feminine": "viridis",
+        "neuter": "viride",
+        "suffixes": "3rd (-is/e)"
+      }
+    },
+    {
+      "questionType": "Adjective",
+      "english": "wild, fierce; arrogant",
+      "lemma": "ferōx",
+      "options": ["āter", "Romanus", "pinguis"],
+      "learned": true,
+      "properties": {
+        "feminine": "ferōx",
+        "neuter": "ferōx",
+        "genitive": "-ōcis",
+        "suffixes": "3rd (all equal)"
+      }
+    },
+    {
       "questionType": "Translation",
       "english": "woman, female",
       "lemma": "femina",

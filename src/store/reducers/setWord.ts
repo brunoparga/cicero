@@ -7,8 +7,9 @@ export const setWord = (state: AppState): AppState => {
   const correctAnswer = word.questionType === 'Translation' ? word.english : word.lemma;
   word.options = setOptions(word.options, correctAnswer);
   const guessOptions = {
-    Translation: { translation: false },
+    Adjective: { declension: false },
     Noun: { latin: false, genitive: false, gender: false },
+    Translation: { translation: false },
     Verb: { infinitive: false },
   };
   const guess = guessOptions[word.questionType];
