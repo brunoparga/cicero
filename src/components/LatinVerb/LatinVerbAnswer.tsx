@@ -5,7 +5,6 @@ import { store } from '../../store';
 import { Word } from '../../types';
 import { active, passive } from '../../grammar/infinitiveSuffixes';
 import { Answer } from '../shared/Answer';
-import '../shared/Answer.css';
 
 // Prepare the correct answer for presentation
 export const LatinVerbAnswer: React.FunctionComponent = () => {
@@ -13,6 +12,7 @@ export const LatinVerbAnswer: React.FunctionComponent = () => {
     state: {
       word: {
         lemma,
+        english,
         properties: {
           conjugation, perfect, supine, deponent, correctInfinitive,
         },
@@ -26,5 +26,5 @@ export const LatinVerbAnswer: React.FunctionComponent = () => {
   const typeOfVerb = deponent ? 'Deponent verb' : 'Verb';
   const answer = `${typeOfVerb}: ${lemma}, ${infinitive}, ${perfect || '--'}, ${supine || '--'}`;
 
-  return <Answer text={answer} />;
+  return <Answer header={english} text={answer} />;
 };

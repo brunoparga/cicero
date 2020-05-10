@@ -4,18 +4,18 @@ import { store } from '../../store';
 import { actionTypes } from '../../store/reducer';
 import './Answer.css';
 
-type Props = { text: string }
+type Props = { header: string, text: string }
 
 // Confirm the correct answer, which the user has already guessed.
 // This will evolve toward asking for a new word and possibly rating how well
 // the present one was remembered (Anki-style spaced repetition).
-export const Answer: React.FunctionComponent<Props> = ({ text }) => {
-  const { state: { word }, dispatch } = React.useContext(store);
+export const Answer: React.FunctionComponent<Props> = ({ header, text }) => {
+  const { dispatch } = React.useContext(store);
 
   const clickHandler = () => dispatch({ type: actionTypes.SET_WORD });
   return (
     <>
-      <h1>{word?.english}</h1>
+      <h1>{header}</h1>
       <div className="answer-container">
         <span className="answer">{text}</span>
         <button type="button" className="next" onClick={clickHandler}>

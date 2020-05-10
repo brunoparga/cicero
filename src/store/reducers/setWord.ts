@@ -4,8 +4,10 @@ import { setOptions } from '../../helpers/setOptions';
 
 export const setWord = (state: AppState): AppState => {
   const [word, ...words] = state.words;
-  word.options = setOptions(word.options, word.lemma);
+  const correctAnswer = word.questionType === 'EnglishWord' ? word.english : word.lemma;
+  word.options = setOptions(word.options, correctAnswer);
   const guessOptions = {
+    EnglishWord: { translation: false },
     LatinNoun: { latin: false, genitive: false, gender: false },
     LatinVerb: { infinitive: false },
   };

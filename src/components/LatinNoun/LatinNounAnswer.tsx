@@ -5,7 +5,6 @@ import { store } from '../../store';
 import { Word } from '../../types';
 import { singular, plural } from '../../grammar/genitiveSuffixes';
 import { Answer } from '../shared/Answer';
-import '../shared/Answer.css';
 
 // Prepare the correct answer for presentation
 export const LatinNounAnswer: React.FunctionComponent = () => {
@@ -13,6 +12,7 @@ export const LatinNounAnswer: React.FunctionComponent = () => {
     state: {
       word: {
         lemma,
+        english,
         properties: {
           number, gender, declension, correctGenitive,
         },
@@ -24,5 +24,5 @@ export const LatinNounAnswer: React.FunctionComponent = () => {
   const genitive = correctGenitive || { singular, plural }[number][declension];
   const answer = `${lemma}, ${genitive}, ${gender} ${number} noun`;
 
-  return <Answer text={answer} />;
+  return <Answer header={english} text={answer} />;
 };

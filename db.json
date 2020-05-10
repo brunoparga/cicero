@@ -2,16 +2,13 @@
   "words": [
     {
       "id": 1,
-      "questionType": "LatinNoun",
-      "english": "boy",
-      "lemma": "puer",
-      "options": ["vir", "puella", "mundus"],
-      "learned": false,
+      "questionType": "EnglishWord",
+      "english": "woman, female",
+      "lemma": "femina",
+      "options": ["man (as opposed to woman)", "port", "sun"],
+      "learned": true,
       "properties": {
-        "correctGenitive": "-erī",
-        "number": "singular",
-        "declension": 1,
-        "gender": "masculine"
+        "genitive": "-ae"
       }
     },
     {

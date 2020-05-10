@@ -1,18 +1,13 @@
 import React from 'react';
 
-import { store } from '../../store';
 import { WordButtons } from '../shared/WordButtons';
-// eslint-disable-next-line no-unused-vars
-import { Word } from '../../types';
 
-export const Question: React.FunctionComponent = ({ children }) => {
-  const { state: { word } } = React.useContext(store) as { state: { word: Word } };
+type Props = { header: string, label: string }
 
-  return (
-    <>
-      <h1>{word.english}</h1>
-      <WordButtons />
-      {children}
-    </>
-  );
-};
+export const Question: React.FunctionComponent<Props> = ({ header, label, children }) => (
+  <>
+    <h1>{header}</h1>
+    <WordButtons label={label} />
+    {children}
+  </>
+);

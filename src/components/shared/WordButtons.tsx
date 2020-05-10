@@ -7,12 +7,16 @@ import { Buttons } from './Buttons';
 
 // Buttons to select the correct Latin word for the given English word.
 // Future plan: replace English with any user-selected language.
-export const WordButtons: React.FunctionComponent = () => {
-  const { state: { word } } = React.useContext(store) as { state: { word: Word }};
+export const WordButtons: React.FunctionComponent<{ label: string }> = ({ label }) => {
+  const { state: { word } } = React.useContext(store);
+  const {
+    questionType, english, lemma, options,
+  } = word as Word;
+  const correctAnswer = questionType === 'EnglishWord' ? english : lemma;
 
   return (
     <div className="pink-background">
-      <Buttons label="Latin" items={word.options} correctAnswer={word.lemma} />
+      <Buttons label={label} items={options} correctAnswer={correctAnswer} />
     </div>
   );
 };
