@@ -10,5 +10,5 @@ import { Word } from '../../types';
 // its genitive suffix and grammatical number.
 export const VerbQuestion: React.FunctionComponent = () => {
   const { state: { word } } = React.useContext(store) as { state: { word: Word } };
-  return <Question header={word.english} label="Latin"><InfinitiveButtons /></Question>;
+  return <Question header={word.english}><InfinitiveButtons /></Question>;
 };

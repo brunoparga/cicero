@@ -12,7 +12,7 @@ import { Word } from '../../types';
 export const NounQuestion: React.FunctionComponent = () => {
   const { state: { word } } = React.useContext(store) as { state: { word: Word } };
   return (
-    <Question header={word.english} label="Latin">
+    <Question header={word.english}>
       <GenitiveButtons />
       <GenderButtons />
     </Question>
