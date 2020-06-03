@@ -23,5 +23,8 @@ pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+.vscode/
+
+# App-specific
 db.json
 todo.txt

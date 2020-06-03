@@ -65,7 +65,7 @@
       "questionType": "Translation",
       "english": "woman, female",
       "lemma": "femina",
-      "options": ["man (as opposed to woman)", "port", "sun"],
+      "options": ["man", "port", "sun"],
       "learned": true,
       "properties": {
         "genitive": "-ae"
