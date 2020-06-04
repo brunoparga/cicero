@@ -1,6 +1,13 @@
 {
   "words": [
     {
+      "questionType": "Adverb",
+      "english": "always",
+      "lemma": "semper",
+      "options": ["numquam", "iam", "hodiē"],
+      "learned": true
+    },
+    {
       "questionType": "Adjective",
       "english": "good, kind",
       "lemma": "bonus",

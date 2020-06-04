@@ -6,10 +6,18 @@ import { VerbProperties } from './verb';
 
 export enum QuestionType {
   Adjective = 'Adjective',
+  Adverb = 'Adverb',
   Noun = 'Noun',
   Translation = 'Translation',
   Verb = 'Verb'
 }
+
+type AdverbProperties = {}
+type Properties = AdjectiveProperties
+  & AdverbProperties
+  & NounProperties
+  & TranslationProperties
+  & VerbProperties
 
 export type Word = {
   questionType: QuestionType;
@@ -17,5 +25,5 @@ export type Word = {
   lemma: string;
   options: string[];
   learned: boolean;
-  properties: AdjectiveProperties & NounProperties & TranslationProperties & VerbProperties
+  properties: Properties
 }

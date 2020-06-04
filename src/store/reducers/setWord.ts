@@ -8,6 +8,7 @@ export const setWord = (state: AppState): AppState => {
   word.options = setOptions(word.options, correctAnswer);
   const guessOptions = {
     Adjective: { latin: false, declension: false },
+    Adverb: { latin: false },
     Noun: { latin: false, genitive: false, gender: false },
     Translation: { translation: false },
     Verb: { latin: false, infinitive: false },
