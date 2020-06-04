@@ -3,7 +3,7 @@ import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { QuestionType } from '../types';
 import { Adjective } from './Adjective';
-import { Adverb } from './Adverb';
+import { Etcetera } from './Etcetera';
 import { Noun } from './Noun';
 import { Translation } from './Translation';
 import { Verb } from './Verb';
@@ -13,7 +13,7 @@ type Drill = (drillProps: QuestionType) => React.ReactElement
 // Select the correct element to display based on question type
 export const Drill: Drill = (questionType) => {
   const elements = {
-    Adjective, Adverb, Noun, Translation, Verb,
+    Adjective, Etcetera, Noun, Translation, Verb,
   };
   return React.createElement(elements[questionType]);
 

@@ -1,7 +1,14 @@
 {
   "words": [
     {
-      "questionType": "Adverb",
+      "questionType": "Etcetera",
+      "english": "(determ. pron.) that one; he, she, it; (as antec. to rel.) such",
+      "lemma": "is, ea, id",
+      "options": ["hic, haec, hoc", "cēterus, -a, -um", "ille, illa, illud"],
+      "learned": true
+    },
+    {
+      "questionType": "Etcetera",
       "english": "always",
       "lemma": "semper",
       "options": ["numquam", "iam", "hodiē"],

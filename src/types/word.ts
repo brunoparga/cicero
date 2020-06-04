@@ -6,15 +6,15 @@ import { VerbProperties } from './verb';
 
 export enum QuestionType {
   Adjective = 'Adjective',
-  Adverb = 'Adverb',
+  Etcetera = 'Etcetera',
   Noun = 'Noun',
   Translation = 'Translation',
   Verb = 'Verb'
 }
 
-type AdverbProperties = {}
+type EtceteraProperties = {}
 type Properties = AdjectiveProperties
-  & AdverbProperties
+  & EtceteraProperties
   & NounProperties
   & TranslationProperties
   & VerbProperties
