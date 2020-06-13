@@ -21,8 +21,9 @@
       "options": ["āter", "Romanus", "pinguis"],
       "learned": true,
       "properties": {
-        "feminine": "bona",
-        "neuter": "bonum",
+        "masculineGenitive": "-ī",
+        "feminine": "bona, -ae",
+        "neuter": "bonum, -ī",
         "suffixes": "1st/2nd (-us)"
       }
     },
@@ -33,8 +34,9 @@
       "options": ["viridis", "bonus", "ferōx"],
       "learned": true,
       "properties": {
-        "feminine": "ātra",
-        "neuter": "ātrum",
+        "masculineGenitive": "ātrī",
+        "feminine": "ātra, ātrae",
+        "neuter": "ātrum, ātrī",
         "suffixes": "1st/2nd (-er)"
       }
     },
@@ -47,6 +49,7 @@
       "properties": {
         "feminine": "celeris",
         "neuter": "celere",
+        "genitive": "celeris",
         "suffixes": "3rd (-er/-ris/-re)"
       }
     },
@@ -57,8 +60,8 @@
       "options": ["sapiens", "Romanus", "pinguis"],
       "learned": true,
       "properties": {
-        "feminine": "viridis",
         "neuter": "viride",
+        "genitive": "viridis",
         "suffixes": "3rd (-is/e)"
       }
     },
@@ -69,9 +72,7 @@
       "options": ["āter", "Romanus", "pinguis"],
       "learned": true,
       "properties": {
-        "feminine": "ferōx",
-        "neuter": "ferōx",
-        "genitive": "-ōcis",
+        "genitive": "ferōcis",
         "suffixes": "3rd (all equal)"
       }
     },

@@ -1,5 +1,7 @@
 export type AdjectiveProperties = {
-  feminine: string;
-  neuter: string;
+  masculineGenitive?: string,
+  feminine?: string;
+  neuter?: string;
+  genitive?: string;
   suffixes: string;
 };
