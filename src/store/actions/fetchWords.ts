@@ -8,11 +8,12 @@ export const fetchWords = (dispatch: React.Dispatch<Action>) => {
     .then((res) => res.json())
     .then((words) => {
       const payload = words.map((word: Word): Word => {
-        // TODO: show different-form pronouns, numerals and such as adjectives
         // IDEA: write question type in the back-end (pro: easy on the front, con:
         // hard with teach and translate)
         if (['Adjective', 'Noun', 'Verb'].includes(word.questionType)) {
           return word;
+        } if (['Numeral', 'Pronoun'].includes(word.questionType) && word.lemma.includes(',')) {
+          return { ...word, questionType: QuestionType.Adjective };
         }
         return { ...word, questionType: QuestionType.Etcetera };
       });
