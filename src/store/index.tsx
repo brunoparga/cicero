@@ -13,6 +13,7 @@ const StateProvider: React.FunctionComponent = ({ children }) => {
   const [state, dispatch]: [AppState, Dispatch<Action>] = useReducer(reducer, initialAppState);
 
   // Fetch the first word from the API
+  // TODO: this means I cannot work on the last word
   if (state.words.length === 0) {
     fetchWords(dispatch);
   }
