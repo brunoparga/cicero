@@ -14,6 +14,7 @@ const StateProvider: React.FunctionComponent = ({ children }) => {
 
   // Fetch the first word from the API
   // TODO: this means I cannot work on the last word
+  // TODO: this is a possible location of the error that causes several API calls instead of just 1
   if (state.words.length === 0) {
     fetchWords(dispatch);
   }

@@ -6,6 +6,7 @@ export type NounProperties = {
   declension: Declension;
   gender: Gender;
   correctGenitive: string;
+  indeclinable?: boolean;
 }
 
 export type NounGuess = {

@@ -4,4 +4,5 @@ export type AdjectiveProperties = {
   neuter?: string;
   genitive?: string;
   suffixes: string;
+  indeclinable?: boolean;
 };
