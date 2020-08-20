@@ -7,9 +7,9 @@ import { actionTypes } from '../../store/reducer';
 import { Word } from '../../types';
 import { Buttons } from '../shared/Buttons';
 import { Checkbox } from '../shared/Checkbox';
+import { Conjugation } from '../../grammar/grammarCategories';
 
-// Buttons to select the genitive suffix, which indicates how the word is inflected, changing
-// according to its role in the sentence (subject, object...)
+// Buttons to select the infinitive suffix, which indicates how the verb is conjugated
 export const InfinitiveButtons: React.FunctionComponent = () => {
   const {
     state: { word, passiveSelected },
@@ -22,14 +22,21 @@ export const InfinitiveButtons: React.FunctionComponent = () => {
   const [suffixes, setSuffixes] = React.useState(active);
 
   React.useEffect(() => {
-    const correctActive = [...active];
-    const correctPassive = [...passive];
-    if (correctInfinitive && passiveSelected === deponent) {
+    setSuffixes((suff) => {
+      if (suff.length !== 4) { return [...active] }
+      if (conjugation === Conjugation.Irregular) {
+        const pos = Math.floor(Math.random() * 3)
+        const newSuffixes = [...suffixes]
+        newSuffixes.splice(pos, 0, correctInfinitive)
+        return newSuffixes
+      }
+      // The few verbs that have a correctInfinitive but are not in the 'Irregular' conjugation
+      // (e.g. dō) are all active, so no need to worry about deponent verbs here.
+      const correctActive = [...active];
       correctActive[conjugation] = correctInfinitive;
-      correctPassive[conjugation] = correctInfinitive;
-    }
-    setSuffixes(passiveSelected ? correctPassive : correctActive);
-  }, [passiveSelected, conjugation, correctInfinitive, deponent]);
+      return correctActive;
+    })
+  }, [conjugation, correctInfinitive]);
 
   const toggleDeponent = { type: actionTypes.TOGGLE_DEPONENT };
 

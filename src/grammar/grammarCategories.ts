@@ -21,6 +21,7 @@ export enum Gender {
 }
 
 export enum Conjugation {
+  Irregular = -1,
   First,
   Second,
   Third,
