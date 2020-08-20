@@ -18,7 +18,7 @@ const setAnswer = (word: Word): string => {
       return `masculine: ${lemma}, ${masculineGenitive} / feminine: ${feminine} / neuter: ${neuter}`;
     case '3rd (-er/-ris/-re)':
       return `masculine: ${lemma} / feminine: ${feminine} / neuter: ${neuter} -- genitive ${genitive}`;
-    case '3rd (-is/e)':
+    case '3rd (-is/-e)':
       return `masculine, feminine: ${lemma} / neuter: ${neuter} -- genitive ${genitive}`;
     default:
       return `${lemma}, ${genitive}`;
