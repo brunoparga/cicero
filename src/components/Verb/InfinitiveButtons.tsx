@@ -23,19 +23,19 @@ export const InfinitiveButtons: React.FunctionComponent = () => {
 
   React.useEffect(() => {
     setSuffixes((suff) => {
-      if (suff.length !== 4) { return [...active] }
+      if (suff.length !== 4) { return [...active]; }
       if (conjugation === Conjugation.Irregular) {
-        const pos = Math.floor(Math.random() * 3)
-        const newSuffixes = [...suffixes]
-        newSuffixes.splice(pos, 0, correctInfinitive)
-        return newSuffixes
+        const pos = Math.floor(Math.random() * 3);
+        const newSuffixes = [...suffixes];
+        newSuffixes.splice(pos, 0, correctInfinitive);
+        return newSuffixes;
       }
       // The few verbs that have a correctInfinitive but are not in the 'Irregular' conjugation
       // (e.g. dō) are all active, so no need to worry about deponent verbs here.
       const correctActive = [...active];
       correctActive[conjugation] = correctInfinitive;
       return correctActive;
-    })
+    });
   }, [conjugation, correctInfinitive]);
 
   const toggleDeponent = { type: actionTypes.TOGGLE_DEPONENT };
