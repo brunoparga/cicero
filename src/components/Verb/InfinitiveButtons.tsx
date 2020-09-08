@@ -23,7 +23,7 @@ export const InfinitiveButtons: React.FunctionComponent = () => {
 
   React.useEffect(() => {
     setSuffixes((suff) => {
-      if (suff.length !== 4) { return [...active]; }
+      if (!correctInfinitive || suff.length !== 4) { return [...active]; }
       if (conjugation === Conjugation.Irregular) {
         const pos = Math.floor(Math.random() * 3);
         const newSuffixes = [...suffixes];
