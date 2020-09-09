@@ -17,10 +17,7 @@ const processWord = (word: Word): Word => {
 };
 
 export const fetchWords = (dispatch: React.Dispatch<Action>) => {
-  const URL = process.env.NODE_ENV === 'production'
-    ? 'https://learnwithcicero.herokuapp.com/words/'
-    : 'http://localhost:3001/words/';
-  fetch(URL)
+  fetch(process.env.REACT_APP_API_URL as string)
     .then((res) => res.json())
     .then((words) => {
       const payload = words.map(processWord);
