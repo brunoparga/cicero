@@ -1,7 +1,7 @@
 dependencies:
   '@testing-library/jest-dom': 5.11.4
   '@testing-library/react': 11.0.4_react-dom@16.13.1+react@16.13.1
-  '@testing-library/user-event': 12.1.4
+  '@testing-library/user-event': 12.1.5
   '@types/jest': 26.0.13
   '@types/node': 14.10.1
   '@types/react': 16.9.49
@@ -1710,7 +1710,7 @@ packages:
       react-dom: '*'
     resolution:
       integrity: sha512-U0fZO2zxm7M0CB5h1+lh31lbAwMSmDMEMGpMT3BUPJwIjDEKYWOV4dx7lb3x2Ue0Pyt77gmz/VropuJnSz/Iew==
-  /@testing-library/user-event/12.1.4:
+  /@testing-library/user-event/12.1.5:
     dependencies:
       '@babel/runtime': 7.11.2
     dev: false
@@ -1720,7 +1720,7 @@ packages:
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
     resolution:
-      integrity: sha512-vd5s43lNfyq/JEr8ndQmS+An6dEVUmjW9zqtpmMHU+rrPMaHLrUIlWZ9wDE8ALS/dFMsu6U00A5X/7Dv/2tWnw==
+      integrity: sha512-FzTnKvb0KC4T84G6uTx971ja8OOqLlsprzWbeRyd8f1MDwbcLIFgx0Hyr56izY9m9y2KwHGVKeVEkTPslw32lw==
   /@types/aria-query/4.2.0:
     dev: false
     resolution:
@@ -11702,7 +11702,7 @@ packages:
 specifiers:
   '@testing-library/jest-dom': 5.11.4
   '@testing-library/react': 11.0.4
-  '@testing-library/user-event': 12.1.4
+  '@testing-library/user-event': 12.1.5
   '@types/jest': 26.0.13
   '@types/node': 14.10.1
   '@types/react': 16.9.49
