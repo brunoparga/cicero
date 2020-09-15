@@ -12,7 +12,14 @@ export const App: React.FunctionComponent = () => {
 
   // Before loading, word is null.
   if (!word) {
-    return <h1>Onerans (loading)...</h1>;
+    return (
+      <>
+        <Topbar />
+        <h1>
+          Onerans (loading)...
+        </h1>
+      </>
+    );
   }
 
   return (
