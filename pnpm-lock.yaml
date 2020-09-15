@@ -14,11 +14,11 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 2.34.0_b0c1eae67c754987ffe07ae15e88c949
   '@typescript-eslint/parser': 2.34.0_eslint@7.8.1+typescript@3.9.7
   eslint: 7.8.1
-  eslint-config-airbnb: 18.2.0_36b766e25406385ffe74dcc39b4331a6
+  eslint-config-airbnb: 18.2.0_9e1ab6f508a05d67590d71a2c7ada124
   eslint-plugin-import: 2.22.0_eslint@7.8.1
   eslint-plugin-jsx-a11y: 6.3.1_eslint@7.8.1
   eslint-plugin-react: 7.20.6_eslint@7.8.1
-  eslint-plugin-react-hooks: 2.5.1_eslint@7.8.1
+  eslint-plugin-react-hooks: 4.1.2_eslint@7.8.1
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.10.4:
@@ -4426,14 +4426,14 @@ packages:
       eslint-plugin-import: ^2.21.2
     resolution:
       integrity: sha512-Snswd5oC6nJaevs3nZoLSTvGJBvzTfnBqOIArkf3cbyTyq9UD79wOk8s+RiL6bhca0p/eRO6veczhf6A/7Jy8Q==
-  /eslint-config-airbnb/18.2.0_36b766e25406385ffe74dcc39b4331a6:
+  /eslint-config-airbnb/18.2.0_9e1ab6f508a05d67590d71a2c7ada124:
     dependencies:
       eslint: 7.8.1
       eslint-config-airbnb-base: 14.2.0_aa3bd54e20b5c6ebf1c4dc30eeb1f422
       eslint-plugin-import: 2.22.0_eslint@7.8.1
       eslint-plugin-jsx-a11y: 6.3.1_eslint@7.8.1
       eslint-plugin-react: 7.20.6_eslint@7.8.1
-      eslint-plugin-react-hooks: 2.5.1_eslint@7.8.1
+      eslint-plugin-react-hooks: 4.1.2_eslint@7.8.1
       object.assign: 4.1.0
       object.entries: 1.1.2
     dev: true
@@ -4609,16 +4609,16 @@ packages:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
     resolution:
       integrity: sha512-iXTCFcOmlWvw4+TOE8CLWj6yX1GwzT0Y6cUfHHZqWnSk144VmVIRcVGtUAzrLES7C798lmvnt02C7rxaOX1HNA==
-  /eslint-plugin-react-hooks/2.5.1_eslint@7.8.1:
+  /eslint-plugin-react-hooks/4.1.2_eslint@7.8.1:
     dependencies:
       eslint: 7.8.1
     dev: true
     engines:
-      node: '>=7'
+      node: '>=10'
     peerDependencies:
-      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
+      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
     resolution:
-      integrity: sha512-Y2c4b55R+6ZzwtTppKwSmK/Kar8AdLiC2f9NADCuxbcTgPPg41Gyqa6b9GppgXSvCtkRw43ZE86CT5sejKC6/g==
+      integrity: sha512-ykUeqkGyUGgwTtk78C0o8UG2fzwmgJ0qxBGPp2WqRKsTwcLuVf01kTDRAtOsd4u6whX2XOC8749n2vPydP82fg==
   /eslint-plugin-react/7.19.0_eslint@6.8.0:
     dependencies:
       array-includes: 3.1.1
@@ -11710,7 +11710,7 @@ specifiers:
   eslint-plugin-import: 2.22.0
   eslint-plugin-jsx-a11y: 6.3.1
   eslint-plugin-react: 7.20.6
-  eslint-plugin-react-hooks: 2.5.1
+  eslint-plugin-react-hooks: 4.1.2
   react: 16.13.1
   react-dom: 16.13.1
   react-scripts: 3.4.3
