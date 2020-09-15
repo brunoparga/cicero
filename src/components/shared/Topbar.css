@@ -1,0 +1,23 @@
+.navbar {
+  background-color: #A11;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-size: 40px;
+  margin: 5px 15px;
+}
+
+.navbar-btn {
+  background-color: white;
+  color: #A11;
+  border-radius: 3px;
+  border-width: 0;
+  padding: 5px;
+  margin: 5px 15px;
+  font-size: 20px;
+}

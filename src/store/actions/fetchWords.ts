@@ -17,7 +17,7 @@ const processWord = (word: Word): Word => {
 };
 
 export const fetchWords = (dispatch: React.Dispatch<Action>) => {
-  fetch(process.env.REACT_APP_API_URL as string)
+  fetch(`${process.env.REACT_APP_API_URL}/words`)
     .then((res) => res.json())
     .then((words) => {
       const payload = words.map(processWord);

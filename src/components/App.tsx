@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { store } from '../store';
+import { Topbar } from './shared/Topbar';
 import { Drill } from './Drill';
 import { Teach } from './Teach';
 import './App.css';
@@ -15,8 +16,11 @@ export const App: React.FunctionComponent = () => {
   }
 
   return (
-    <div className="App">
-      {(word.learned ? Drill(word.questionType) : <Teach />)}
-    </div>
+    <>
+      <Topbar />
+      <div className="App">
+        {(word.learned ? Drill(word.questionType) : <Teach />)}
+      </div>
+    </>
   );
 };
