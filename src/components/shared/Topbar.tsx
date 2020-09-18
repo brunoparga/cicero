@@ -15,7 +15,7 @@ export const Topbar: React.FunctionComponent = () => {
   const onSubmit = (formData: any) => {
     fetch(URL, {
       method: 'POST',
-      headers: { ContentType: 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
     });
   };
