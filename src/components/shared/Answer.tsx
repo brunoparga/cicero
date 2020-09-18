@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { store } from '../../store';
-import { actionTypes } from '../../store/reducer';
+import { actionTypes } from '../../store/actionTypes';
 import './Answer.css';
 
 type Props = { header: string, text: string }

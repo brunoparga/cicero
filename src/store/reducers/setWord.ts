@@ -15,6 +15,12 @@ export const setWord = (state: AppState): AppState => {
   };
   const guess = guessOptions[word.questionType];
   return {
-    word, words, guess, revealAnswer: false, pluralSelected: false, passiveSelected: false,
+    ...state,
+    word,
+    words,
+    guess,
+    revealAnswer: false,
+    pluralSelected: false,
+    passiveSelected: false,
   };
 };

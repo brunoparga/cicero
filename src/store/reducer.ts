@@ -1,17 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import { Action, AppState } from '../types';
+import { actionTypes } from './actionTypes';
 import { setGuess } from './reducers/setGuess';
+import { setUser } from './reducers/setUser';
 import { setWord } from './reducers/setWord';
-
-export const actionTypes = {
-  LEARN_WORD: 'LEARN_WORD',
-  REVEAL_ANSWER: 'REVEAL_ANSWER',
-  SET_GUESS: 'SET_GUESS',
-  SET_WORD: 'SET_WORD',
-  SET_WORDS: 'SET_WORDS',
-  TOGGLE_DEPONENT: 'TOGGLE_DEPONENT',
-  TOGGLE_PLURAL: 'TOGGLE_PLURAL',
-};
 
 export const reducer = (state: AppState, { type, payload }: Action): AppState => {
   switch (type) {
@@ -25,6 +17,8 @@ export const reducer = (state: AppState, { type, payload }: Action): AppState =>
       return setWord(state);
     case actionTypes.SET_WORDS:
       return { ...state, words: payload };
+    case actionTypes.SIGN_IN:
+      return setUser(state, payload);
     case actionTypes.TOGGLE_DEPONENT:
       return { ...state, passiveSelected: !state.passiveSelected };
     case actionTypes.TOGGLE_PLURAL:

@@ -2,6 +2,7 @@
 import { AppState } from '../types';
 
 export const initialAppState: AppState = {
+  user: null,
   word: null,
   words: [],
   pluralSelected: false,
