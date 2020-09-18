@@ -8,7 +8,7 @@ dependencies:
   '@types/react-dom': 16.9.8
   react: 16.13.1
   react-dom: 16.13.1_react@16.13.1
-  react-hook-form: 6.8.2_react@16.13.1
+  react-hook-form: 6.8.3_react@16.13.1
   react-scripts: 3.4.3_typescript@3.9.7
   typescript: 3.9.7
 devDependencies:
@@ -9540,14 +9540,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-TAv1KJFh3RhqxNvhzxj6LeT5NWklP6rDr2a0jaTfsZ5wSZWHOGeqQyejUp3xxLfPt2UpyJEcVQB/zyPcmonNFA==
-  /react-hook-form/6.8.2_react@16.13.1:
+  /react-hook-form/6.8.3_react@16.13.1:
     dependencies:
       react: 16.13.1
     dev: false
     peerDependencies:
       react: ^16.8.0
     resolution:
-      integrity: sha512-9Xz1uz61fCMtQ0MTTnTIDqUpWWi+livCUsYcIOpUrlJXDHJ7QgDLF3wVKcmLIX727FFyGzesXkVCg8cQuRy8OQ==
+      integrity: sha512-IsYcATD4fodv9BiwWBwiBHE50+IyvhpPTi+jIab4fQZLbDPJnN7YXnJ+/2oMXDJ94n+PnUs4wklr9pg8TNdOrQ==
   /react-is/16.13.1:
     resolution:
       integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
@@ -11872,6 +11872,6 @@ specifiers:
   eslint-plugin-react-hooks: 4.1.2
   react: 16.13.1
   react-dom: 16.13.1
-  react-hook-form: 6.8.2
+  react-hook-form: 6.8.3
   react-scripts: 3.4.3
   typescript: 3.9.7
