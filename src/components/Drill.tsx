@@ -1,6 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 
-// eslint-disable-next-line no-unused-vars
 import { QuestionType } from '../types';
 import { Adjective } from './Adjective';
 import { Etcetera } from './Etcetera';
@@ -8,10 +8,10 @@ import { Noun } from './Noun';
 import { Translation } from './Translation';
 import { Verb } from './Verb';
 
-type Drill = (drillProps: QuestionType) => React.ReactElement
+type DrillElement = (drillProps: QuestionType) => React.ReactElement
 
 // Select the correct element to display based on question type
-export const Drill: Drill = (questionType) => {
+export const Drill: DrillElement = (questionType) => {
   const elements = {
     Adjective, Etcetera, Noun, Translation, Verb,
   };
