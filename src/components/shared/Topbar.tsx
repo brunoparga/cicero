@@ -2,8 +2,7 @@ import React from 'react';
 
 import { store } from '../../store';
 import { UserState } from '../../types';
-import { SignoutButton } from '../UserAccountForm/SignoutButton';
-import { UserAccountForm } from '../UserAccountForm';
+import { SignoutButton, UserAccountForm } from '../UserAccountForm';
 import './Topbar.css';
 
 export const Topbar: React.FunctionComponent = () => {

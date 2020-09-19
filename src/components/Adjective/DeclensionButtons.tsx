@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Buttons } from '../shared/Buttons';
+import { Buttons } from '../shared';
 import { store } from '../../store';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../../types';

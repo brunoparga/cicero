@@ -1,9 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-import { QuestionType, Word } from '../../types/word';
-import { Action } from '../../types';
-import { actionTypes } from '../actionTypes';
+import { Action, QuestionType, Word } from '../../types';
+import { actionTypes } from '../store';
 
 const processWord = (word: Word): Word => {
   // IDEA: write question type in the back-end (pro: easy on the front, con:

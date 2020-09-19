@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { store } from '../store';
-import { Topbar } from './shared/Topbar';
+import { Topbar } from './shared';
 import { Drill } from './Drill';
 import { Teach } from './Teach';
 import './App.css';

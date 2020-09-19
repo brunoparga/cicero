@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import { Word } from './word';
+import { Word } from '..';
 
 type UserNotLoggedIn = { message: string; }
 type UserLoggedIn = { email?: string; token?: string; }

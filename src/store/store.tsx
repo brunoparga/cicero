@@ -1,17 +1,16 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-import React, { createContext, useReducer, Dispatch } from 'react';
+import React from 'react';
 
 import { Action, AppState, AppStateWithDispatch } from '../types';
-import { initialAppState } from './initialState';
-import { reducer } from './reducer';
-import { actionTypes } from './actionTypes';
-import { fetchWords } from './actions/fetchWords';
+import {
+  actionTypes, fetchWords, initialAppState, reducer,
+} from '.';
 
-const store = createContext<AppStateWithDispatch>({ state: initialAppState, dispatch: () => {} });
+const store = React
+  .createContext<AppStateWithDispatch>({ state: initialAppState, dispatch: () => {} });
 
 const StateProvider: React.FunctionComponent = ({ children }) => {
-  const [state, dispatch]: [AppState, Dispatch<Action>] = useReducer(reducer, initialAppState);
+  const [state, dispatch]: [AppState, React.Dispatch<Action>] = React
+    .useReducer(reducer, initialAppState);
 
   // Fetch the first word from the API
   // TODO: this means I cannot work on the last word
@@ -29,4 +28,4 @@ const StateProvider: React.FunctionComponent = ({ children }) => {
   return <store.Provider value={{ state, dispatch }}>{children}</store.Provider>;
 };
 
-export { store, StateProvider };
+export { StateProvider, store };

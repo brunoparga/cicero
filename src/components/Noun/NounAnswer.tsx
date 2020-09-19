@@ -3,8 +3,8 @@ import React from 'react';
 import { store } from '../../store';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../../types';
-import { singular, plural } from '../../grammar/genitiveSuffixes';
-import { Answer } from '../shared/Answer';
+import { singular, plural } from '../../grammar';
+import { Answer } from '../shared';
 
 // Prepare the correct answer for presentation
 export const NounAnswer: React.FunctionComponent = () => {

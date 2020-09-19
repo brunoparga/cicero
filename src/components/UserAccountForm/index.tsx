@@ -1,11 +1,11 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-import { store } from '../../store';
-import { signin } from '../../store/actions/signin';
-import { signup } from '../../store/actions/signup';
+import { signin, signup, store } from '../../store';
 import { UserAccountInputs } from '../../types';
 import './index.css';
+
+export * from './SignoutButton';
 
 export const UserAccountForm: React.FunctionComponent = () => {
   const { dispatch } = React.useContext(store);
