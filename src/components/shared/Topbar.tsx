@@ -23,8 +23,8 @@ export const Topbar: React.FunctionComponent = () => {
 
   return (
     <div className="navbar">
-      <div className="title">Cicero</div>
-      <div className="email">{email}</div>
+      <div className="title white">Cicero</div>
+      <div className="white">{email}</div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input type="text" name="email" placeholder="Email" ref={register({ required: true })} />
         {errors.email && <span>This field is required</span>}
@@ -35,7 +35,7 @@ export const Topbar: React.FunctionComponent = () => {
           ref={register({ required: true })}
         />
         {errors.password && <span>This field is required</span>}
-        <button type="submit" className="navbar-btn">Sign in</button>
+        <button type="submit" className="btn navbar-btn">Sign in</button>
       </form>
     </div>
   );

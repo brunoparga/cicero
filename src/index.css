@@ -8,3 +8,10 @@ body {
 
 button { font-family: 'Open Sans', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
   'Droid Sans', 'Helvetica Neue', sans-serif; }
+
+.white { color: white; }
+
+.btn {
+  border-radius: 3px;
+  border: none;
+}

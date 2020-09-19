@@ -18,7 +18,7 @@ export const Answer: React.FunctionComponent<Props> = ({ header, text }) => {
       <h1>{header}</h1>
       <div className="answer-container">
         <span className="answer">{text}</span>
-        <button type="button" className="next" onClick={clickHandler}>
+        <button type="button" className="next white btn" onClick={clickHandler}>
           <span className="big">&gt;</span>
           <br />
           Next

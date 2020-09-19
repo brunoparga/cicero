@@ -30,7 +30,7 @@ export const Teach: React.FunctionComponent = () => {
       <h4><em>{nounType}</em></h4>
       <div className="answer-container">
         <span className="answer">{english}</span>
-        <button type="button" className="next" onClick={clickHandler}>
+        <button type="button" className="next white btn" onClick={clickHandler}>
           <span className="big">&gt;</span>
           <br />
           Next
