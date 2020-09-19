@@ -1,42 +1,17 @@
 import React from 'react';
 
-import { useForm } from 'react-hook-form';
 import { store } from '../../store';
-import { signin } from '../../store/actions/signin';
-import { UserAccountInputs } from '../../types';
+import { UserAccountForm } from '../UserAccountForm';
 import './Topbar.css';
 
 export const Topbar: React.FunctionComponent = () => {
-  const { state: { user }, dispatch } = React.useContext(store);
-  let email;
-  if (user) {
-    email = user.email;
-  }
-
-  const [action] = React.useState('signin');
-  const URL = `${process.env.REACT_APP_API_URL}/${action}`;
-  const { register, handleSubmit, errors } = useForm<UserAccountInputs>();
-
-  const onSubmit = (formData: UserAccountInputs) => {
-    signin(URL, formData, dispatch);
-  };
+  const { state: { user } } = React.useContext(store);
+  const rightSide = user ? <div className="white">{user.email}</div> : <UserAccountForm />;
 
   return (
     <div className="navbar">
       <div className="title white">Cicero</div>
-      <div className="white">{email}</div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="text" name="email" placeholder="Email" ref={register({ required: true })} />
-        {errors.email && <span>This field is required</span>}
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          ref={register({ required: true })}
-        />
-        {errors.password && <span>This field is required</span>}
-        <button type="submit" className="btn navbar-btn">Sign in</button>
-      </form>
+      {rightSide}
     </div>
   );
 };
