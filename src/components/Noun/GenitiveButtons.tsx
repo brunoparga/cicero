@@ -5,7 +5,7 @@ import { singular, plural } from '../../grammar/genitiveSuffixes';
 import { actionTypes } from '../../store/actionTypes';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../../types';
-import { useSuffixes } from '../shared/useSuffixes';
+import { useSuffixes } from '../../hooks/useSuffixes';
 import { Buttons } from '../shared/Buttons';
 import { Checkbox } from '../shared/Checkbox';
 

@@ -1,9 +1,9 @@
 import React from 'react';
 
 // eslint-disable-next-line no-unused-vars
-import { Word } from '../../types/word';
-import { store } from '../../store';
-import { singular, plural } from '../../grammar/genitiveSuffixes';
+import { Word } from '../types/word';
+import { store } from '../store';
+import { singular, plural } from '../grammar/genitiveSuffixes';
 
 export const useSuffixes = (): string[] => {
   const { state: { word, pluralSelected } } = React.useContext(store);
