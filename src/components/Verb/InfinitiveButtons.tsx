@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { store } from '../../store';
+import { actionTypes, store } from '../../store';
 import { active, passive } from '../../grammar/infinitiveSuffixes';
-import { actionTypes } from '../../store/actionTypes';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../../types';
 import { Buttons } from '../shared/Buttons';

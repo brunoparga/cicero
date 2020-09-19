@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { store } from '../../store';
-import { actionTypes } from '../../store/actionTypes';
+import { actionTypes, store } from '../../store';
 import { Button } from './Button';
 import './Buttons.css';
 

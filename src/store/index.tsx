@@ -29,4 +29,4 @@ const StateProvider: React.FunctionComponent = ({ children }) => {
   return <store.Provider value={{ state, dispatch }}>{children}</store.Provider>;
 };
 
-export { store, StateProvider };
+export { actionTypes, StateProvider, store };

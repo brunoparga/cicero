@@ -3,7 +3,7 @@ import React from 'react';
 
 import { QuestionType, Word } from '../../types/word';
 import { Action } from '../../types';
-import { actionTypes } from '../actionTypes';
+import { actionTypes } from '..';
 
 const processWord = (word: Word): Word => {
   // IDEA: write question type in the back-end (pro: easy on the front, con:

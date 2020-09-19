@@ -1,10 +1,9 @@
 import React from 'react';
 
+import { actionTypes, store } from '../store';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../types';
 import { singular, plural } from '../grammar/genitiveSuffixes';
-import { actionTypes } from '../store/actionTypes';
-import { store } from '../store';
 import './Teach.css';
 
 export const Teach: React.FunctionComponent = () => {
