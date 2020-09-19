@@ -2,7 +2,7 @@
 import { AppState } from '../types';
 
 export const initialAppState: AppState = {
-  user: null,
+  user: { message: '' },
   word: null,
   words: [],
   pluralSelected: false,
