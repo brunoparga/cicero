@@ -1,14 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import { Word } from './word';
 
-export type UserState = {
-  message: string;
-  email: string;
-  token: string;
-}
+type UserNotLoggedIn = { message: string; }
+type UserLoggedIn = { email?: string; token?: string; }
+export type UserState = UserNotLoggedIn & UserLoggedIn;
 
 export type AppState = {
-  user: UserState | null;
+  user: UserState;
   pluralSelected: boolean;
   guess: {
     [key: string]: boolean;

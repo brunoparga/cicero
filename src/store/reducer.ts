@@ -19,6 +19,8 @@ export const reducer = (state: AppState, { type, payload }: Action): AppState =>
       return { ...state, words: payload };
     case actionTypes.SIGN_IN:
       return setUser(state, payload);
+    case actionTypes.SIGN_OUT:
+      return { ...state, user: { message: 'Signed out.' } };
     case actionTypes.TOGGLE_DEPONENT:
       return { ...state, passiveSelected: !state.passiveSelected };
     case actionTypes.TOGGLE_PLURAL:

@@ -2,6 +2,7 @@
 export enum actionTypes {
   // User actions
   SIGN_IN = 'SIGN_IN',
+  SIGN_OUT = 'SIGN_OUT',
   // Word actions
   LEARN_WORD = 'LEARN_WORD',
   REVEAL_ANSWER = 'REVEAL_ANSWER',

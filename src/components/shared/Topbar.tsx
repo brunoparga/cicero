@@ -1,18 +1,21 @@
 import React from 'react';
 
 import { store } from '../../store';
+import { UserState } from '../../types';
+import { SignoutButton } from '../UserAccountForm/SignoutButton';
 import { UserAccountForm } from '../UserAccountForm';
 import './Topbar.css';
 
 export const Topbar: React.FunctionComponent = () => {
   const { state: { user } } = React.useContext(store);
-  const message = user?.message || user?.email;
+  const { message, email } = user as UserState;
+  const text = message || email;
 
   return (
     <div className="navbar">
       <div className="title white">Cicero</div>
-      <div className="white">{message}</div>
-      {!user?.email && <UserAccountForm />}
+      <div className="white">{text}</div>
+      {email ? <SignoutButton /> : <UserAccountForm />}
     </div>
   );
 };
