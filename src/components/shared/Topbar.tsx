@@ -6,12 +6,13 @@ import './Topbar.css';
 
 export const Topbar: React.FunctionComponent = () => {
   const { state: { user } } = React.useContext(store);
-  const rightSide = user ? <div className="white">{user.email}</div> : <UserAccountForm />;
+  const message = user?.message || user?.email;
 
   return (
     <div className="navbar">
       <div className="title white">Cicero</div>
-      {rightSide}
+      <div className="white">{message}</div>
+      {!user?.email && <UserAccountForm />}
     </div>
   );
 };

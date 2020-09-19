@@ -9,7 +9,7 @@ type SuccessPayload = {
 type FailurePayload = { message: string; }
 type SetUserPayload = SuccessPayload & FailurePayload
 
-export const setUser = (state: AppState, { message, email, token }: SetUserPayload) => {
-  if (message || state.user) { return state; }
-  return { ...state, user: { email, token } };
+export const setUser = (state: AppState, user: SetUserPayload) => {
+  if (state.user?.email) { return state; }
+  return { ...state, user };
 };

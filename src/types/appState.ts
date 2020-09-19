@@ -2,6 +2,7 @@
 import { Word } from './word';
 
 export type UserState = {
+  message: string;
   email: string;
   token: string;
 }
