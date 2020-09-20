@@ -1,9 +1,11 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import { FieldError, useForm } from 'react-hook-form';
 
 import { store } from '../../store';
 import { signin } from '../../store/actions/signin';
 import { UserAccountInputs } from '../../types';
+import { RequiredText } from './RequiredText';
+import { RequiredPassword } from './RequiredPassword';
 import './index.css';
 
 export const UserAccountForm: React.FunctionComponent = () => {
@@ -11,7 +13,7 @@ export const UserAccountForm: React.FunctionComponent = () => {
 
   const [action, setAction] = React.useState('signin');
   const URL = `${process.env.REACT_APP_API_URL}/${action}`;
-  const { register, handleSubmit, errors } = useForm<UserAccountInputs>();
+  const { handleSubmit, errors } = useForm<UserAccountInputs>();
 
   const onSubmit = (formData: UserAccountInputs) => {
     signin(URL, formData, dispatch);
@@ -23,15 +25,10 @@ export const UserAccountForm: React.FunctionComponent = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input type="text" name="email" placeholder="Email" ref={register({ required: true })} />
-      {errors.email && <span className="white">This field is required</span>}
-      <input
-        type="password"
-        name="password"
-        placeholder="Password"
-        ref={register({ required: true })}
-      />
-      {errors.password && <span className="white">This field is required</span>}
+      <RequiredText name="email" error={errors.email as FieldError} />
+      <RequiredPassword name="password" error={errors.password as FieldError} />
+      {action === 'signup'
+        && <RequiredPassword name="confirmPassword" error={errors.confirmPassword as FieldError} />}
       <button type="submit" className="btn form-btn">Log in</button>
       <button type="button" className="btn form-btn" onClick={onSignupClick}>Sign up</button>
     </form>
