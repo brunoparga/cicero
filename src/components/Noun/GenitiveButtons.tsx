@@ -4,7 +4,7 @@ import { actionTypes, store } from '../../store';
 import { singular, plural } from '../../grammar';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../../types';
-import { useSuffixes } from '../../hooks/useSuffixes';
+import { useGenitives } from '../../hooks/useGenitives';
 import { Buttons, Checkbox } from '../shared';
 
 // Buttons to select the genitive suffix, which indicates how the word is inflected, changing
@@ -17,7 +17,7 @@ export const GenitiveButtons: React.FunctionComponent = () => {
 
   const { properties: { correctGenitive, declension, number } } = word as Word;
 
-  const suffixes = useSuffixes();
+  const suffixes = useGenitives();
 
   const togglePlural = { type: actionTypes.TOGGLE_PLURAL };
 

@@ -1,47 +1,21 @@
 import React from 'react';
 
 import { actionTypes, store } from '../../store';
-import { active, Conjugation, passive } from '../../grammar';
+import { active, passive } from '../../grammar';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../../types';
 import { Buttons, Checkbox } from '../shared';
+import { useInfinitives } from '../../hooks/useInfinitives';
 
 // Buttons to select the infinitive suffix, which indicates how the verb is conjugated
 export const InfinitiveButtons: React.FunctionComponent = () => {
-  const {
-    state: { word, passiveSelected },
-    dispatch,
-  } = React.useContext(store);
-
-  const { properties } = word as Word;
-  const { conjugation, deponent, correctInfinitive } = properties;
-
-  const [suffixes, setSuffixes] = React.useState(active);
-
-  React.useEffect(() => {
-    setSuffixes((suff) => {
-      if (!correctInfinitive || suff.length !== 4) { return [...active]; }
-      if (conjugation === Conjugation.Irregular) {
-        const pos = Math.floor(Math.random() * 3);
-        const newSuffixes = [...suffixes];
-        newSuffixes.splice(pos, 0, correctInfinitive);
-        return newSuffixes;
-      }
-      // The few verbs that have a correctInfinitive but are not in the 'Irregular' conjugation
-      // (e.g. dō) are all active, so no need to worry about deponent verbs here.
-      const correctActive = [...active];
-      correctActive[conjugation] = correctInfinitive;
-      return correctActive;
-    });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [conjugation, correctInfinitive]);
-
+  const { state: { word, passiveSelected }, dispatch } = React.useContext(store);
+  const { properties: { conjugation, deponent, correctInfinitive } } = word as Word;
+  const suffixes = useInfinitives();
   const toggleDeponent = { type: actionTypes.TOGGLE_DEPONENT };
 
   const keyUpHandler = (event: React.KeyboardEvent) => {
-    if (event.key.toUpperCase() === 'P') {
-      dispatch(toggleDeponent);
-    }
+    if (event.key.toUpperCase() === 'P') { dispatch(toggleDeponent); }
   };
 
   const correctAnswer = correctInfinitive || (deponent ? passive : active)[conjugation];
