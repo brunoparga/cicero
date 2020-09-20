@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Question } from '../shared/Question';
+import { Question } from '../shared';
 import { GenitiveButtons } from './GenitiveButtons';
 import { GenderButtons } from './GenderButtons';
 import { store } from '../../store';

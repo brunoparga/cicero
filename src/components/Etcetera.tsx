@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { store } from '../store';
-import { Answer } from './shared/Answer';
-import { Question } from './shared/Question';
+import { Answer, Question } from './shared';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../types';
 

@@ -4,7 +4,7 @@ import { store } from '../../store';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../../types';
 import { active, passive } from '../../grammar';
-import { Answer } from '../shared/Answer';
+import { Answer } from '../shared';
 
 // Prepare the correct answer for presentation
 export const VerbAnswer: React.FunctionComponent = () => {

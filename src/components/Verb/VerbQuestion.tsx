@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Question } from '../shared/Question';
+import { Question } from '../shared';
 import { InfinitiveButtons } from './InfinitiveButtons';
 import { store } from '../../store';
 // eslint-disable-next-line no-unused-vars

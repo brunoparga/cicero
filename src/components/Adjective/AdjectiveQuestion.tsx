@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Question } from '../shared/Question';
+import { Question } from '../shared';
 import { DeclensionButtons } from './DeclensionButtons';
 import { store } from '../../store';
 // eslint-disable-next-line no-unused-vars

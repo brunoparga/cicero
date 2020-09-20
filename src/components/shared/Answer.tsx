@@ -3,7 +3,7 @@ import React from 'react';
 import { actionTypes, store } from '../../store';
 import './Answer.css';
 
-type Props = { teach: boolean, header: string, wordType: string, text: string }
+type Props = { teach?: boolean, header: string, wordType?: string, text: string }
 
 // Confirm the correct answer, which the user has already guessed.
 // This will evolve toward asking for a new word and possibly rating how well
