@@ -3,7 +3,7 @@ import React from 'react';
 import { store } from '../../store';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../../types';
-import { singular, plural } from '../../grammar/genitiveSuffixes';
+import { singular, plural } from '../../grammar';
 import { Answer } from '../shared/Answer';
 
 // Prepare the correct answer for presentation

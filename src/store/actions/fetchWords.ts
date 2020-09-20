@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-import { QuestionType, Word } from '../../types/word';
-import { Action } from '../../types';
+import { Action, QuestionType, Word } from '../../types';
 import { actionTypes } from '..';
 
 const processWord = (word: Word): Word => {

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { actionTypes, store } from '../../store';
-import { singular, plural } from '../../grammar/genitiveSuffixes';
+import { singular, plural } from '../../grammar';
 // eslint-disable-next-line no-unused-vars
 import { Word } from '../../types';
 import { useSuffixes } from '../../hooks/useSuffixes';

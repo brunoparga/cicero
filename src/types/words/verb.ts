@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Conjugation } from '../grammar/grammarCategories';
+import { Conjugation } from '../../grammar';
 
 export type VerbProperties = {
   conjugation: Conjugation;
