@@ -1,13 +1,13 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 
-import { QuestionType } from '../types';
+import { QuestionType } from '../../types';
 import { Adjective } from './Adjective';
 import { Etcetera } from './Etcetera';
 import { Noun } from './Noun';
 import { Translation } from './Translation';
 import { Verb } from './Verb';
 
+// eslint-disable-next-line no-unused-vars
 type DrillElement = (drillProps: QuestionType) => React.ReactElement
 
 // Select the correct element to display based on question type

@@ -1,9 +1,8 @@
 import React from 'react';
 
-import { store } from '../store';
-import { Answer, Question } from './shared';
-// eslint-disable-next-line no-unused-vars
-import { Word } from '../types';
+import { store } from '../../store';
+import { Answer, Question } from '../shared';
+import { Word } from '../../types';
 
 // Decide to show question or answer based on whether the word has already been guessed.
 export const Etcetera: React.FunctionComponent = () => {

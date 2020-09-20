@@ -1,9 +1,8 @@
 import React from 'react';
 
-import { Buttons } from '../shared';
-import { store } from '../../store';
-// eslint-disable-next-line no-unused-vars
-import { Word } from '../../types';
+import { Buttons } from '../../shared';
+import { store } from '../../../store';
+import { Word } from '../../../types';
 
 export const DeclensionButtons: React.FunctionComponent = () => {
   const { state: { word } } = React.useContext(store) as { state: { word: Word } };

@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { Question } from '../shared';
+import { Question } from '../../shared';
 import { InfinitiveButtons } from './InfinitiveButtons';
-import { store } from '../../store';
-// eslint-disable-next-line no-unused-vars
-import { Word } from '../../types';
+import { store } from '../../../store';
+import { Word } from '../../../types';
 
 // Present buttons for user to guess which word is the correct Latin translation,
 // its genitive suffix and grammatical number.

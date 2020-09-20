@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 
 import { Action, QuestionType, Word } from '../../types';

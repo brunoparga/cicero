@@ -1,9 +1,8 @@
 import React from 'react';
 
-import { store } from '../../store';
-// eslint-disable-next-line no-unused-vars
-import { Word } from '../../types';
-import { Answer } from '../shared';
+import { store } from '../../../store';
+import { Word } from '../../../types';
+import { Answer } from '../../shared';
 
 const setAnswer = (word: Word): string => {
   const {

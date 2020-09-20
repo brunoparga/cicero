@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { store } from '../../store';
+import { store } from '../../../store';
 import { NounAnswer } from './NounAnswer';
 import { NounQuestion } from './NounQuestion';
 

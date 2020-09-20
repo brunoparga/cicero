@@ -1,6 +1,5 @@
 import React from 'react';
 
-// eslint-disable-next-line no-unused-vars
 import { Word } from '../types';
 import { store } from '../store';
 import { singular, plural } from '../grammar';

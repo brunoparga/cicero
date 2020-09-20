@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import { Word } from '..';
 
 type UserNotLoggedIn = { message: string; }

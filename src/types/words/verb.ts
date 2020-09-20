@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { Conjugation } from '../../grammar';
 
 export type VerbProperties = {

@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import { AppState, Word } from '../../types';
 import { setOptions } from '../../helpers/setOptions';
 

@@ -2,8 +2,8 @@ import React from 'react';
 
 import { store } from '../store';
 import { Topbar } from './shared';
-import { Drill } from './Drill';
-import { Teach } from './Teach';
+import { Drill } from './Words/Drill';
+import { Teach } from './Words/Teach';
 import './App.css';
 
 // Either show a loading screen or the loaded app.

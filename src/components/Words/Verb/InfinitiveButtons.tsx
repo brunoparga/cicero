@@ -1,11 +1,10 @@
 import React from 'react';
 
-import { actionTypes, store } from '../../store';
-import { active, passive } from '../../grammar';
-// eslint-disable-next-line no-unused-vars
-import { Word } from '../../types';
-import { Buttons, Checkbox } from '../shared';
-import { useInfinitives } from '../../hooks/useInfinitives';
+import { actionTypes, store } from '../../../store';
+import { active, passive } from '../../../grammar';
+import { Word } from '../../../types';
+import { Buttons, Checkbox } from '../../shared';
+import { useInfinitives } from '../../../hooks/useInfinitives';
 
 // Buttons to select the infinitive suffix, which indicates how the verb is conjugated
 export const InfinitiveButtons: React.FunctionComponent = () => {

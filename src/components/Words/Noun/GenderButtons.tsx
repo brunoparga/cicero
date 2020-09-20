@@ -1,9 +1,8 @@
 import React from 'react';
 
-import { Buttons } from '../shared';
-import { store } from '../../store';
-// eslint-disable-next-line no-unused-vars
-import { Word } from '../../types';
+import { Buttons } from '../../shared';
+import { store } from '../../../store';
+import { Word } from '../../../types';
 
 // Buttons to select the noun's gender. Nouns that are both masculine and feminine are rare enough
 // that it is not worth it coding this as checkboxes rather than radio buttons.

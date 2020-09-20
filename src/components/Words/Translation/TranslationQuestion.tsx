@@ -1,9 +1,8 @@
 import React from 'react';
 
-import { store } from '../../store';
-import { Question } from '../shared';
-// eslint-disable-next-line no-unused-vars
-import { Word } from '../../types';
+import { store } from '../../../store';
+import { Question } from '../../shared';
+import { Word } from '../../../types';
 
 export const TranslationQuestion: React.FunctionComponent = () => {
   const {

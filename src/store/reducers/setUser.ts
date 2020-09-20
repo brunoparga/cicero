@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import { AppState } from '../../types';
 
 type SuccessPayload = {

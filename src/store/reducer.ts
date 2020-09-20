@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import { Action, AppState } from '../types';
 import { actionTypes } from '.';
 import { setGuess, setUser, setWord } from './reducers';

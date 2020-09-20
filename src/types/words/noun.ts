@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import { Declension, Gender, GrammaticalNumber } from '../../grammar';
 
 export type NounProperties = {
