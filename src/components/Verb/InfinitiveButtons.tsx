@@ -34,6 +34,7 @@ export const InfinitiveButtons: React.FunctionComponent = () => {
       correctActive[conjugation] = correctInfinitive;
       return correctActive;
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [conjugation, correctInfinitive]);
 
   const toggleDeponent = { type: actionTypes.TOGGLE_DEPONENT };

@@ -1,12 +1,10 @@
 import React from 'react';
-import { FieldError, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 
 import { store } from '../../store';
 import { signin } from '../../store/actions/signin';
 import { signup } from '../../store/actions/signup';
 import { UserAccountInputs } from '../../types';
-import { RequiredText } from './RequiredText';
-import { RequiredPassword } from './RequiredPassword';
 import './index.css';
 
 export const UserAccountForm: React.FunctionComponent = () => {
@@ -14,20 +12,25 @@ export const UserAccountForm: React.FunctionComponent = () => {
 
   const [action, setAction] = React.useState('signin');
   const URL = `${process.env.REACT_APP_API_URL}/${action}`;
-  const { errors } = useForm<UserAccountInputs>();
+  const { register, watch, errors } = useForm<UserAccountInputs>();
 
   const onSigninClick = () => {
-    console.log(watch('email'));
     if (action === 'signin') {
-      signin(URL, { email: watch('email'), password: watch('password') }, dispatch);
+      const signinData = { email: watch('email'), password: watch('password') };
+      signin(URL, signinData, dispatch);
     } else {
       setAction('signin');
     }
   };
 
-  const onSignupClick = (formData: any) => {
+  const onSignupClick = () => {
     if (action === 'signup') {
-      signup(URL, formData, dispatch);
+      const signupData = {
+        email: watch('email'),
+        password: watch('password'),
+        confirmPassword: watch('confirmPassword'),
+      };
+      signup(URL, signupData, dispatch);
     } else {
       setAction('signup');
     }
@@ -35,12 +38,40 @@ export const UserAccountForm: React.FunctionComponent = () => {
 
   return (
     <form>
-      <RequiredText name="email" error={errors.email as FieldError} />
-      <RequiredPassword name="password" error={errors.password as FieldError} />
+      <input type="text" name="email" placeholder="Email" ref={register({ required: true })} />
+      {errors.email && <span className="white">This field is required</span>}
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        ref={register({ required: true })}
+      />
+      {errors.password && <span className="white">This field is required</span>}
+      {action === 'signup' && (
+      <input
+        type="password"
+        name="confirmPassword"
+        placeholder="Confirm password"
+        ref={register({ required: true })}
+      />
+      )}
       {action === 'signup'
-        && <RequiredPassword name="confirmPassword" error={errors.confirmPassword as FieldError} />}
-      <button type="button" className="btn form-btn" onClick={onSigninClick}>Log in</button>
-      <button type="button" className="btn form-btn" onClick={onSignupClick}>Sign up</button>
+      && errors.confirmPassword
+      && <span className="white">This field is required</span>}
+      <button
+        type="button"
+        className={`btn form-btn ${action === 'signin' ? 'in-focus white' : 'not-focused'}`}
+        onClick={onSigninClick}
+      >
+        Log in
+      </button>
+      <button
+        type="button"
+        className={`btn form-btn ${action === 'signup' ? 'in-focus white' : 'not-focused'}`}
+        onClick={onSignupClick}
+      >
+        Sign up
+      </button>
     </form>
   );
 };
