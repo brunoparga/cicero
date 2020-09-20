@@ -1,9 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { Action, AppState } from '../types';
 import { actionTypes } from '.';
-import { setGuess } from './reducers/setGuess';
-import { setUser } from './reducers/setUser';
-import { setWord } from './reducers/setWord';
+import { setGuess, setUser, setWord } from './reducers';
 
 export const reducer = (state: AppState, { type, payload }: Action): AppState => {
   switch (type) {
