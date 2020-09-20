@@ -11,7 +11,7 @@ const processWord = (word: Word): Word => {
     return { ...word, questionType: QuestionType.Etcetera };
   } if (['Adjective', 'Noun', 'Verb'].includes(word.questionType)) {
     return word;
-  } if (['Numeral', 'Pronoun'].includes(word.questionType)) {
+  } if (['Numeral', 'Pronoun'].includes(word.questionType) && word.properties) {
     return { ...word, questionType: QuestionType.Adjective };
   }
   return { ...word, questionType: QuestionType.Etcetera };
