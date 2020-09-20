@@ -4,18 +4,27 @@ import { store } from '../../store';
 import { actionTypes } from '../../store/actionTypes';
 import './Answer.css';
 
-type Props = { header: string, text: string }
+type Props = { teach: boolean, header: string, wordType: string, text: string }
 
 // Confirm the correct answer, which the user has already guessed.
 // This will evolve toward asking for a new word and possibly rating how well
 // the present one was remembered (Anki-style spaced repetition).
-export const Answer: React.FunctionComponent<Props> = ({ header, text }) => {
+export const Answer: React.FunctionComponent<Props> = ({
+  teach = false, header, wordType, text,
+}) => {
   const { dispatch } = React.useContext(store);
 
-  const clickHandler = () => dispatch({ type: actionTypes.SET_WORD });
+  const clickHandler = () => {
+    if (teach) {
+      dispatch({ type: actionTypes.LEARN_WORD });
+    }
+    dispatch({ type: actionTypes.SET_WORD });
+  };
   return (
     <>
+      {teach && <h4>New word:</h4>}
       <h1>{header}</h1>
+      {teach && <h4><em>{wordType}</em></h4>}
       <div className="answer-container">
         <span className="answer">{text}</span>
         <button type="button" className="next white btn" onClick={clickHandler}>
