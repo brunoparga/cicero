@@ -1,9 +1,9 @@
 // eslint-disable-next-line no-unused-vars
-import { AppState } from '../../types';
+import { AppState, Word } from '../../types';
 import { setOptions } from '../../helpers/setOptions';
 
 export const setWord = (state: AppState): AppState => {
-  const [word, ...words] = state.words;
+  const [word, ...words] = state.words as Word[];
   const correctAnswer = word.questionType === 'Translation' ? word.english : word.lemma;
   word.options = setOptions(word.options, correctAnswer);
   const guessOptions = {
