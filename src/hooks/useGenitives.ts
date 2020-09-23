@@ -5,7 +5,7 @@ import { store } from '../store';
 import { singular, plural } from '../grammar';
 
 export const useGenitives = (): string[] => {
-  const { state: { word, pluralSelected } } = React.useContext(store);
+  const { state: { word, page: { pluralSelected } } } = React.useContext(store);
   const { properties: { correctGenitive, declension, number } } = word as Word;
 
   const [suffixes, setSuffixes] = React.useState(singular);

@@ -4,14 +4,18 @@ type UserNotLoggedIn = { message: string; }
 type UserLoggedIn = { email?: string; token?: string; }
 export type UserState = UserNotLoggedIn & UserLoggedIn;
 
-export type AppState = {
-  user: UserState;
-  pluralSelected: boolean;
+export type PageState = {
   guess: {
     [key: string]: boolean;
   };
-  revealAnswer: boolean;
   passiveSelected: boolean;
+  pluralSelected: boolean;
+  revealAnswer: boolean;
+}
+
+export type AppState = {
+  page: PageState;
+  user: UserState;
   word: Word | null;
   words: Word[]
 };

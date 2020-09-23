@@ -6,6 +6,6 @@ import { VerbQuestion } from './VerbQuestion';
 
 // Decide to show question or answer based on whether the word has already been guessed.
 export const Verb: React.FunctionComponent = () => {
-  const { state: { revealAnswer } } = React.useContext(store);
+  const { state: { page: { revealAnswer } } } = React.useContext(store);
   return revealAnswer ? <VerbAnswer /> : <VerbQuestion />;
 };

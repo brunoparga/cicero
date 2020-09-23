@@ -17,9 +17,11 @@ export const setWord = (state: AppState): AppState => {
     ...state,
     word,
     words,
-    guess,
-    revealAnswer: false,
-    pluralSelected: false,
-    passiveSelected: false,
+    page: {
+      guess,
+      passiveSelected: false,
+      pluralSelected: false,
+      revealAnswer: false,
+    },
   };
 };

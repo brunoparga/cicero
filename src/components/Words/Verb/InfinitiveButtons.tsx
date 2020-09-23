@@ -8,7 +8,7 @@ import { useInfinitives } from '../../../hooks/useInfinitives';
 
 // Buttons to select the infinitive suffix, which indicates how the verb is conjugated
 export const InfinitiveButtons: React.FunctionComponent = () => {
-  const { state: { word, passiveSelected }, dispatch } = React.useContext(store);
+  const { state: { word, page: { passiveSelected } }, dispatch } = React.useContext(store);
   const { properties: { conjugation, deponent, correctInfinitive } } = word as Word;
   const suffixes = useInfinitives();
   const toggleDeponent = { type: actionTypes.TOGGLE_DEPONENT };

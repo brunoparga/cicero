@@ -10,7 +10,7 @@ import { Buttons, Checkbox } from '../../shared';
 // according to its role in the sentence (subject, object...)
 export const GenitiveButtons: React.FunctionComponent = () => {
   const {
-    state: { word, pluralSelected },
+    state: { word, page: { pluralSelected } },
     dispatch,
   } = React.useContext(store);
 
