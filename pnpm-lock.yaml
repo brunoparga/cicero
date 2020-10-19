@@ -5,8 +5,10 @@ dependencies:
   '@types/jest': 26.0.14
   '@types/node': 14.11.1
   '@types/react': 16.9.49
+  '@types/react-combine-reducers': 1.0.0
   '@types/react-dom': 16.9.8
   react: 16.13.1
+  react-combine-reducers: 1.0.4
   react-dom: 16.13.1_react@16.13.1
   react-hook-form: 6.8.3_react@16.13.1
   react-scripts: 3.4.3_typescript@3.9.7
@@ -1041,6 +1043,13 @@ packages:
       '@babel/core': ^7.0.0-0
     resolution:
       integrity: sha512-wNfsc4s8N2qnIwpO/WP2ZiSyjfpTamT2C9V9FDH/Ljub9zw6P3SjkXcFmc0RQUt96k2fmIvtla2MMjgTwIAC+A==
+  /@babel/polyfill/7.12.1:
+    dependencies:
+      core-js: 2.6.11
+      regenerator-runtime: 0.13.7
+    dev: false
+    resolution:
+      integrity: sha512-X0pi0V6gxLi6lFZpGmeNa4zxtwEmCs42isWLNjZZDE0Y8yVfgu0T2OAHlzBbdYlqbW/YXVvoBHpATEM+goCj8g==
   /@babel/preset-env/7.11.5_@babel+core@7.9.0:
     dependencies:
       '@babel/compat-data': 7.11.0
@@ -1860,6 +1869,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
+  /@types/react-combine-reducers/1.0.0:
+    dependencies:
+      '@types/react': 16.9.49
+    dev: false
+    resolution:
+      integrity: sha512-FRR5PBN1/2xZ83huIC/H8JHE51srN5cW216qwebauNVv6SXPkyH8RWwIqSUkxhaw8bYwZGyVQ++o/uBYvdLBBw==
   /@types/react-dom/16.9.8:
     dependencies:
       '@types/react': 16.9.49
@@ -9493,6 +9508,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-OfBnObtnGgLGfweORmdZbyEz+3dgVePQBb3zipiaDsMHV1NpWm0rDFYIVXFV/AK+x4VIIfWHhrdMIeoTLyRr2g==
+  /react-combine-reducers/1.0.4:
+    dependencies:
+      '@babel/polyfill': 7.12.1
+    dev: false
+    resolution:
+      integrity: sha512-pMY5ymvbD40tzQA+o0RrsVK6NOPf4Dg/EfVlodKoA0AQH280DEdi+q4zzUmVms/tAp+NfgUMDgF6/gnXQ/BOWg==
   /react-dev-utils/10.2.1:
     dependencies:
       '@babel/code-frame': 7.8.3
@@ -11861,6 +11882,7 @@ specifiers:
   '@types/jest': 26.0.14
   '@types/node': 14.11.1
   '@types/react': 16.9.49
+  '@types/react-combine-reducers': ^1.0.0
   '@types/react-dom': 16.9.8
   '@typescript-eslint/eslint-plugin': 4.1.1
   '@typescript-eslint/parser': 4.1.1
@@ -11871,6 +11893,7 @@ specifiers:
   eslint-plugin-react: 7.20.6
   eslint-plugin-react-hooks: 4.1.2
   react: 16.13.1
+  react-combine-reducers: ^1.0.4
   react-dom: 16.13.1
   react-hook-form: 6.8.3
   react-scripts: 3.4.3
