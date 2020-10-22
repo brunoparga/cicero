@@ -1,14 +1,14 @@
 dependencies:
   '@testing-library/jest-dom': 5.11.4
-  '@testing-library/react': 11.0.4_react-dom@16.13.1+react@16.13.1
+  '@testing-library/react': 11.0.4_react-dom@17.0.1+react@17.0.1
   '@testing-library/user-event': 12.1.5
   '@types/jest': 26.0.14
   '@types/node': 14.11.1
   '@types/react': 16.9.49
   '@types/react-dom': 16.9.8
-  react: 16.13.1
-  react-dom: 16.13.1_react@16.13.1
-  react-hook-form: 6.8.3_react@16.13.1
+  react: 17.0.1
+  react-dom: 17.0.1_react@17.0.1
+  react-hook-form: 6.8.3_react@17.0.1
   react-scripts: 3.4.3_typescript@3.9.7
   typescript: 3.9.7
 devDependencies:
@@ -1721,12 +1721,12 @@ packages:
       yarn: '>=1'
     resolution:
       integrity: sha512-6RRn3epuweBODDIv3dAlWjOEHQLpGJHB2i912VS3JQtsD22+ENInhdDNl4ZZQiViLlIfFinkSET/J736ytV9sw==
-  /@testing-library/react/11.0.4_react-dom@16.13.1+react@16.13.1:
+  /@testing-library/react/11.0.4_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/runtime': 7.11.2
       '@testing-library/dom': 7.24.2
-      react: 16.13.1
-      react-dom: 16.13.1_react@16.13.1
+      react: 17.0.1
+      react-dom: 17.0.1_react@17.0.1
     dev: false
     engines:
       node: '>=10'
@@ -9524,25 +9524,24 @@ packages:
       node: '>=8.10'
     resolution:
       integrity: sha512-XxTbgJnYZmxuPtY3y/UV0D8/65NKkmaia4rXzViknVnZeVlklSh8u6TnaEYPfAi/Gh1TP4mEOXHI6jQOPbeakQ==
-  /react-dom/16.13.1_react@16.13.1:
+  /react-dom/17.0.1_react@17.0.1:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-      prop-types: 15.7.2
-      react: 16.13.1
-      scheduler: 0.19.1
+      react: 17.0.1
+      scheduler: 0.20.1
     dev: false
     peerDependencies:
-      react: ^16.13.1
+      react: 17.0.1
     resolution:
-      integrity: sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
+      integrity: sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug==
   /react-error-overlay/6.0.7:
     dev: false
     resolution:
       integrity: sha512-TAv1KJFh3RhqxNvhzxj6LeT5NWklP6rDr2a0jaTfsZ5wSZWHOGeqQyejUp3xxLfPt2UpyJEcVQB/zyPcmonNFA==
-  /react-hook-form/6.8.3_react@16.13.1:
+  /react-hook-form/6.8.3_react@17.0.1:
     dependencies:
-      react: 16.13.1
+      react: 17.0.1
     dev: false
     peerDependencies:
       react: ^16.8.0
@@ -9619,16 +9618,15 @@ packages:
         optional: true
     resolution:
       integrity: sha512-oSnoWmii/iKdeQiwaO6map1lUaZLmG0xIUyb/HwCVFLT7gNbj8JZ9RmpvMCZ4fB98ZUMRfNmp/ft8uy/xD1RLA==
-  /react/16.13.1:
+  /react/17.0.1:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-      prop-types: 15.7.2
     dev: false
     engines:
       node: '>=0.10.0'
     resolution:
-      integrity: sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
+      integrity: sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w==
   /read-pkg-up/2.0.0:
     dependencies:
       find-up: 2.1.0
@@ -10139,13 +10137,13 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-Ydydq3zC+WYDJK1+gRxRapLIED9PWeSuuS41wqyoRmzvhhh9nc+QQrVMKJYzJFULazeGhzSV0QleN2wD3boh2g==
-  /scheduler/0.19.1:
+  /scheduler/0.20.1:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
     dev: false
     resolution:
-      integrity: sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==
+      integrity: sha512-LKTe+2xNJBNxu/QhHvDR14wUXHRQbVY5ZOYpOGWRzhydZUqrLb2JBvLPY7cAqFmqrWuDED0Mjk7013SZiOz6Bw==
   /schema-utils/1.0.0:
     dependencies:
       ajv: 6.12.4
@@ -11870,8 +11868,8 @@ specifiers:
   eslint-plugin-jsx-a11y: 6.3.1
   eslint-plugin-react: 7.20.6
   eslint-plugin-react-hooks: 4.1.2
-  react: 16.13.1
-  react-dom: 16.13.1
+  react: 17.0.1
+  react-dom: 17.0.1
   react-hook-form: 6.8.3
   react-scripts: 3.4.3
   typescript: 3.9.7
