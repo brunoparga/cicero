@@ -4,7 +4,7 @@ dependencies:
   '@testing-library/user-event': 12.1.10
   '@types/jest': 26.0.15
   '@types/node': 14.14.5
-  '@types/react': 16.9.53
+  '@types/react': 16.9.54
   '@types/react-dom': 16.9.8
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
@@ -1886,13 +1886,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-DtLFjSj0OYAdVLBbyjhuV9CdGVHCkHn2R+xr3XkBvK2rS1Y1tkc14XSGjYgm5Fjjr90AxH9tiSzc1pCFMGO06g==
-  /@types/react/16.9.53:
+  /@types/react/16.9.54:
     dependencies:
       '@types/prop-types': 15.7.3
       csstype: 3.0.4
     dev: false
     resolution:
-      integrity: sha512-4nW60Sd4L7+WMXH1D6jCdVftuW7j4Za6zdp6tJ33Rqv0nk1ZAmQKML9ZLD4H0dehA3FZxXR/GM8gXplf82oNGw==
+      integrity: sha512-GhawhYraQZpGFO2hVMArjPrYbnA/6+DS8SubK8IPhhVClmKqANihsRenOm5E0mvqK0m/BKoqVktA1O1+Xvlz9w==
   /@types/resolve/0.0.8:
     dependencies:
       '@types/node': 14.14.5
@@ -12146,7 +12146,7 @@ specifiers:
   '@testing-library/user-event': 12.1.10
   '@types/jest': 26.0.15
   '@types/node': 14.14.5
-  '@types/react': 16.9.53
+  '@types/react': 16.9.54
   '@types/react-dom': 16.9.8
   '@typescript-eslint/eslint-plugin': 4.6.0
   '@typescript-eslint/parser': 4.6.0
