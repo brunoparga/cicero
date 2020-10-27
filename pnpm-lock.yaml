@@ -1,5 +1,5 @@
 dependencies:
-  '@testing-library/jest-dom': 5.11.4
+  '@testing-library/jest-dom': 5.11.5
   '@testing-library/react': 11.0.4_react-dom@17.0.1+react@17.0.1
   '@testing-library/user-event': 12.1.5
   '@types/jest': 26.0.14
@@ -1704,7 +1704,7 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-ERxcZSoHx0EcN4HfshySEWmEf5Kkmgi+J7O79yCJ3xggzVlBJ2w/QjJUC+EBkJJ2OeSw48i3IoePN4w8JlVUIA==
-  /@testing-library/jest-dom/5.11.4:
+  /@testing-library/jest-dom/5.11.5:
     dependencies:
       '@babel/runtime': 7.11.2
       '@types/testing-library__jest-dom': 5.9.2
@@ -1720,7 +1720,7 @@ packages:
       npm: '>=6'
       yarn: '>=1'
     resolution:
-      integrity: sha512-6RRn3epuweBODDIv3dAlWjOEHQLpGJHB2i912VS3JQtsD22+ENInhdDNl4ZZQiViLlIfFinkSET/J736ytV9sw==
+      integrity: sha512-XI+ClHR864i6p2kRCEyhvpVejuer+ObVUF4cjCvRSF88eOMIfqw7RoS9+qoRhyigGswMfT64L6Nt0Ufotxbwtg==
   /@testing-library/react/11.0.4_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/runtime': 7.11.2
@@ -1816,12 +1816,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-nwKNbvnwJ2/mndE9ItP/zc2TCzw6uuodnF4EHYWD+gCQDVBuRQL5UzbZD0/ezy1iKsFU2ZQiDqg4M9dN4+wZgA==
-  /@types/jest/24.9.1:
-    dependencies:
-      jest-diff: 24.9.0
-    dev: false
-    resolution:
-      integrity: sha512-Fb38HkXSVA4L8fGKEZ6le5bB8r6MRWlOCZbVuWZcmOMSCd2wCYOwN1ibj8daIoV9naq7aaOZjrLCoCMptKU/4Q==
   /@types/jest/26.0.14:
     dependencies:
       jest-diff: 25.5.0
@@ -1879,7 +1873,7 @@ packages:
       integrity: sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
   /@types/testing-library__jest-dom/5.9.2:
     dependencies:
-      '@types/jest': 24.9.1
+      '@types/jest': 26.0.14
     dev: false
     resolution:
       integrity: sha512-K7nUSpH/5i8i0NagTJ+uFUDRueDlnMNhJtMjMwTGPPSqyImbWC/hgKPDCKt6Phu2iMJg2kWqlax+Ucj2DKMwpA==
@@ -11849,7 +11843,7 @@ packages:
     resolution:
       integrity: sha512-AX3Zw5iPruN5ie6xGRIDgqkT+ZhnRlZMLMHAs8tg7nRruy2Nb+i5o9bwghAogtM08q1dpr2LVoS8KSTMYpWXUw==
 specifiers:
-  '@testing-library/jest-dom': 5.11.4
+  '@testing-library/jest-dom': 5.11.5
   '@testing-library/react': 11.0.4
   '@testing-library/user-event': 12.1.5
   '@types/jest': 26.0.14
@@ -11863,7 +11857,7 @@ specifiers:
   eslint-plugin-import: 2.22.0
   eslint-plugin-jsx-a11y: 6.3.1
   eslint-plugin-react: 7.20.6
-  eslint-plugin-react-hooks: 4.1.2
+  eslint-plugin-react-hooks: 4.2.0
   react: 17.0.1
   react-dom: 17.0.1
   react-hook-form: 6.8.3
