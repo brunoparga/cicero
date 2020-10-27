@@ -11,13 +11,13 @@ type Props = { teach?: boolean, header: string, wordType?: string, text: string 
 export const Answer: React.FunctionComponent<Props> = ({
   teach = false, header, wordType, text,
 }) => {
-  const { dispatch } = React.useContext(store);
+  const { state: { words }, dispatch } = React.useContext(store);
 
   const clickHandler = () => {
     if (teach) {
       dispatch({ type: actionTypes.LEARN_WORD });
     }
-    dispatch({ type: actionTypes.SET_WORD });
+    dispatch({ type: actionTypes.SET_WORD, payload: words });
   };
   return (
     <>

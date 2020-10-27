@@ -22,6 +22,7 @@ export const fetchWords = (dispatch: React.Dispatch<Action>) => {
     .then((words) => {
       const payload = words.map(processWord);
       dispatch({ type: actionTypes.SET_WORDS, payload });
+      return payload;
     })
-    .then(() => dispatch({ type: actionTypes.SET_WORD }));
+    .then((payload) => dispatch({ type: actionTypes.SET_WORD, payload }));
 };
