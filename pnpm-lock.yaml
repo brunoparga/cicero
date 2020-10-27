@@ -1,7 +1,7 @@
 dependencies:
   '@testing-library/jest-dom': 5.11.4
   '@testing-library/react': 11.0.4_react-dom@17.0.1+react@17.0.1
-  '@testing-library/user-event': 12.1.5
+  '@testing-library/user-event': 12.1.10
   '@types/jest': 26.0.14
   '@types/node': 14.14.5
   '@types/react': 16.9.49
@@ -1735,7 +1735,7 @@ packages:
       react-dom: '*'
     resolution:
       integrity: sha512-U0fZO2zxm7M0CB5h1+lh31lbAwMSmDMEMGpMT3BUPJwIjDEKYWOV4dx7lb3x2Ue0Pyt77gmz/VropuJnSz/Iew==
-  /@testing-library/user-event/12.1.5:
+  /@testing-library/user-event/12.1.10:
     dependencies:
       '@babel/runtime': 7.11.2
     dev: false
@@ -1745,7 +1745,7 @@ packages:
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
     resolution:
-      integrity: sha512-FzTnKvb0KC4T84G6uTx971ja8OOqLlsprzWbeRyd8f1MDwbcLIFgx0Hyr56izY9m9y2KwHGVKeVEkTPslw32lw==
+      integrity: sha512-StlNdKHp2Rpb7yrny/5/CGpz8bR3jLa1Ge59ODGU6TmAhkrxSpvR6tCD1gaMFkkjEUWkmmye8BaXsZPcaiJ6Ug==
   /@types/aria-query/4.2.0:
     dev: false
     resolution:
@@ -11851,7 +11851,7 @@ packages:
 specifiers:
   '@testing-library/jest-dom': 5.11.4
   '@testing-library/react': 11.0.4
-  '@testing-library/user-event': 12.1.5
+  '@testing-library/user-event': 12.1.10
   '@types/jest': 26.0.14
   '@types/node': 14.14.5
   '@types/react': 16.9.49
@@ -11863,7 +11863,7 @@ specifiers:
   eslint-plugin-import: 2.22.1
   eslint-plugin-jsx-a11y: 6.3.1
   eslint-plugin-react: 7.20.6
-  eslint-plugin-react-hooks: 4.1.2
+  eslint-plugin-react-hooks: 4.2.0
   react: 17.0.1
   react-dom: 17.0.1
   react-hook-form: 6.8.3
