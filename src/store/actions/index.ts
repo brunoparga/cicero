@@ -1,5 +1,4 @@
-import { fetchWords } from './fetchWords';
-import { signin } from './signin';
-import { signup } from './signup';
-
-export { fetchWords, signin, signup };
+export * from './actionTypes';
+export * from './fetchWords';
+export * from './signin';
+export * from './signup';

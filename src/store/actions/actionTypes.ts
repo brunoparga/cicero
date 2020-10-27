@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-shadow
 export enum actionTypes {
   // User actions
   SIGN_IN = 'SIGN_IN',
