@@ -8,6 +8,6 @@ export const userReducer = (user: UserState, { type, payload }: Action): UserSta
     case actionTypes.SIGN_OUT:
       return { message: 'Signed out.' };
     default:
-      throw new Error();
+      return user;
   }
 };

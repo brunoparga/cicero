@@ -12,7 +12,6 @@ export const pageReducer = (page: PageState, { type, payload }: Action): PageSta
     }
     case actionTypes.SET_WORD: {
       const [word] = payload as Word[];
-      // do whatever this action does to this slice
       const guessOptions = {
         Adjective: { latin: false, declension: false },
         Etcetera: { latin: false },
@@ -28,6 +27,6 @@ export const pageReducer = (page: PageState, { type, payload }: Action): PageSta
     case actionTypes.TOGGLE_PLURAL:
       return { ...page, pluralSelected: !page.pluralSelected };
     default:
-      throw new Error();
+      return page;
   }
 };

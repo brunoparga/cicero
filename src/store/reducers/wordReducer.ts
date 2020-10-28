@@ -2,7 +2,7 @@ import { Action, Word } from '../../types';
 import { actionTypes } from '..';
 import { setOptions } from '../../helpers/setOptions';
 
-export const wordReducer = (word: Word | null, { type, payload }: Action): Word => {
+export const wordReducer = (word: Word | null, { type, payload }: Action): Word | null => {
   switch (type) {
     case actionTypes.LEARN_WORD:
       return { ...word, learned: true } as Word;
@@ -13,6 +13,6 @@ export const wordReducer = (word: Word | null, { type, payload }: Action): Word 
       return newWord;
     }
     default:
-      throw new Error();
+      return word;
   }
 };
