@@ -20,7 +20,12 @@ export const pageReducer = (page: PageState, { type, payload }: Action): PageSta
         Verb: { latin: false, infinitive: false },
       };
       const guess = guessOptions[word.questionType];
-      return { ...page, guess };
+      return {
+        guess,
+        passiveSelected: false,
+        pluralSelected: false,
+        revealAnswer: false,
+      };
     }
     case actionTypes.TOGGLE_DEPONENT:
       return { ...page, passiveSelected: !page.passiveSelected };
