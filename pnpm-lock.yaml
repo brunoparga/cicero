@@ -4,7 +4,7 @@ dependencies:
   '@testing-library/user-event': 12.1.10
   '@types/jest': 26.0.15
   '@types/node': 14.14.5
-  '@types/react': 16.9.54
+  '@types/react': 16.9.55
   '@types/react-combine-reducers': 1.0.0
   '@types/react-dom': 16.9.9
   react: 17.0.1
@@ -1851,6 +1851,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-GhawhYraQZpGFO2hVMArjPrYbnA/6+DS8SubK8IPhhVClmKqANihsRenOm5E0mvqK0m/BKoqVktA1O1+Xvlz9w==
+  /@types/react/16.9.55:
+    dependencies:
+      '@types/prop-types': 15.7.3
+      csstype: 3.0.4
+    dev: false
+    resolution:
+      integrity: sha512-6KLe6lkILeRwyyy7yG9rULKJ0sXplUsl98MGoCfpteXf9sPWFWWMknDcsvubcpaTdBuxtsLF6HDUwdApZL/xIg==
   /@types/stack-utils/1.0.1:
     dev: false
     resolution:
@@ -11876,7 +11883,7 @@ specifiers:
   '@testing-library/user-event': 12.1.10
   '@types/jest': 26.0.15
   '@types/node': 14.14.5
-  '@types/react': 16.9.54
+  '@types/react': 16.9.55
   '@types/react-combine-reducers': ^1.0.0
   '@types/react-dom': 16.9.9
   '@typescript-eslint/eslint-plugin': 4.6.0
