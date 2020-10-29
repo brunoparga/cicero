@@ -4,6 +4,7 @@ import { AppReducer, AppState, PageState } from '../types';
 import * as reducers from './reducers';
 
 const initialPageState: PageState = {
+  studying: false,
   guess: {},
   passiveSelected: false,
   pluralSelected: false,

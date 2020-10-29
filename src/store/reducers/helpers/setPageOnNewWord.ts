@@ -10,6 +10,7 @@ export const setPageOnNewWord = (word: Word): PageState => {
   };
   const guess = guessOptions[word.questionType];
   return {
+    studying: true,
     guess,
     passiveSelected: false,
     pluralSelected: false,

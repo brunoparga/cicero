@@ -17,6 +17,8 @@ export const pageReducer = (page: PageState, { type, payload }: Action): PageSta
       return { ...page, passiveSelected: !page.passiveSelected };
     case actionTypes.TOGGLE_PLURAL:
       return { ...page, pluralSelected: !page.pluralSelected };
+    case actionTypes.TOGGLE_STUDYING:
+      return { ...page, studying: !page.studying };
     default:
       return page;
   }

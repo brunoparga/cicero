@@ -5,6 +5,7 @@ type UserLoggedIn = { email?: string; token?: string; }
 export type UserState = UserNotLoggedIn & UserLoggedIn;
 
 export type PageState = {
+  studying: boolean;
   guess: {
     [key: string]: boolean;
   };
