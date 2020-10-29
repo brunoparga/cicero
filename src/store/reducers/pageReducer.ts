@@ -1,5 +1,6 @@
-import { Action, PageState, Word } from '../../types';
+import { Action, PageState } from '../../types';
 import { actionTypes } from '..';
+import { setPageOnNewWord } from './helpers/setPageOnNewWord';
 
 export const pageReducer = (page: PageState, { type, payload }: Action): PageState => {
   switch (type) {
@@ -10,23 +11,8 @@ export const pageReducer = (page: PageState, { type, payload }: Action): PageSta
       guess[payload.property] = payload.value;
       return { ...page, guess };
     }
-    case actionTypes.SET_WORD: {
-      const [word] = payload as Word[];
-      const guessOptions = {
-        Adjective: { latin: false, declension: false },
-        Etcetera: { latin: false },
-        Noun: { latin: false, genitive: false, gender: false },
-        Translation: { translation: false },
-        Verb: { latin: false, infinitive: false },
-      };
-      const guess = guessOptions[word.questionType];
-      return {
-        guess,
-        passiveSelected: false,
-        pluralSelected: false,
-        revealAnswer: false,
-      };
-    }
+    case actionTypes.SET_WORD:
+      return setPageOnNewWord(payload[0]);
     case actionTypes.TOGGLE_DEPONENT:
       return { ...page, passiveSelected: !page.passiveSelected };
     case actionTypes.TOGGLE_PLURAL:
