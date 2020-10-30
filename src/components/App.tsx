@@ -4,30 +4,31 @@ import { store } from '../store';
 import { Topbar } from './shared';
 import { Drill } from './Words/Drill';
 import { Teach } from './Words/Teach';
+import { FrontPage } from './FrontPage';
 import './App.css';
+import { Summary } from './Words/Summary';
 
 // Either show a loading screen or the loaded app.
 export const App: React.FunctionComponent = () => {
-  const { state: { word } } = React.useContext(store);
+  const { state: { word, page: { status } } } = React.useContext(store);
 
-  // Before loading, word is null.
-  if (!word) {
-    return (
-      <>
-        <Topbar />
-        <h1>
-          Onerans (loading)...
-        </h1>
-      </>
-    );
+  let component;
+  if (status === 'studying' && !word) {
+    component = <h1>Onerans (loading)...</h1>;
+  } else if (status === 'studying' && word?.learned) {
+    component = Drill(word?.questionType);
+  } else if (status === 'studying') {
+    component = <Teach />;
+  } else if (status === 'done') {
+    component = <Summary />;
+  } else {
+    component = <FrontPage />;
   }
 
   return (
     <>
       <Topbar />
-      <div className="App">
-        {(word.learned ? Drill(word.questionType) : <Teach />)}
-      </div>
+      <div className="App">{component}</div>
     </>
   );
 };

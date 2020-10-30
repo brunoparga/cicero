@@ -2,7 +2,7 @@ import React from 'react';
 
 import { QuestionType } from '../../types';
 import { Adjective } from './Adjective';
-import { Etcetera } from './Etcetera';
+import { Indeclinable } from './Indeclinable';
 import { Noun } from './Noun';
 import { Translation } from './Translation';
 import { Verb } from './Verb';
@@ -13,7 +13,7 @@ type DrillElement = (drillProps: QuestionType) => React.ReactElement
 // Select the correct element to display based on question type
 export const Drill: DrillElement = (questionType) => {
   const elements = {
-    Adjective, Etcetera, Noun, Translation, Verb,
+    Adjective, Indeclinable, Noun, Translation, Verb,
   };
   return React.createElement(elements[questionType]);
 

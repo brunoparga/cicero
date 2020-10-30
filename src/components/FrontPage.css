@@ -1,0 +1,11 @@
+.front-page-container {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.front-page-container > button {
+  margin-top: 50px;
+}

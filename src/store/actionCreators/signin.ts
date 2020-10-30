@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { Action, UserAccountInputs } from '../../types';
-import { actionTypes } from '.';
+import { actionTypes } from '..';
 
-export const signup = (
+export const signin = (
   URL: string, formData: UserAccountInputs, dispatch: React.Dispatch<Action>,
 ) => {
   fetch(URL, {

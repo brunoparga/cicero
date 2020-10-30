@@ -1,3 +1,5 @@
-export type { NounGuess } from './noun';
-export type { VerbGuess } from './verb';
+export * from './adjective';
+export * from './noun';
+export * from './verb';
+export * from './translation';
 export * from './word';

@@ -18,3 +18,8 @@
 h1 {
   margin: 15px;
 }
+
+.big {
+  font-size: 40px;
+  font-weight: bolder;
+}
