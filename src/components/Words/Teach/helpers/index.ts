@@ -1,12 +1,13 @@
 import { Adjective } from './adjective';
 import { Etcetera } from './etcetera';
 import { Noun } from './noun';
+import { Verb } from './verb';
 
-const placeholderFunction = () => ['foo', 'bar', 'baz'];
 export const functionSelector = {
   Noun,
   Adjective,
   Etcetera,
-  Translation: placeholderFunction,
-  Verb: placeholderFunction,
+  // This does nothing, since no Translation words can get here. But the type system requires it.
+  Translation: () => ['', '', ''],
+  Verb,
 };

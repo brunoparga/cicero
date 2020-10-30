@@ -8,18 +8,18 @@ export const describeAdjective = (word: Word): string => {
   } = word;
 
   if (indeclinable) {
-    return 'indeclinable';
+    return 'Indeclinable adjective';
   }
 
   switch (suffixes) {
     case '1st/2nd (-us)':
     case '1st/2nd (-er)':
-      return `masculine: ${lemma}, ${masculineGenitive} / feminine: ${feminine} / neuter: ${neuter}`;
+      return `Adjective: masculine ${lemma}, ${masculineGenitive} / feminine ${feminine} / neuter ${neuter}`;
     case '3rd (-er/-ris/-re)':
-      return `masculine: ${lemma} / feminine: ${feminine} / neuter: ${neuter} -- genitive: ${genitive}`;
+      return `Adjective: masculine ${lemma} / feminine ${feminine} / neuter ${neuter}, genitive ${genitive}`;
     case '3rd (-is/-e)':
-      return `masculine, feminine: ${lemma} / neuter: ${neuter} -- genitive: ${genitive}`;
+      return `Adjective: masculine, feminine ${lemma} / neuter ${neuter}, genitive ${genitive}`;
     default:
-      return `${lemma}, ${genitive}`;
+      return `Adjective: ${lemma}, ${genitive}`;
   }
 };
