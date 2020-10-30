@@ -3,9 +3,13 @@ import { Word } from '../../types';
 export const describeAdjective = (word: Word): string => {
   const {
     lemma, properties: {
-      feminine, neuter, masculineGenitive, genitive, suffixes,
+      feminine, neuter, masculineGenitive, genitive, suffixes, indeclinable,
     },
   } = word;
+
+  if (indeclinable) {
+    return 'indeclinable';
+  }
 
   switch (suffixes) {
     case '1st/2nd (-us)':
