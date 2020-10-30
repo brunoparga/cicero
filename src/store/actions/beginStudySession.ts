@@ -16,13 +16,15 @@ const processWord = (word: Word): Word => {
   return { ...word, questionType: QuestionType.Indeclinable };
 };
 
-export const fetchWords = (dispatch: React.Dispatch<Action>) => {
+export const beginStudySession = (dispatch: React.Dispatch<Action>) => {
   fetch(`${process.env.REACT_APP_API_URL}/words`)
     .then((res) => res.json())
     .then((words) => {
       const payload = words.map(processWord);
-      dispatch({ type: actionTypes.SET_WORDS, payload });
+      dispatch({ type: actionTypes.FETCH_WORDS, payload });
       return payload;
     })
-    .then((payload) => dispatch({ type: actionTypes.SET_WORD, payload }));
+    .then((words) => {
+      dispatch({ type: actionTypes.SET_WORD, payload: { words, index: 0 } });
+    });
 };

@@ -11,7 +11,7 @@ const StateProvider: React.FunctionComponent = ({ children }) => {
     .useReducer(reducer, initialAppState);
 
   // Get back from study mode to the front page
-  if (state.words.length === 0 && state.page.studying) {
+  if (state.page.studying && state.page.currentWordIndex === state.words.length) {
     dispatch({ type: actionTypes.TOGGLE_STUDYING });
   }
 

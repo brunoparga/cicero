@@ -1,12 +1,12 @@
 import React from 'react';
-import { actionTypes, fetchWords, store } from '../store';
+import { actionTypes, beginStudySession, store } from '../store';
 import './FrontPage.css';
 import './shared/Button.css';
 
 export const FrontPage: React.FunctionComponent = () => {
   const { dispatch } = React.useContext(store);
   const clickHandler = () => {
-    fetchWords(dispatch);
+    beginStudySession(dispatch);
     dispatch({ type: actionTypes.TOGGLE_STUDYING });
   };
   return (
