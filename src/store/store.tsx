@@ -11,8 +11,8 @@ const StateProvider: React.FunctionComponent = ({ children }) => {
     .useReducer(reducer, initialAppState);
 
   // Get back from study mode to the front page
-  if (state.page.studying && state.page.currentWordIndex === state.words.length) {
-    dispatch({ type: actionTypes.TOGGLE_STUDYING });
+  if (state.page.status === 'studying' && state.page.currentWordIndex === state.words.length) {
+    dispatch({ type: actionTypes.SET_STATUS, payload: 'frontPage' });
   }
 
   // Test if all values have been guessed correctly (there has to be a word set)

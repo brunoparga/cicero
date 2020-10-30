@@ -9,14 +9,14 @@ import './App.css';
 
 // Either show a loading screen or the loaded app.
 export const App: React.FunctionComponent = () => {
-  const { state: { word, page: { studying } } } = React.useContext(store);
+  const { state: { word, page: { status } } } = React.useContext(store);
 
   let component;
-  if (studying && !word) {
+  if (status === 'studying' && !word) {
     component = <h1>Onerans (loading)...</h1>;
-  } else if (studying && word?.learned) {
+  } else if (status === 'studying' && word?.learned) {
     component = Drill(word?.questionType);
-  } else if (studying) {
+  } else if (status === 'studying') {
     component = <Teach />;
   } else {
     component = <FrontPage />;

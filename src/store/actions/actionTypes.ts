@@ -2,7 +2,7 @@
 // eslint-disable-next-line no-shadow
 export enum actionTypes {
   // Page actions
-  TOGGLE_STUDYING = 'TOGGLE_STUDYING',
+  SET_STATUS = 'SET_STATUS',
   // User actions
   SIGN_IN = 'SIGN_IN',
   SIGN_OUT = 'SIGN_OUT',

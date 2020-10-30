@@ -17,12 +17,12 @@ export const pageReducer = (page: PageState, { type, payload }: Action): PageSta
       const word = payload.words[page.currentWordIndex];
       return setPageOnNewWord(word, payload.index);
     }
+    case actionTypes.SET_STATUS:
+      return { ...page, status: payload };
     case actionTypes.TOGGLE_DEPONENT:
       return { ...page, passiveSelected: !page.passiveSelected };
     case actionTypes.TOGGLE_PLURAL:
       return { ...page, pluralSelected: !page.pluralSelected };
-    case actionTypes.TOGGLE_STUDYING:
-      return { ...page, studying: !page.studying };
     default:
       return page;
   }
