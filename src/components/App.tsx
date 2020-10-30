@@ -6,6 +6,7 @@ import { Drill } from './Words/Drill';
 import { Teach } from './Words/Teach';
 import { FrontPage } from './FrontPage';
 import './App.css';
+import { Summary } from './Words/Summary';
 
 // Either show a loading screen or the loaded app.
 export const App: React.FunctionComponent = () => {
@@ -18,6 +19,8 @@ export const App: React.FunctionComponent = () => {
     component = Drill(word?.questionType);
   } else if (status === 'studying') {
     component = <Teach />;
+  } else if (status === 'done') {
+    component = <Summary />;
   } else {
     component = <FrontPage />;
   }
