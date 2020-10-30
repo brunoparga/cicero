@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { actionTypes, store } from '../../store';
+import { actionTypes, sendSessionResults, store } from '../../store';
 import './Answer.css';
 
 type Props = { teach?: boolean, header: string, wordType?: string, text: string }
@@ -11,14 +11,18 @@ export const Answer: React.FunctionComponent<Props> = ({
 }) => {
   const { state: { words, page: { currentWordIndex } }, dispatch } = React.useContext(store);
 
+  const atTheLastWord = currentWordIndex === words.length - 1;
+
   const learnWord = { type: actionTypes.LEARN_WORD };
   const nextWord = { type: actionTypes.SET_WORD, payload: { words, index: currentWordIndex + 1 } };
   const doneStudying = { type: actionTypes.SET_STATUS, payload: 'done' };
-  const atTheLastWord = currentWordIndex === words.length - 1;
 
   const clickHandler = () => {
     if (teach) {
       dispatch(learnWord);
+    }
+    if (atTheLastWord) {
+      sendSessionResults(words, dispatch);
     }
     dispatch(atTheLastWord ? doneStudying : nextWord);
   };

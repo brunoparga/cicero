@@ -1,16 +1,8 @@
 import combineReducers from 'react-combine-reducers';
 
-import { AppReducer, AppState, PageState } from '../types';
+import { AppReducer, AppState } from '../types';
+import { initialPageState } from '.';
 import * as reducers from './reducers';
-
-const initialPageState: PageState = {
-  status: 'frontPage',
-  currentWordIndex: 0,
-  guess: {},
-  passiveSelected: false,
-  pluralSelected: false,
-  revealAnswer: false,
-};
 
 export const [reducer, initialAppState]: [AppReducer, AppState] = combineReducers<AppReducer>({
   page: [reducers.pageReducer, initialPageState],

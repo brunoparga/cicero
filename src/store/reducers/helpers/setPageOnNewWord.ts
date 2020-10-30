@@ -1,4 +1,5 @@
 import { PageState, Word } from '../../../types';
+import { initialPageState } from '../..';
 
 export const setPageOnNewWord = (word: Word, index: number): PageState => {
   const guessOptions = {
@@ -10,11 +11,9 @@ export const setPageOnNewWord = (word: Word, index: number): PageState => {
   };
   const guess = guessOptions[word.questionType];
   return {
+    ...initialPageState,
     status: 'studying',
     currentWordIndex: index,
     guess,
-    passiveSelected: false,
-    pluralSelected: false,
-    revealAnswer: false,
   };
 };

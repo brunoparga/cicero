@@ -3,10 +3,9 @@ import React from 'react';
 import { actionTypes, store } from '../../store';
 import { Word } from '../../types';
 import './Summary.css';
-import '../shared/Answer.css';
 
 export const Summary: React.FunctionComponent = () => {
-  const { state: { words }, dispatch } = React.useContext(store);
+  const { state: { words, page: { resultsSaved } }, dispatch } = React.useContext(store);
 
   const formatWord = (word: Word): React.ReactElement => (
     <li key={word.lemma} className="left">
@@ -27,7 +26,12 @@ export const Summary: React.FunctionComponent = () => {
         <p>Here are the words you studied:</p>
         <ol>{words.map(formatWord)}</ol>
       </div>
-      <button type="button" className="next white btn" onClick={clickHandler}>
+      <button
+        type="button"
+        className={`next white btn ${!resultsSaved && 'gray'}`}
+        onClick={clickHandler}
+        disabled={!resultsSaved}
+      >
         <span className="big">&gt;</span>
         <br />
         Done

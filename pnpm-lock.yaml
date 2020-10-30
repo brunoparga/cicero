@@ -3,8 +3,8 @@ dependencies:
   '@testing-library/react': 11.1.0_react-dom@17.0.1+react@17.0.1
   '@testing-library/user-event': 12.1.10
   '@types/jest': 26.0.15
-  '@types/node': 14.14.5
-  '@types/react': 16.9.54
+  '@types/node': 14.14.6
+  '@types/react': 16.9.55
   '@types/react-combine-reducers': 1.0.0
   '@types/react-dom': 16.9.9
   react: 17.0.1
@@ -1820,6 +1820,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-H5Wn24s/ZOukBmDn03nnGTp18A60ny9AmCwnEcgJiTgSGsCO7k+NWP7zjCCbhlcnVCoI+co52dUAt9GMhOSULw==
+  /@types/node/14.14.6:
+    dev: false
+    resolution:
+      integrity: sha512-6QlRuqsQ/Ox/aJEQWBEJG7A9+u7oSYl3mem/K8IzxXG/kAGbV1YPD9Bg9Zw3vyxC/YP+zONKwy8hGkSt1jxFMw==
   /@types/parse-json/4.0.0:
     dev: false
     resolution:
@@ -1834,7 +1838,7 @@ packages:
       integrity: sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
   /@types/react-combine-reducers/1.0.0:
     dependencies:
-      '@types/react': 16.9.54
+      '@types/react': 16.9.55
     dev: false
     resolution:
       integrity: sha512-FRR5PBN1/2xZ83huIC/H8JHE51srN5cW216qwebauNVv6SXPkyH8RWwIqSUkxhaw8bYwZGyVQ++o/uBYvdLBBw==
@@ -1851,6 +1855,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-GhawhYraQZpGFO2hVMArjPrYbnA/6+DS8SubK8IPhhVClmKqANihsRenOm5E0mvqK0m/BKoqVktA1O1+Xvlz9w==
+  /@types/react/16.9.55:
+    dependencies:
+      '@types/prop-types': 15.7.3
+      csstype: 3.0.4
+    dev: false
+    resolution:
+      integrity: sha512-6KLe6lkILeRwyyy7yG9rULKJ0sXplUsl98MGoCfpteXf9sPWFWWMknDcsvubcpaTdBuxtsLF6HDUwdApZL/xIg==
   /@types/stack-utils/1.0.1:
     dev: false
     resolution:
@@ -11875,9 +11886,9 @@ specifiers:
   '@testing-library/react': 11.1.0
   '@testing-library/user-event': 12.1.10
   '@types/jest': 26.0.15
-  '@types/node': 14.14.5
-  '@types/react': 16.9.54
-  '@types/react-combine-reducers': ^1.0.0
+  '@types/node': 14.14.6
+  '@types/react': 16.9.55
+  '@types/react-combine-reducers': 1.0.0
   '@types/react-dom': 16.9.9
   '@typescript-eslint/eslint-plugin': 4.6.0
   '@typescript-eslint/parser': 4.6.0

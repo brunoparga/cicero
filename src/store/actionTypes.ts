@@ -3,6 +3,7 @@
 export enum actionTypes {
   // Page actions
   SET_STATUS = 'SET_STATUS',
+  RESULTS_SAVED = 'RESULTS_SAVED',
   // User actions
   SIGN_IN = 'SIGN_IN',
   SIGN_OUT = 'SIGN_OUT',

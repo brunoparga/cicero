@@ -7,6 +7,7 @@ export type UserState = UserNotLoggedIn & UserLoggedIn;
 export type PageState = {
   status: 'frontPage' | 'studying' | 'done';
   currentWordIndex: number;
+  resultsSaved: boolean;
   guess: {
     [key: string]: boolean;
   };

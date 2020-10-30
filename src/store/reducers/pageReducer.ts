@@ -6,6 +6,8 @@ export const pageReducer = (page: PageState, { type, payload }: Action): PageSta
   switch (type) {
     case actionTypes.FETCH_WORDS:
       return { ...page, currentWordIndex: 0 };
+    case actionTypes.RESULTS_SAVED:
+      return { ...page, resultsSaved: true };
     case actionTypes.REVEAL_ANSWER:
       return { ...page, revealAnswer: true };
     case actionTypes.SET_GUESS: {
