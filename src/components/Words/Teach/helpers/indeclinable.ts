@@ -1,5 +1,5 @@
 import { Word } from '../../../../types';
 
-export const Etcetera = (
+export const Indeclinable = (
   { lemma, english }: Word,
 ): [string, string, string] => [lemma, 'Indeclinable word', english];
