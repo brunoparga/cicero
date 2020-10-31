@@ -2,7 +2,8 @@ import React from 'react';
 
 import { store } from '../../../store';
 import { Word } from '../../../types';
-import { Answer, describeVerb } from '../../shared';
+import { Answer } from '../../shared';
+import { describeVerb } from '../../../helpers';
 
 // Prepare the correct answer for presentation
 export const VerbAnswer: React.FunctionComponent = () => {

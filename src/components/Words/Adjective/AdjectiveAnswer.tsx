@@ -2,7 +2,8 @@ import React from 'react';
 
 import { store } from '../../../store';
 import { Word } from '../../../types';
-import { Answer, describeAdjective } from '../../shared';
+import { Answer } from '../../shared';
+import { describeAdjective } from '../../../helpers';
 
 // Prepare the correct answer for presentation
 export const AdjectiveAnswer: React.FunctionComponent = () => {
