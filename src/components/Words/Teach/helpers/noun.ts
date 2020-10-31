@@ -8,6 +8,6 @@ export const Noun = (word: Word): [string, string, string] => {
   } = properties as NounProperties;
   const genitive = correctGenitive || { singular, plural }[number][declension];
   const header = `${lemma}, ${genitive}`;
-  const wordType = `${gender} ${number} noun`;
-  return [header, wordType, english];
+  const description = `${gender} ${number} noun`;
+  return [header, description, english];
 };

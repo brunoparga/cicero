@@ -1,6 +1,6 @@
 import { Action, Word } from '../../types';
 import { actionTypes } from '..';
-import { setOptions } from '../../helpers/setOptions';
+import { setWordOptions } from '../../helpers';
 
 export const wordReducer = (word: Word | null, { type, payload }: Action): Word | null => {
   switch (type) {
@@ -12,7 +12,7 @@ export const wordReducer = (word: Word | null, { type, payload }: Action): Word 
       // The store will take care of that for us.
       if (!newWord) { return null; }
       const rightAnswer = newWord.questionType === 'Translation' ? newWord.english : newWord.lemma;
-      newWord.options = setOptions(newWord.options, rightAnswer);
+      newWord.options = setWordOptions(newWord.options, rightAnswer);
       return newWord;
     }
     default:

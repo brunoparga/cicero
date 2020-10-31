@@ -1,4 +1,4 @@
 export { describeAdjective } from './describeAdjective';
 export { describeVerb } from './describeVerb';
-export { setOptions } from './setOptions';
+export { setWordOptions } from './setWordOptions';
 export { shuffle } from './shuffle';
