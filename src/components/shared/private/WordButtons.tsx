@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { store } from '../../store';
-import { Word } from '../../types';
-import { Buttons } from './Buttons';
+import { store } from '../../../store';
+import { Word } from '../../../types';
+import { Buttons } from '..';
 
 // Buttons to select the correct Latin word for the given English word.
 // Future plan: replace English with any user-selected language.

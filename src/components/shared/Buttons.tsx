@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { actionTypes, store } from '../../store';
-import { Button } from './Button';
+import { Button } from './private';
 import './Buttons.css';
 
 type Props = {

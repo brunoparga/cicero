@@ -1,7 +1,7 @@
 import React from 'react';
-import { actionTypes, beginStudySession, store } from '../store';
+import { actionTypes, beginStudySession, store } from '../../store';
+import '../shared/private/Button.css';
 import './FrontPage.css';
-import './shared/Button.css';
 
 export const FrontPage: React.FunctionComponent = () => {
   const { dispatch } = React.useContext(store);

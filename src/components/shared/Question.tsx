@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { WordButtons } from './WordButtons';
+import { WordButtons } from './private';
 
 type Props = { header: string, label?: string }
 

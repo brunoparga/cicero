@@ -1,5 +1,5 @@
-import { NounProperties, Word } from '../../../../types';
-import { singular, plural } from '../../../../grammar';
+import { NounProperties, Word } from '../../../types';
+import { singular, plural } from '../../../grammar';
 
 export const Noun = (word: Word): [string, string, string] => {
   const { lemma, english, properties } = word;

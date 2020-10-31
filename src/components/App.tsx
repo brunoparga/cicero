@@ -2,11 +2,8 @@ import React from 'react';
 
 import { store } from '../store';
 import { Topbar } from './shared';
-import { Drill } from './Words/Drill';
-import { Teach } from './Words/Teach';
-import { FrontPage } from './FrontPage';
+import * as Pages from './Pages';
 import './App.css';
-import { Summary } from './Words/Summary';
 
 // Either show a loading screen or the loaded app.
 export const App: React.FunctionComponent = () => {
@@ -16,13 +13,13 @@ export const App: React.FunctionComponent = () => {
   if (status === 'studying' && !word) {
     component = <h1>Onerans (loading)...</h1>;
   } else if (status === 'studying' && word?.learned) {
-    component = Drill(word?.questionType);
+    component = Pages.Drill(word?.questionType);
   } else if (status === 'studying') {
-    component = <Teach />;
+    component = <Pages.Teach />;
   } else if (status === 'done') {
-    component = <Summary />;
+    component = <Pages.Summary />;
   } else {
-    component = <FrontPage />;
+    component = <Pages.FrontPage />;
   }
 
   return (
