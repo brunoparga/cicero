@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { answerActions } from '../../helpers';
+import { useAnswerActions } from '../../hooks/useAnswerActions';
 import './Answer.css';
 
 type Props = { teach?: boolean, header: string, description?: string, text: string }
@@ -9,7 +9,7 @@ type Props = { teach?: boolean, header: string, description?: string, text: stri
 export const Answer: React.FunctionComponent<Props> = ({
   teach = false, header, description, text,
 }) => {
-  const [lastWord, clickHandler] = answerActions(teach);
+  const [lastWord, clickHandler] = useAnswerActions(teach);
 
   return (
     <>
