@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { actionTypes, sendSessionResults, store } from '../../store';
+import { answerActions } from '../../helpers';
 import './Answer.css';
 
 type Props = { teach?: boolean, header: string, description?: string, text: string }
@@ -9,23 +9,7 @@ type Props = { teach?: boolean, header: string, description?: string, text: stri
 export const Answer: React.FunctionComponent<Props> = ({
   teach = false, header, description, text,
 }) => {
-  const { state: { words, page: { currentWordIndex } }, dispatch } = React.useContext(store);
-
-  const atTheLastWord = currentWordIndex === words.length - 1;
-
-  const learnWord = { type: actionTypes.LEARN_WORD };
-  const nextWord = { type: actionTypes.SET_WORD, payload: { words, index: currentWordIndex + 1 } };
-  const doneStudying = { type: actionTypes.SET_STATUS, payload: 'done' };
-
-  const clickHandler = () => {
-    if (teach) {
-      dispatch(learnWord);
-    }
-    if (atTheLastWord) {
-      sendSessionResults(words, dispatch);
-    }
-    dispatch(atTheLastWord ? doneStudying : nextWord);
-  };
+  const [lastWord, clickHandler] = answerActions(teach);
 
   return (
     <>
@@ -37,7 +21,7 @@ export const Answer: React.FunctionComponent<Props> = ({
         <button type="button" className="next white btn" onClick={clickHandler}>
           <span className="big">&gt;</span>
           <br />
-          {atTheLastWord ? 'Done' : 'Next' }
+          {lastWord ? 'Done' : 'Next' }
         </button>
       </div>
     </>

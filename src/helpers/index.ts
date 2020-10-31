@@ -1,3 +1,4 @@
+export { answerActions } from './answerActions';
 export { describeAdjective } from './describeAdjective';
 export { describeVerb } from './describeVerb';
 export { setWordOptions } from './setWordOptions';
