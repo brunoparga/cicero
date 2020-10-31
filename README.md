@@ -1,1 +1,3 @@
-Cicero is meant to be a flashcard system for learning Latin. It's being designed to be extensible to learning from languages other than English.
+## Cicero ##
+
+Cicero is a flashcard system for learning Latin. A live version can be found at https://bp-cicero.xyz.
