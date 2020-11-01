@@ -14,7 +14,7 @@ const createClickHandler = (context: AppStateWithDispatch, teach: boolean): Void
     const learnWord = { type: actionTypes.LEARN_WORD };
     const nextWord = {
       type: actionTypes.SET_WORD,
-      payload: { words, index: currentWordIndex + 1 },
+      payload: { words, index: currentWordIndex },
     };
     const doneStudying = { type: actionTypes.SET_STATUS, payload: 'done' };
 

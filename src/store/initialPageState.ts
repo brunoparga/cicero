@@ -2,7 +2,7 @@ import { PageState } from '../types';
 
 export const initialPageState: PageState = {
   status: 'frontPage',
-  currentWordIndex: 0,
+  currentWordIndex: -1,
   resultsSaved: false,
   guess: {},
   passiveSelected: false,

@@ -13,7 +13,7 @@ export const setPageOnNewWord = (word: Word, index: number): PageState => {
   return {
     ...initialPageState,
     status: 'studying',
-    currentWordIndex: index,
+    currentWordIndex: index + 1,
     guess,
   };
 };

@@ -7,7 +7,7 @@ export const wordReducer = (word: Word | null, { type, payload }: Action): Word 
     case actionTypes.LEARN_WORD:
       return { ...word, learned: true } as Word;
     case actionTypes.SET_WORD: {
-      const newWord = payload.words[payload.index];
+      const newWord = payload.words[payload.index + 1];
       // If undefined, this means we're out of words and should end the study session.
       // The store will take care of that for us.
       if (!newWord) { return null; }

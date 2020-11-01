@@ -16,7 +16,7 @@ export const pageReducer = (page: PageState, { type, payload }: Action): PageSta
       return { ...page, guess };
     }
     case actionTypes.SET_WORD: {
-      const word = payload.words[page.currentWordIndex];
+      const word = payload.words[page.currentWordIndex + 1];
       return setPageOnNewWord(word, payload.index);
     }
     case actionTypes.SET_STATUS:
