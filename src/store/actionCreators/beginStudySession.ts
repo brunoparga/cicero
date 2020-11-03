@@ -24,9 +24,6 @@ export const beginStudySession = (dispatch: React.Dispatch<Action>) => {
     .then((words) => {
       const payload = words.map(processWord);
       dispatch({ type: actionTypes.FETCH_WORDS, payload });
-      return payload;
     })
-    .then((words) => {
-      dispatch({ type: actionTypes.SET_WORD, payload: { words, index: 0 } });
-    });
+    .then(() => dispatch({ type: actionTypes.SET_WORD }));
 };
