@@ -1,5 +1,5 @@
 export * from './actionCreators';
-export * from './actionTypes';
+export * from './actions';
 export { crossSliceReducer } from './crossSliceReducer';
 export { initialPageState } from './initialPageState';
 export { initialAppState, rootReducer } from './reducer';

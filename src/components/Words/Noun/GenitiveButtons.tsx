@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { actionTypes, store } from '../../../store';
+import { actions, store } from '../../../store';
 import { singular, plural } from '../../../grammar';
 import { Word } from '../../../types';
 import { useGenitives } from '../../../hooks/useGenitives';
@@ -18,7 +18,7 @@ export const GenitiveButtons: React.FunctionComponent = () => {
 
   const suffixes = useGenitives();
 
-  const togglePlural = { type: actionTypes.TOGGLE_PLURAL };
+  const togglePlural = { type: actions.TOGGLE_PLURAL };
 
   const keyUpHandler = (event: React.KeyboardEvent) => {
     if (event.key.toUpperCase() === 'P') {

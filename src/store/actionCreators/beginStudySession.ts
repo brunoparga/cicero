@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Action, QuestionType, Word } from '../../types';
-import { actionTypes } from '..';
+import { actions } from '..';
 
 const processWord = (word: Word): Word => {
   // IDEA: write question type in the back-end (pro: easy on the front, con:
@@ -23,7 +23,7 @@ export const beginStudySession = (dispatch: React.Dispatch<Action>) => {
     .then((res) => res.json())
     .then((words) => {
       const payload = words.map(processWord);
-      dispatch({ type: actionTypes.FETCH_WORDS, payload });
+      dispatch({ type: actions.FETCH_WORDS, payload });
     })
-    .then(() => dispatch({ type: actionTypes.SET_WORD }));
+    .then(() => dispatch({ type: actions.SET_WORD }));
 };

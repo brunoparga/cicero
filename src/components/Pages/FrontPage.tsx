@@ -1,5 +1,5 @@
 import React from 'react';
-import { actionTypes, beginStudySession, store } from '../../store';
+import { actions, beginStudySession, store } from '../../store';
 import '../shared/private/Button.css';
 import './FrontPage.css';
 
@@ -7,7 +7,7 @@ export const FrontPage: React.FunctionComponent = () => {
   const { dispatch } = React.useContext(store);
   const clickHandler = () => {
     beginStudySession(dispatch);
-    dispatch({ type: actionTypes.SET_STATUS, payload: 'studying' });
+    dispatch({ type: actions.SET_STATUS, payload: 'studying' });
   };
   return (
     <div className="front-page-container">

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Action, UserAccountInputs } from '../../types';
-import { actionTypes } from '..';
+import { actions } from '..';
 
 export const signup = (
   URL: string, formData: UserAccountInputs, dispatch: React.Dispatch<Action>,
@@ -12,5 +12,5 @@ export const signup = (
     body: JSON.stringify(formData),
   })
     .then((res) => res.json())
-    .then((payload) => dispatch({ type: actionTypes.SIGN_IN, payload }));
+    .then((payload) => dispatch({ type: actions.SIGN_IN, payload }));
 };

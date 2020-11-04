@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { actionTypes, sendSessionResults, store } from '../store';
+import { actions, sendSessionResults, store } from '../store';
 import { AppStateWithDispatch } from '../types';
 
 type VoidFunction = () => void;
@@ -11,9 +11,9 @@ const createClickHandler = (context: AppStateWithDispatch, teach: boolean): Void
   const lastWord = currentWordIndex === words.length - 1;
 
   return () => {
-    const learnWord = { type: actionTypes.LEARN_WORD };
-    const nextWord = { type: actionTypes.SET_WORD };
-    const doneStudying = { type: actionTypes.SET_STATUS, payload: 'done' };
+    const learnWord = { type: actions.LEARN_WORD };
+    const nextWord = { type: actions.SET_WORD };
+    const doneStudying = { type: actions.SET_STATUS, payload: 'done' };
 
     if (teach) {
       dispatch(learnWord);

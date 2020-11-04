@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { actionTypes, store } from '../../store';
+import { actions, store } from '../../store';
 import { Word } from '../../types';
 import './Summary.css';
 
@@ -17,7 +17,7 @@ export const Summary: React.FunctionComponent = () => {
     </li>
   );
 
-  const clickHandler = () => dispatch({ type: actionTypes.SET_STATUS, payload: 'frontPage' });
+  const clickHandler = () => dispatch({ type: actions.SET_STATUS, payload: 'frontPage' });
 
   return (
     <div className="answer-container">

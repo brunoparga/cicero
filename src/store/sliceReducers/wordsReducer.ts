@@ -1,9 +1,9 @@
 import { Action, Word } from '../../types';
-import { actionTypes } from '..';
+import { actions } from '..';
 
 export const wordsReducer = (words: Word[], { type, payload }: Action): Word[] => {
   switch (type) {
-    case actionTypes.FETCH_WORDS:
+    case actions.FETCH_WORDS:
       return payload;
     default:
       return words;

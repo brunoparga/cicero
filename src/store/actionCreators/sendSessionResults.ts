@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Action, Word } from '../../types';
-import { actionTypes } from '../actionTypes';
+import { actions } from '..';
 
 export const sendSessionResults = (words: Word[], dispatch: React.Dispatch<Action>) => {
   const body = JSON.stringify(words.map((word) => ({ lemma: word.lemma, learned: word.learned })));
@@ -10,5 +10,5 @@ export const sendSessionResults = (words: Word[], dispatch: React.Dispatch<Actio
     headers: { 'Content-Type': 'application/json' },
     body,
   })
-    .then(() => dispatch({ type: actionTypes.RESULTS_SAVED }));
+    .then(() => dispatch({ type: actions.RESULTS_SAVED }));
 };

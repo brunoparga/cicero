@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { actionTypes, store } from '../../../store';
+import { actions, store } from '../../../store';
 import { active, passive } from '../../../grammar';
 import { Word } from '../../../types';
 import { Buttons, Checkbox } from '../../shared';
@@ -11,7 +11,7 @@ export const InfinitiveButtons: React.FunctionComponent = () => {
   const { state: { word, page: { passiveSelected } }, dispatch } = React.useContext(store);
   const { properties: { conjugation, deponent, correctInfinitive } } = word as Word;
   const suffixes = useInfinitives();
-  const toggleDeponent = { type: actionTypes.TOGGLE_DEPONENT };
+  const toggleDeponent = { type: actions.TOGGLE_DEPONENT };
 
   const keyUpHandler = (event: React.KeyboardEvent) => {
     if (event.key.toUpperCase() === 'P') { dispatch(toggleDeponent); }
