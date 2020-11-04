@@ -1,13 +1,10 @@
 import { NounProperties, Word } from '../../../types';
-import { singular, plural } from '../../../grammar';
+import { setGenitive } from '../../../helpers';
 
 export const Noun = (word: Word): [string, string, string] => {
   const { lemma, english, properties } = word;
-  const {
-    correctGenitive, gender, number, declension,
-  } = properties as NounProperties;
-  const genitive = correctGenitive || { singular, plural }[number][declension];
-  const header = `${lemma}, ${genitive}`;
+  const { gender, number } = properties as NounProperties;
+  const header = `${lemma}, ${setGenitive(properties)}`;
   const description = `${gender} ${number} noun`;
   return [header, description, english];
 };

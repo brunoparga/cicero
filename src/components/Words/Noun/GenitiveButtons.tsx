@@ -1,20 +1,17 @@
 import React from 'react';
 
 import { actions, store } from '../../../store';
-import { singular, plural } from '../../../grammar';
-import { Word } from '../../../types';
+import { NounProperties, Word } from '../../../types';
 import { useGenitives } from '../../../hooks/useGenitives';
 import { Buttons, Checkbox } from '../../shared';
+import { setGenitive } from '../../../helpers';
 
 // Buttons to select the genitive suffix, which indicates how the word is inflected, changing
 // according to its role in the sentence (subject, object...)
 export const GenitiveButtons: React.FunctionComponent = () => {
-  const {
-    state: { word, page: { pluralSelected } },
-    dispatch,
-  } = React.useContext(store);
+  const { state: { word, page: { pluralSelected } }, dispatch } = React.useContext(store);
 
-  const { properties: { correctGenitive, declension, number } } = word as Word;
+  const { properties }: { properties: NounProperties } = word as Word;
 
   const suffixes = useGenitives();
 
@@ -26,7 +23,7 @@ export const GenitiveButtons: React.FunctionComponent = () => {
     }
   };
 
-  const correctAnswer = correctGenitive || { singular, plural }[number][declension];
+  const correctAnswer = setGenitive(properties);
 
   return (
     <div className="buttons pink-background spaced">
