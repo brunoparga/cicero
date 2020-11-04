@@ -1,5 +1,5 @@
 import { setPageOnNewWord, setWordOptions } from '../helpers';
-import { AppReducer, PageState } from '../types';
+import { AppReducer } from '../types';
 import { actions } from '.';
 import { initialPageState } from './initialPageState';
 
@@ -10,9 +10,7 @@ export const crossSliceReducer: AppReducer = (state, { type }) => {
       const word = state.words[index];
       // If word is undefined, this means we're out of words and should end the study session.
       if (!word) {
-        const { resultsSaved } = state.page;
-        const page: PageState = { ...initialPageState, status: 'done', resultsSaved };
-        return { ...state, word: null, page };
+        return { ...state, word: null, page: { ...initialPageState, status: 'done' } };
       }
       const page = setPageOnNewWord(word, index);
       const rightAnswer = word.questionType === 'Translation' ? word.english : word.lemma;
