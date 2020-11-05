@@ -7,6 +7,5 @@ import { describeWord } from '../../../helpers';
 
 export const TranslationQuestion: React.FunctionComponent = () => {
   const { state: { word } } = React.useContext(store) as { state: { word: Word } };
-  const header = describeWord(word);
-  return <Question header={header} label="Translation" />;
+  return <Question header={describeWord(word)} label="Translation" />;
 };
