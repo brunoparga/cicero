@@ -16,7 +16,7 @@ export enum Gender {
   Masculine = 'masculine',
   Feminine = 'feminine',
   Neuter = 'neuter',
-  MasculineOrFeminine = 'masculine/feminine'
+  'Masculine/Feminine' = 'masculine/feminine'
 }
 
 export enum Conjugation {
