@@ -1,13 +1,18 @@
 import React from 'react';
 
-import { store } from '../store';
+import { actions, store } from '../store';
 import { Topbar } from './shared';
 import * as Pages from './Pages';
 import './App.css';
 
 // Either show a loading screen or the loaded app.
 export const App: React.FunctionComponent = () => {
-  const { state: { word, page: { status } } } = React.useContext(store);
+  const { state: { word, page: { status } }, dispatch } = React.useContext(store);
+
+  const storedEmail = localStorage.getItem('email');
+  if (storedEmail) {
+    dispatch({ type: actions.SIGN_IN, payload: { email: storedEmail } });
+  }
 
   let component;
   if (status === 'studying' && !word) {

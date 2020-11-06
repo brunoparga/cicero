@@ -12,5 +12,9 @@ export const signin = (
     body: JSON.stringify(formData),
   })
     .then((res) => res.json())
-    .then((payload) => dispatch({ type: actions.SIGN_IN, payload }));
+    .then((data) => {
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('email', data.email);
+      dispatch({ type: actions.SIGN_IN, payload: { email: data.email } });
+    });
 };

@@ -1,7 +1,7 @@
 import { Word } from '..';
 
 type UserNotLoggedIn = { message: string; }
-type UserLoggedIn = { email?: string; token?: string; }
+type UserLoggedIn = { email?: string }
 export type UserState = UserNotLoggedIn & UserLoggedIn;
 
 export type PageState = {
