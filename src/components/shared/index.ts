@@ -1,5 +1,5 @@
-export * from './Answer';
-export * from './Buttons';
-export * from './Checkbox';
-export * from './Question';
-export * from './Topbar';
+export { Answer } from './Answer';
+export { Buttons } from './Buttons';
+export { Checkbox } from './Checkbox';
+export { Question } from './Question';
+export { Topbar } from './Topbar';

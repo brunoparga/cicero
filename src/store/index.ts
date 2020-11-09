@@ -1,6 +1,8 @@
-export * from './actionCreators';
-export * from './actions';
+export {
+  beginStudySession, endSession, signin, signup,
+} from './actionCreators';
+export { actions } from './actions';
 export { crossSliceReducer } from './crossSliceReducer';
 export { initialPageState } from './initialPageState';
 export { initialAppState, rootReducer } from './reducer';
-export * from './store';
+export { StateProvider, store } from './store';

@@ -5,7 +5,7 @@ import { signin, signup, store } from '../../store';
 import { UserAccountInputs } from '../../types';
 import './index.css';
 
-export * from './SignoutButton';
+export { SignoutButton } from './SignoutButton';
 
 export const UserAccountForm: React.FunctionComponent = () => {
   const { dispatch } = React.useContext(store);
