@@ -4,8 +4,12 @@ module.exports = {
     es6: true,
   },
   extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:react/recommended',
     'airbnb',
+    '@typescript-eslint',
   ],
   globals: {
     Atomics: 'readonly',
