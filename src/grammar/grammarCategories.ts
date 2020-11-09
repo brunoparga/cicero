@@ -1,4 +1,5 @@
 // This leverages TS Enums to keep these categories neat and tidy.
+/* eslint-disable no-shadow */
 export enum Declension {
   First,
   Second,
