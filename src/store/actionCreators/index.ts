@@ -1,4 +1,4 @@
 export { beginStudySession } from './beginStudySession';
-export { endSession } from './endSession';
+export { endStudySession } from './endStudySession';
 export { signin } from './signin';
 export { signup } from './signup';

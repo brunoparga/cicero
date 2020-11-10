@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { actions, endSession, store } from '../store';
+import { actions, endStudySession, store } from '../store';
 import { AppStateWithDispatch } from '../types';
 
 type VoidFunction = () => void;
@@ -18,7 +18,7 @@ const createClickHandler = (context: AppStateWithDispatch, teach: boolean): Void
       dispatch(learnWord);
     }
     if (lastWord) {
-      endSession(words, dispatch);
+      endStudySession(words, dispatch);
     } else {
       dispatch(nextWord);
     }
