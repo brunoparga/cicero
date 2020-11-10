@@ -1,7 +1,7 @@
 import { Word } from '../types';
 import { describeVerb, setGenitive } from '.';
 
-export const describeWord = (word: Word) => {
+export const describeWord = (word: Word): string => {
   const { lemma, properties } = word;
   let header = `Indeclinable: ${lemma}`;
   // Skip the whole check if the word doesn't even have properties, i.e. is indeclinable

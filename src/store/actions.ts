@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-shadow
 export enum actions {
   // Page actions
   SET_STATUS = 'SET_STATUS',

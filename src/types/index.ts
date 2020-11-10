@@ -3,6 +3,7 @@ export type {
 } from './store';
 export type { FormInputPropTypes, UserAccountInputs } from './users';
 export type {
-  AdjectiveProperties, NounGuess, NounProperties, QuestionType, TranslationProperties, VerbGuess,
-  VerbProperties, Word,
+  AdjectiveProperties, NounGuess, NounProperties, TranslationProperties, VerbGuess, VerbProperties,
+  Word,
 } from './words';
+export { QuestionType } from './words';

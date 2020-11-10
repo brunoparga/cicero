@@ -4,7 +4,7 @@ import { Action, AppState, AppStateWithDispatch } from '../types';
 import { initialAppState, rootReducer } from '.';
 
 const store = React
-  .createContext<AppStateWithDispatch>({ state: initialAppState, dispatch: () => {} });
+  .createContext<AppStateWithDispatch>({ state: initialAppState, dispatch: () => undefined });
 
 const StateProvider: React.FunctionComponent = ({ children }) => {
   const [state, dispatch]: [AppState, React.Dispatch<Action>] = React

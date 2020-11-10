@@ -4,6 +4,7 @@ import { TranslationProperties } from './translation';
 import { NounProperties } from './noun';
 import { VerbProperties } from './verb';
 
+// eslint-disable-next-line no-shadow
 export enum QuestionType {
   Adjective = 'Adjective',
   Indeclinable = 'Indeclinable',
@@ -12,9 +13,7 @@ export enum QuestionType {
   Verb = 'Verb'
 }
 
-type IndeclinableProperties = {}
 type Properties = AdjectiveProperties
-  & IndeclinableProperties
   & NounProperties
   & TranslationProperties
   & VerbProperties

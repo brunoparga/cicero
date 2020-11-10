@@ -5,7 +5,7 @@ import { actions } from '..';
 
 export const signin = (
   URL: string, formData: UserAccountInputs, dispatch: React.Dispatch<Action>,
-) => {
+): void => {
   fetch(URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

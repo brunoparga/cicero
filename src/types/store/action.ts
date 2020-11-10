@@ -3,9 +3,9 @@ import { AppState } from './appState';
 
 export type Action = {
   type: string;
-  payload?: any;
+  payload?: unknown;
   error?: boolean;
-  meta?: any;
+  meta?: unknown;
 }
 
 export type AppStateWithDispatch = {

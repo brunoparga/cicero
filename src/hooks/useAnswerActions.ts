@@ -27,10 +27,10 @@ const createClickHandler = (context: AppStateWithDispatch, teach: boolean): Void
 
 // Provide the Answer component with two things it needs: whether this is the last word of the study
 // session, and a click handler that dispatches the appropriate actions.
-export const useAnswerActions = (teach: boolean) => {
+export const useAnswerActions = (teach: boolean): [boolean, VoidFunction] => {
   const context = React.useContext(store);
   const { words, page: { currentWordIndex } } = context.state;
   const lastWord = currentWordIndex === words.length - 1;
   const clickHandler = createClickHandler(context, teach);
-  return [lastWord, clickHandler] as [boolean, VoidFunction];
+  return [lastWord, clickHandler];
 };

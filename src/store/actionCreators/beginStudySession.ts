@@ -18,7 +18,7 @@ const processWord = (word: Word): Word => {
   return { ...word, questionType: QuestionType.Indeclinable };
 };
 
-export const beginStudySession = (dispatch: React.Dispatch<Action>) => {
+export const beginStudySession = (dispatch: React.Dispatch<Action>): void => {
   fetch(`${process.env.REACT_APP_API_URL}/words`)
     .then((res) => res.json())
     .then((words) => {

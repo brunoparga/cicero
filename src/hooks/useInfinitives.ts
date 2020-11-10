@@ -4,7 +4,7 @@ import { store } from '../store';
 import { Word } from '../types';
 import { active, Conjugation, passive } from '../grammar';
 
-export const useInfinitives = () => {
+export const useInfinitives = (): Array<string> => {
   const { state: { word, page: { passiveSelected } } } = React.useContext(store);
   const { properties: { conjugation, correctInfinitive } } = word as Word;
   const [suffixes, setSuffixes] = React.useState(active);

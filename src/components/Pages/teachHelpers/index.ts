@@ -8,6 +8,6 @@ export const functionSelector = {
   Adjective,
   Indeclinable,
   // This does nothing, since no Translation words can get here. But the type system requires it.
-  Translation: () => ['', '', ''],
+  Translation: (): [string, string, string] => ['', '', ''],
   Verb,
 };
