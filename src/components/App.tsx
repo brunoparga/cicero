@@ -11,7 +11,7 @@ export const App: React.FunctionComponent = () => {
 
   const storedEmail = localStorage.getItem('email');
   if (storedEmail) {
-    dispatch({ type: actions.SIGN_IN, payload: { email: storedEmail } });
+    dispatch({ ...actions.SIGN_IN, payload: { email: storedEmail } });
   }
 
   let component;

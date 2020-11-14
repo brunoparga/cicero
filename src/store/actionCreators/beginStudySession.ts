@@ -23,7 +23,7 @@ export const beginStudySession = (dispatch: React.Dispatch<Action>): void => {
     .then((res) => res.json())
     .then((words) => {
       const payload = words.map(processWord);
-      dispatch({ type: actions.FETCH_WORDS, payload });
+      dispatch({ ...actions.FETCH_WORDS, payload });
     })
-    .then(() => dispatch({ type: actions.SET_WORD }));
+    .then(() => dispatch(actions.SET_WORD));
 };

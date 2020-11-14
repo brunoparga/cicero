@@ -11,10 +11,9 @@ export const InfinitiveButtons: React.FunctionComponent = () => {
   const { state: { word, page: { passiveSelected } }, dispatch } = React.useContext(store);
   const { properties: { conjugation, deponent, correctInfinitive } } = word as Word;
   const suffixes = useInfinitives();
-  const toggleDeponent = { type: actions.TOGGLE_DEPONENT };
 
   const keyUpHandler = (event: React.KeyboardEvent) => {
-    if (event.key.toUpperCase() === 'P') { dispatch(toggleDeponent); }
+    if (event.key.toUpperCase() === 'P') { dispatch(actions.TOGGLE_DEPONENT); }
   };
 
   const correctAnswer = correctInfinitive || (deponent ? passive : active)[conjugation];
@@ -24,7 +23,7 @@ export const InfinitiveButtons: React.FunctionComponent = () => {
       <Buttons label="Infinitive" items={suffixes} correctAnswer={correctAnswer} />
       <Checkbox
         checked={passiveSelected}
-        clickHandler={() => dispatch(toggleDeponent)}
+        clickHandler={() => dispatch(actions.TOGGLE_DEPONENT)}
         keyUpHandler={keyUpHandler}
         label="Passive"
       />

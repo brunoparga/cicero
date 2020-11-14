@@ -11,16 +11,13 @@ const createClickHandler = (context: AppStateWithDispatch, teach: boolean): Void
   const lastWord = currentWordIndex === words.length - 1;
 
   return () => {
-    const learnWord = { type: actions.LEARN_WORD };
-    const nextWord = { type: actions.SET_WORD };
-
     if (teach) {
-      dispatch(learnWord);
+      dispatch(actions.LEARN_WORD);
     }
     if (lastWord) {
       endStudySession(words, dispatch);
     } else {
-      dispatch(nextWord);
+      dispatch(actions.SET_WORD);
     }
   };
 };

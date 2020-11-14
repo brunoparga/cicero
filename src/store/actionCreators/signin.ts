@@ -15,6 +15,6 @@ export const signin = (
     .then((data) => {
       localStorage.setItem('token', data.token);
       localStorage.setItem('email', data.email);
-      dispatch({ type: actions.SIGN_IN, payload: { email: data.email } });
+      dispatch({ ...actions.SIGN_IN, payload: { email: data.email } });
     });
 };

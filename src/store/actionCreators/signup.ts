@@ -12,5 +12,5 @@ export const signup = (
     body: JSON.stringify(formData),
   })
     .then((res) => res.json())
-    .then((payload) => dispatch({ type: actions.SIGN_IN, payload }));
+    .then((payload) => dispatch({ ...actions.SIGN_IN, payload }));
 };

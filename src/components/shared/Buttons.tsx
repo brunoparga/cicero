@@ -26,7 +26,7 @@ export const Buttons: React.FunctionComponent<Props> = ({ label, items, correctA
       setSelected(elt.innerText);
       const property = label.toLowerCase();
       const value = elt.innerText === correctAnswer;
-      dispatch({ type: actions.SET_GUESS, payload: { property, value } });
+      dispatch({ ...actions.SET_GUESS, payload: { property, value } });
     }
   };
 

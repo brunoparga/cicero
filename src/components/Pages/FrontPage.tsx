@@ -7,7 +7,7 @@ export const FrontPage: React.FunctionComponent = () => {
   const { dispatch } = React.useContext(store);
   const clickHandler = () => {
     beginStudySession(dispatch);
-    dispatch({ type: actions.SET_STATUS, payload: 'studying' });
+    dispatch({ ...actions.SET_STATUS, payload: 'studying' });
   };
   return (
     <div className="front-page-container">

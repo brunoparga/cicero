@@ -17,7 +17,7 @@ export const Summary: React.FunctionComponent = () => {
     </li>
   );
 
-  const clickHandler = () => dispatch({ type: actions.SET_STATUS, payload: 'frontPage' });
+  const clickHandler = () => dispatch({ ...actions.SET_STATUS, payload: 'frontPage' });
 
   return (
     <div className="answer-container">

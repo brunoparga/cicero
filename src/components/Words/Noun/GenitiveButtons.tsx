@@ -10,27 +10,20 @@ import { setGenitive } from '../../../helpers';
 // according to its role in the sentence (subject, object...)
 export const GenitiveButtons: React.FunctionComponent = () => {
   const { state: { word, page: { pluralSelected } }, dispatch } = React.useContext(store);
-
   const { properties }: { properties: NounProperties } = word as Word;
-
+  const correctAnswer = setGenitive(properties);
   const suffixes = useGenitives();
 
-  const togglePlural = { type: actions.TOGGLE_PLURAL };
-
   const keyUpHandler = (event: React.KeyboardEvent) => {
-    if (event.key.toUpperCase() === 'P') {
-      dispatch(togglePlural);
-    }
+    if (event.key.toUpperCase() === 'P') { dispatch(actions.TOGGLE_PLURAL); }
   };
-
-  const correctAnswer = setGenitive(properties);
 
   return (
     <div className="buttons pink-background spaced">
       <Buttons label="Genitive" items={suffixes} correctAnswer={correctAnswer} />
       <Checkbox
         checked={pluralSelected}
-        clickHandler={() => dispatch(togglePlural)}
+        clickHandler={() => dispatch(actions.TOGGLE_PLURAL)}
         keyUpHandler={keyUpHandler}
         label="Plural"
       />
