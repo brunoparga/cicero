@@ -1,11 +1,10 @@
 import { setPageOnNewWord, setWordOptions } from '../helpers';
 import { AppReducer } from '../types';
-import { actions } from '.';
 import { initialPageState } from './initialPageState';
 
 export const crossSliceReducer: AppReducer = (state, { type }) => {
   switch (type) {
-    case actions.SET_WORD: {
+    case 'SET_WORD': {
       const index = state.page.currentWordIndex + 1;
       const word = state.words[index];
       // If word is undefined, this means we're out of words and should end the study session.

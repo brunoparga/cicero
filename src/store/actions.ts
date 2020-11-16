@@ -14,7 +14,7 @@ const types = [
   'SET_WORD',
   'TOGGLE_DEPONENT',
   'TOGGLE_PLURAL',
-];
+] as const;
 
 export const actions: Record<string, Action> = types
   .reduce((acc, type) => ({ ...acc, [type]: { type } }), {});
