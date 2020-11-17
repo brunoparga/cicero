@@ -7,7 +7,7 @@ export const endStudySession = (words: Word[], dispatch: React.Dispatch<Action>)
   // Using this action at the last word changes the page state to 'done'
   dispatch(actions.SET_WORD);
   // Record the results in the DB, including the token
-  const body = JSON.stringify(words.map((word) => ({ lemma: word.lemma, learned: word.learned })));
+  const body = JSON.stringify(words.map((word) => word.id));
   fetch(`${process.env.REACT_APP_API_URL}/words`, {
     method: 'POST',
     headers: {

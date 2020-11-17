@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Action, UserAccountInputs } from '../../types';
 import { actions } from '..';
+import { storeToken } from '../../helpers';
 
 export const signin = (
   URL: string, formData: UserAccountInputs, dispatch: React.Dispatch<Action>,
@@ -12,9 +13,8 @@ export const signin = (
     body: JSON.stringify(formData),
   })
     .then((res) => res.json())
-    .then((data) => {
-      localStorage.setItem('token', data.token);
-      localStorage.setItem('email', data.email);
-      dispatch({ ...actions.SIGN_IN, payload: { email: data.email } });
+    .then((token) => {
+      const email = storeToken(token);
+      dispatch({ ...actions.SIGN_IN, payload: { email } });
     });
 };

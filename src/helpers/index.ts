@@ -5,3 +5,4 @@ export { setGenitive } from './setGenitive';
 export { setPageOnNewWord } from './setPageOnNewWord';
 export { setWordOptions } from './setWordOptions';
 export { shuffle } from './shuffle';
+export { storeToken } from './storeToken';

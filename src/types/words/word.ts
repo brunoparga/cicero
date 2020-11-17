@@ -19,6 +19,7 @@ type Properties = AdjectiveProperties
   & VerbProperties
 
 export type Word = {
+  id: number;
   questionType: QuestionType;
   english: string;
   lemma: string;
