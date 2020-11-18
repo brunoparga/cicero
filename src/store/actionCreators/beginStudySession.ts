@@ -19,7 +19,12 @@ const processWord = (word: Word): Word => {
 };
 
 export const beginStudySession = (dispatch: React.Dispatch<Action>): void => {
-  fetch(`${process.env.REACT_APP_API_URL}/words`)
+  fetch(`${process.env.REACT_APP_API_URL}/words`, {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('token')}`,
+      'Content-Type': 'application/json',
+    },
+  })
     .then((res) => res.json())
     .then((words) => {
       const payload = words.map(processWord);
