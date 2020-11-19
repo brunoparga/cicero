@@ -5,7 +5,7 @@ import { authFetch, processWord } from '../../helpers';
 import { actions } from '..';
 
 export const beginReviewSession = (dispatch: React.Dispatch<Action>): void => {
-  authFetch(`${process.env.REACT_APP_API_URL}/words`, {
+  authFetch(`${process.env.REACT_APP_API_URL}/words/review`, {
     headers: { 'Content-Type': 'application/json' },
   })
     .then((res) => res.json())
