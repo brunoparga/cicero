@@ -1,5 +1,5 @@
 export {
-  beginStudySession, endStudySession, signin, signup,
+  beginLearnSession, beginReviewSession, endStudySession, signin, signup,
 } from './actionCreators';
 export { actions } from './actions';
 export { crossSliceReducer } from './crossSliceReducer';

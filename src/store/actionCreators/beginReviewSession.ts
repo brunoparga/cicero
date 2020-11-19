@@ -4,7 +4,7 @@ import { Action } from '../../types';
 import { authFetch, processWord } from '../../helpers';
 import { actions } from '..';
 
-export const beginStudySession = (dispatch: React.Dispatch<Action>): void => {
+export const beginReviewSession = (dispatch: React.Dispatch<Action>): void => {
   authFetch(`${process.env.REACT_APP_API_URL}/words`, {
     headers: { 'Content-Type': 'application/json' },
   })

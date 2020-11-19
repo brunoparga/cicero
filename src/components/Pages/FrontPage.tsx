@@ -1,12 +1,18 @@
 import React from 'react';
-import { actions, beginStudySession, store } from '../../store';
+import {
+  actions, beginLearnSession, beginReviewSession, store,
+} from '../../store';
 import '../shared/private/Button.css';
 import './FrontPage.css';
 
 export const FrontPage: React.FunctionComponent = () => {
   const { dispatch } = React.useContext(store);
-  const clickHandler = () => {
-    beginStudySession(dispatch);
+  const learnHandler = () => {
+    beginLearnSession(dispatch);
+    dispatch({ ...actions.SET_STATUS, payload: 'studying' });
+  };
+  const reviewHandler = () => {
+    beginReviewSession(dispatch);
     dispatch({ ...actions.SET_STATUS, payload: 'studying' });
   };
   return (
@@ -20,8 +26,11 @@ export const FrontPage: React.FunctionComponent = () => {
         As you learn, Cicero will remember which words you&apos;ve already studied and suggest new
         ones for your review.
       </p>
-      <button type="button" className="item btn answer-btn white active big" onClick={clickHandler}>
-        STUDY
+      <button type="button" className="item btn answer-btn white active big" onClick={learnHandler}>
+        LEARN
+      </button>
+      <button type="button" className="item btn answer-btn white active big" onClick={reviewHandler}>
+        REVIEW
       </button>
     </div>
   );
