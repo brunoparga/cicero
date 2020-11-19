@@ -12,8 +12,10 @@ export const crossSliceReducer: AppReducer = (state, { type }) => {
         return { ...state, word: null, page: { ...initialPageState, status: 'done' } };
       }
       const page = setPageOnNewWord(word, index);
-      const rightAnswer = word.questionType === 'Translation' ? word.english : word.lemma;
-      word.options = setWordOptions(word.options, rightAnswer);
+      if (word.learned) {
+        const rightAnswer = word.questionType === 'Translation' ? word.english : word.lemma;
+        word.options = setWordOptions(word.options, rightAnswer);
+      }
       return { ...state, word, page };
     }
     default:
