@@ -1,18 +1,34 @@
 import React from 'react';
 
-import { store } from '../../store';
+import { actions, store } from '../../store';
 import { UserState } from '../../types';
 import { SignoutButton, UserAccountForm } from '../UserAccountForm';
 import './Topbar.css';
 
 export const Topbar: React.FunctionComponent = () => {
-  const { state: { user } } = React.useContext(store);
+  const { state: { user }, dispatch } = React.useContext(store);
   const { message, email } = user as UserState;
   const text = message || email;
 
+  const toFrontPage = () => dispatch({ ...actions.SET_STATUS, payload: 'frontPage' });
+
+  const keyUpHandler = (event: React.KeyboardEvent) => {
+    if (event.key === ' ' || event.key === 'Enter') {
+      toFrontPage();
+    }
+  };
+
   return (
     <div className="navbar">
-      <div className="title white">Cicero</div>
+      <div
+        className="title white"
+        onClick={toFrontPage}
+        onKeyUp={keyUpHandler}
+        role="link"
+        tabIndex={0}
+      >
+        Cicero
+      </div>
       <div className="white">{text}</div>
       {email ? <SignoutButton /> : <UserAccountForm />}
     </div>
