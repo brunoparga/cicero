@@ -6,6 +6,10 @@
   align-items: center;
 }
 
-.front-page-container > button {
+.front-page-buttons {
   margin-top: 50px;
+}
+
+.front-page-buttons > button {
+  margin: 0 15px;
 }

@@ -26,12 +26,14 @@ export const FrontPage: React.FunctionComponent = () => {
         As you learn, Cicero will remember which words you&apos;ve already studied and suggest new
         ones for your review.
       </p>
-      <button type="button" className="item btn answer-btn white active big" onClick={learnHandler}>
-        LEARN
-      </button>
-      <button type="button" className="item btn answer-btn white active big" onClick={reviewHandler}>
-        REVIEW
-      </button>
+      <div className="front-page-buttons">
+        <button type="button" className="item btn answer-btn white active big" onClick={learnHandler}>
+          LEARN
+        </button>
+        <button type="button" className="item btn answer-btn white active big" onClick={reviewHandler}>
+          REVIEW
+        </button>
+      </div>
     </div>
   );
 };
