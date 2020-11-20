@@ -28,9 +28,9 @@ export const Summary: React.FunctionComponent = () => {
       </div>
       <button
         type="button"
-        className={`next white btn ${!resultsSaved && 'gray'}`}
+        className={`next white btn ${!resultsSaved && !words && 'gray'}`}
         onClick={clickHandler}
-        disabled={!resultsSaved}
+        disabled={!resultsSaved && !words}
       >
         <span className="big">&gt;</span>
         <br />
