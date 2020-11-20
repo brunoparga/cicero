@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Action } from '../../types';
-import { authFetch, processWord } from '../../helpers';
+import { authFetch, wordsForReview } from '../../helpers';
 import { actions } from '..';
 
 export const beginReviewSession = (dispatch: React.Dispatch<Action>): void => {
@@ -10,7 +10,7 @@ export const beginReviewSession = (dispatch: React.Dispatch<Action>): void => {
   })
     .then((res) => res.json())
     .then((words) => {
-      const payload = words.map(processWord);
+      const payload = words.map(wordsForReview);
       dispatch({ ...actions.FETCH_WORDS, payload });
     })
     .then(() => dispatch(actions.SET_WORD));
