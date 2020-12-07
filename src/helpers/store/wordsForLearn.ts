@@ -1,4 +1,4 @@
-import { QuestionType, Word } from '../types';
+import { QuestionType, Word } from '../../types';
 
 export const wordsForLearn = (word: Word): Word => {
   // All words whose part of speech contains a comma (i.e., they belong to two parts of speech)

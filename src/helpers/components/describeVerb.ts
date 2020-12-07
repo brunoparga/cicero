@@ -1,5 +1,5 @@
-import { active, passive } from '../grammar';
-import { Word } from '../types';
+import { active, passive } from '../../grammar';
+import { Word } from '../../types';
 
 export const describeVerb = (word: Word): string => {
   const {

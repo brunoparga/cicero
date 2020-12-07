@@ -1,5 +1,5 @@
-import { PageState, Word } from '../types';
-import { initialPageState } from '../store';
+import { PageState, Word } from '../../types';
+import { initialPageState } from '../../store';
 
 export const setPageOnNewWord = (word: Word, currentWordIndex: number): PageState => {
   const guessesByQuestionType = {

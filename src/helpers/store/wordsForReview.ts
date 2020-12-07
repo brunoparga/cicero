@@ -1,4 +1,4 @@
-import { QuestionType, Word } from '../types';
+import { QuestionType, Word } from '../../types';
 
 export const wordsForReview = (word: Word): Word => {
   // IDEA: write question type in the back-end (pro: easy on the front, con:

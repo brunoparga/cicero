@@ -1,5 +1,5 @@
-import { Word } from '../types';
-import { describeVerb, setGenitive } from '.';
+import { Word } from '../../types';
+import { describeVerb, setGenitive } from '..';
 
 export const describeWord = (word: Word): string => {
   const { lemma, properties } = word;
