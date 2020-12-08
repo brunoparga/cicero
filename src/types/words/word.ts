@@ -13,7 +13,17 @@ export enum QuestionType {
   Verb = 'Verb'
 }
 
-type Properties = AdjectiveProperties
+type WordNotes = {
+  indeclinable?: true,
+  declensionNote?: string,
+  verbNote?: string,
+  miscellaneousNote?: string,
+  alternateForm?: string,
+  quodNote?: string
+}
+
+type Properties = WordNotes
+  & AdjectiveProperties
   & NounProperties
   & TranslationProperties
   & VerbProperties
