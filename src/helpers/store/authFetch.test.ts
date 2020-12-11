@@ -1,14 +1,16 @@
-import { authFetch } from './authFetch';
+import { authFetch } from "./authFetch";
 
-it('adds the JSON Web Token to the request', () => {
+it("adds the JSON Web Token to the request", () => {
   // Setup
-  const token = 'someJSONWebToken';
-  localStorage.setItem('token', token);
-  jest.spyOn(global, 'fetch');
+  const token = "someJSONWebToken";
+
+  localStorage.setItem("token", token);
+  jest.spyOn(global, "fetch");
 
   // Exercise
-  const url = 'api.foo.com';
-  const options = { method: 'POST' };
+  const url = "api.foo.com";
+  const options = { method: "POST" };
+
   authFetch(url, options);
 
   // Verify

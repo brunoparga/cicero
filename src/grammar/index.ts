@@ -1,5 +1,8 @@
-export { singular, plural } from './genitiveSuffixes';
+export { singular, plural } from "./genitiveSuffixes";
 export {
-  Declension, GrammaticalNumber, Gender, Conjugation,
-} from './grammarCategories';
-export { active, passive } from './infinitiveSuffixes';
+  Declension,
+  GrammaticalNumber,
+  Gender,
+  Conjugation,
+} from "./grammarCategories";
+export { active, passive } from "./infinitiveSuffixes";

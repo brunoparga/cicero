@@ -24,9 +24,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -43,7 +40,7 @@
     "@typescript-eslint/eslint-plugin": "4.9.0",
     "@typescript-eslint/parser": "4.9.0",
     "eslint": "7.14.0",
-    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-hardcore": "14.0.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-inclusive-language": "1.2.1",
     "eslint-plugin-jest": "24.1.3",

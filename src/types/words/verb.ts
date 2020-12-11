@@ -1,4 +1,4 @@
-import { Conjugation } from '../../grammar';
+import { Conjugation } from "../../grammar";
 
 export type VerbProperties = {
   conjugation: Conjugation;
@@ -6,9 +6,9 @@ export type VerbProperties = {
   supine: string;
   deponent: boolean;
   correctInfinitive: string;
-}
+};
 
 export type VerbGuess = {
   latin: boolean;
   infinitive: boolean;
-}
+};

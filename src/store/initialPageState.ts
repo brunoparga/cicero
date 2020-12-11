@@ -1,7 +1,7 @@
-import { PageState } from '../types';
+import { PageState } from "../types";
 
 export const initialPageState: PageState = {
-  status: 'frontPage',
+  status: "frontPage",
   currentWordIndex: -1,
   resultsSaved: false,
   guess: {},

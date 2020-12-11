@@ -1,23 +1,30 @@
-import React from 'react';
+import React from "react";
 
-import { actions, store } from '../../store';
-import { Word } from '../../types';
-import './Summary.css';
+import { actions, store } from "../../store";
+import { Word } from "../../types";
+import "./Summary.css";
 
 export const Summary: React.FunctionComponent = () => {
-  const { state: { words, page: { resultsSaved } }, dispatch } = React.useContext(store);
+  const {
+    state: {
+      words,
+      page: { resultsSaved },
+    },
+    dispatch,
+  } = React.useContext(store);
 
   const formatWord = (word: Word): React.ReactElement => (
     <li key={word.lemma} className="left">
       <strong>{word.lemma}</strong>
-      {': '}
+      {": "}
       <em>{word.english}</em>
-      {' - '}
+      {" - "}
       {word.questionType}
     </li>
   );
 
-  const clickHandler = () => dispatch({ ...actions.SET_STATUS, payload: 'frontPage' });
+  const clickHandler = () =>
+    dispatch({ ...actions.SET_STATUS, payload: "frontPage" });
 
   return (
     <div className="answer-container">
@@ -28,7 +35,7 @@ export const Summary: React.FunctionComponent = () => {
       </div>
       <button
         type="button"
-        className={`next white btn ${!resultsSaved && !words && 'gray'}`}
+        className={`next white btn ${!resultsSaved && !words && "gray"}`}
         onClick={clickHandler}
         disabled={!resultsSaved && !words}
       >

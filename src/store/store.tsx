@@ -1,23 +1,31 @@
-import React from 'react';
+import React from "react";
 
-import { Action, AppState, AppStateWithDispatch } from '../types';
-import { actions, initialAppState, rootReducer } from '.';
+import { Action, AppState, AppStateWithDispatch } from "../types";
 
-const store = React
-  .createContext<AppStateWithDispatch>({ state: initialAppState, dispatch: () => undefined });
+import { actions, initialAppState, rootReducer } from ".";
+
+const store = React.createContext<AppStateWithDispatch>({
+  state: initialAppState,
+  dispatch: () => undefined,
+});
 
 const StateProvider: React.FunctionComponent = ({ children }) => {
-  const [state, dispatch]: [AppState, React.Dispatch<Action>] = React
-    .useReducer(rootReducer, initialAppState);
+  const [state, dispatch]: [
+    AppState,
+    React.Dispatch<Action>
+  ] = React.useReducer(rootReducer, initialAppState);
 
   if (!state.user.email) {
-    const storedEmail = localStorage.getItem('email');
+    const storedEmail = localStorage.getItem("email");
+
     if (storedEmail) {
       dispatch({ ...actions.SIGN_IN, payload: { email: storedEmail } });
     }
   }
 
-  return <store.Provider value={{ state, dispatch }}>{children}</store.Provider>;
+  return (
+    <store.Provider value={{ state, dispatch }}>{children}</store.Provider>
+  );
 };
 
 export { StateProvider, store };

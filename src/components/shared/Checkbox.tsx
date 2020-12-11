@@ -1,16 +1,19 @@
-import React from 'react';
+import React from "react";
 
-import './Checkbox.css';
+import "./Checkbox.css";
 
-type Props = {
-  checked: boolean,
-  clickHandler: React.MouseEventHandler,
-  keyUpHandler: React.KeyboardEventHandler,
-  label: string
-}
+type Properties = {
+  checked: boolean;
+  clickHandler: React.MouseEventHandler;
+  keyUpHandler: React.KeyboardEventHandler;
+  label: string;
+};
 
-export const Checkbox: React.FunctionComponent<Props> = ({
-  checked, clickHandler, keyUpHandler, label,
+export const Checkbox: React.FunctionComponent<Properties> = ({
+  checked,
+  clickHandler,
+  keyUpHandler,
+  label,
 }) => (
   <div className="checkbox-container">
     <div
@@ -22,10 +25,8 @@ export const Checkbox: React.FunctionComponent<Props> = ({
       onClick={clickHandler}
       onKeyUp={keyUpHandler}
     >
-      <div className={checked ? 'checked' : 'unchecked'}>X</div>
+      <div className={checked ? "checked" : "unchecked"}>X</div>
     </div>
-    <div>
-      {label}
-    </div>
+    <div>{label}</div>
   </div>
 );

@@ -1,6 +1,9 @@
 export {
-  describeAdjective, describeVerb, describeWord, setGenitive,
-} from './components';
+  describeAdjective,
+  describeVerb,
+  describeWord,
+  setGenitive,
+} from "./components";
 export {
   authFetch,
   setPageOnNewWord,
@@ -8,4 +11,4 @@ export {
   storeToken,
   wordsForLearn,
   wordsForReview,
-} from './store';
+} from "./store";

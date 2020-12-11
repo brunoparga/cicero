@@ -1,11 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import { store } from '../../../store';
-import { AdjectiveAnswer } from './AdjectiveAnswer';
-import { AdjectiveQuestion } from './AdjectiveQuestion';
+import { store } from "../../../store";
+
+import { AdjectiveAnswer } from "./AdjectiveAnswer";
+import { AdjectiveQuestion } from "./AdjectiveQuestion";
 
 // Decide to show question or answer based on whether the word has already been guessed.
 export const Adjective: React.FunctionComponent = () => {
-  const { state: { page: { revealAnswer } } } = React.useContext(store);
+  const {
+    state: {
+      page: { revealAnswer },
+    },
+  } = React.useContext(store);
+
   return revealAnswer ? <AdjectiveAnswer /> : <AdjectiveQuestion />;
 };

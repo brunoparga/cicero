@@ -1,19 +1,23 @@
-import React from 'react';
+import React from "react";
 
-import { actions, store } from '../../store';
-import { UserState } from '../../types';
-import { SignoutButton, UserAccountForm } from '../UserAccountForm';
-import './Topbar.css';
+import { actions, store } from "../../store";
+import { UserState } from "../../types";
+import { SignoutButton, UserAccountForm } from "../UserAccountForm";
+import "./Topbar.css";
 
 export const Topbar: React.FunctionComponent = () => {
-  const { state: { user }, dispatch } = React.useContext(store);
+  const {
+    state: { user },
+    dispatch,
+  } = React.useContext(store);
   const { message, email } = user as UserState;
   const text = message || email;
 
-  const toFrontPage = () => dispatch({ ...actions.SET_STATUS, payload: 'frontPage' });
+  const toFrontPage = () =>
+    dispatch({ ...actions.SET_STATUS, payload: "frontPage" });
 
   const keyUpHandler = (event: React.KeyboardEvent) => {
-    if (event.key === ' ' || event.key === 'Enter') {
+    if (event.key === " " || event.key === "Enter") {
       toFrontPage();
     }
   };

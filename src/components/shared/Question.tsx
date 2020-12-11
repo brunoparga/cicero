@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import { WordButtons } from './private';
+import { WordButtons } from "./private";
 
-type Props = { header: string, label?: string }
+type Properties = { header: string; label?: string };
 
-export const Question: React.FunctionComponent<Props> = ({ header, label = 'Latin', children }) => (
+export const Question: React.FunctionComponent<Properties> = ({
+  header,
+  label = "Latin",
+  children,
+}) => (
   <>
     <h1>{header}</h1>
     <WordButtons label={label} />

@@ -1,15 +1,19 @@
-import React from 'react';
+import React from "react";
 
-import { Question } from '../../shared';
-import { GenitiveButtons } from './GenitiveButtons';
-import { GenderButtons } from './GenderButtons';
-import { store } from '../../../store';
-import { Word } from '../../../types';
+import { Question } from "../../shared";
+import { store } from "../../../store";
+import { Word } from "../../../types";
+
+import { GenitiveButtons } from "./GenitiveButtons";
+import { GenderButtons } from "./GenderButtons";
 
 // Present buttons for user to guess which word is the correct Latin translation,
 // its genitive suffix and grammatical number.
 export const NounQuestion: React.FunctionComponent = () => {
-  const { state: { word } } = React.useContext(store) as { state: { word: Word } };
+  const { state } = React.useContext(store) as { state: { word: Word } };
+
+  const { word } = state;
+
   return (
     <Question header={word.english}>
       <GenitiveButtons />

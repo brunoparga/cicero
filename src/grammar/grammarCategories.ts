@@ -5,19 +5,19 @@ export enum Declension {
   Second,
   Third,
   Fourth,
-  Fifth
+  Fifth,
 }
 
 export enum GrammaticalNumber {
-  Singular = 'singular',
-  Plural = 'plural'
+  Singular = "singular",
+  Plural = "plural",
 }
 
 export enum Gender {
-  Masculine = 'masculine',
-  Feminine = 'feminine',
-  Neuter = 'neuter',
-  'Masculine/Feminine' = 'masculine/feminine'
+  Masculine = "masculine",
+  Feminine = "feminine",
+  Neuter = "neuter",
+  "Masculine/Feminine" = "masculine/feminine",
 }
 
 export enum Conjugation {
@@ -25,5 +25,5 @@ export enum Conjugation {
   First,
   Second,
   Third,
-  Fourth
+  Fourth,
 }

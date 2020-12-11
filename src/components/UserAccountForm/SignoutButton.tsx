@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import { actions, store } from '../../store';
-import '../shared/Topbar.css';
+import { actions, store } from "../../store";
+import "../shared/Topbar.css";
 
 export const SignoutButton: React.FunctionComponent = () => {
   const { dispatch } = React.useContext(store);
@@ -9,5 +9,10 @@ export const SignoutButton: React.FunctionComponent = () => {
     localStorage.clear();
     dispatch(actions.SIGN_OUT);
   };
-  return <button type="button" className="btn form-btn" onClick={handleClick}>Log out</button>;
+
+  return (
+    <button type="button" className="btn form-btn" onClick={handleClick}>
+      Log out
+    </button>
+  );
 };

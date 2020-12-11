@@ -1,13 +1,21 @@
-import React from 'react';
+import React from "react";
 
-import { Question } from '../../shared';
-import { InfinitiveButtons } from './InfinitiveButtons';
-import { store } from '../../../store';
-import { Word } from '../../../types';
+import { Question } from "../../shared";
+import { store } from "../../../store";
+import { Word } from "../../../types";
+
+import { InfinitiveButtons } from "./InfinitiveButtons";
 
 // Present buttons for user to guess which word is the correct Latin translation,
 // its genitive suffix and grammatical number.
 export const VerbQuestion: React.FunctionComponent = () => {
-  const { state: { word } } = React.useContext(store) as { state: { word: Word } };
-  return <Question header={word.english}><InfinitiveButtons /></Question>;
+  const { state } = React.useContext(store) as { state: { word: Word } };
+
+  const { word } = state;
+
+  return (
+    <Question header={word.english}>
+      <InfinitiveButtons />
+    </Question>
+  );
 };

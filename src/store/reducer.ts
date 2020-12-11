@@ -1,18 +1,20 @@
-import combineReducers from 'react-combine-reducers';
+import combineReducers from "react-combine-reducers";
 
-import { AppReducer } from '../types';
-import { crossSliceReducer, initialPageState } from '.';
-import * as sliceReducers from './sliceReducers';
+import { AppReducer } from "../types";
+
+import { page, user, word, words } from "./sliceReducers";
+
+import { crossSliceReducer, initialPageState } from ".";
 
 export const [combinedReducer, initialAppState] = combineReducers<AppReducer>({
-  page: [sliceReducers.page, initialPageState],
-  user: [sliceReducers.user, { message: '' }],
-  word: [sliceReducers.word, null],
-  words: [sliceReducers.words, []],
+  page: [page, initialPageState],
+  user: [user, { message: "" }],
+  word: [word, null],
+  words: [words, []],
 });
 
 export const rootReducer: AppReducer = (state, action) => {
   const intermediateState = combinedReducer(state, action);
-  const finalState = crossSliceReducer(intermediateState, action);
-  return finalState;
+
+  return crossSliceReducer(intermediateState, action);
 };

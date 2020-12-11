@@ -1,11 +1,13 @@
-import { Word } from '..';
+import { Word } from "..";
 
-type UserNotLoggedIn = { message: string; }
-type UserLoggedIn = { email?: string }
+type UserNotLoggedIn = { message: string };
+
+type UserLoggedIn = { email?: string };
+
 export type UserState = UserNotLoggedIn & UserLoggedIn;
 
 export type PageState = {
-  status: 'frontPage' | 'studying' | 'done';
+  status: "frontPage" | "studying" | "done";
   currentWordIndex: number;
   resultsSaved: boolean;
   guess: {
@@ -14,11 +16,11 @@ export type PageState = {
   passiveSelected: boolean;
   pluralSelected: boolean;
   revealAnswer: boolean;
-}
+};
 
 export type AppState = {
   page: PageState;
   user: UserState;
   word: Word | null;
-  words: Word[]
+  words: Word[];
 };

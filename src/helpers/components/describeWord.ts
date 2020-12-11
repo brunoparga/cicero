@@ -1,9 +1,11 @@
-import { Word } from '../../types';
-import { describeVerb, setGenitive } from '..';
+import { Word } from "../../types";
+import { describeVerb, setGenitive } from "..";
 
 export const describeWord = (word: Word): string => {
   const { lemma, properties } = word;
+
   let header = `Indeclinable: ${lemma}`;
+
   // Skip the whole check if the word doesn't even have properties, i.e. is indeclinable
   if (properties) {
     // Words get here stripped of their parts of speech, as that gets replaced by
@@ -17,16 +19,19 @@ export const describeWord = (word: Word): string => {
     // It is also worth noting that 'properties' refers to traits a word might have, while Property
     // and prop refer to JS internals. So basically this is testing if the key-value pair set called
     // "properties" contains the key called "prop".
-    const hasProp = (prop: string): boolean => Object.prototype
-      .hasOwnProperty.call(properties, prop);
-    if (hasProp('declension')) {
+    const hasProperty = (property: string): boolean =>
+      Object.prototype.hasOwnProperty.call(properties, property);
+
+    if (hasProperty("declension")) {
       header = `Noun: ${lemma}, ${setGenitive(properties)}`;
-    } else if (hasProp('conjugation')) {
+    } else if (hasProperty("conjugation")) {
       header = describeVerb(word);
-    } else if (hasProp('suffixes')) {
+    } else if (hasProperty("suffixes")) {
       const genitive = properties.masculineGenitive || properties.genitive;
+
       header = `Adjective: ${lemma}, ${genitive}`;
     }
   }
+
   return header;
 };
