@@ -6,7 +6,8 @@ import { Word } from "../../../types";
 import { Buttons, Checkbox } from "../../shared";
 import { useInfinitives } from "../../../hooks/useInfinitives";
 
-// Buttons to select the infinitive suffix, which indicates how the verb is conjugated
+// Buttons to select the infinitive suffix, which indicates how the verb is
+// conjugated
 export const InfinitiveButtons: React.FunctionComponent = () => {
   const {
     state: {

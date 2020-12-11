@@ -4,20 +4,20 @@ import { Action, UserAccountInputs } from "../../types";
 import { actions } from "..";
 import { storeToken } from "../../helpers";
 
-export const signin = (
-  URL: string,
+async function signin(
+  actionURL: string,
   formData: UserAccountInputs,
   dispatch: React.Dispatch<Action>
-): void => {
-  fetch(URL, {
+): Promise<void> {
+  const response = await fetch(actionURL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
-  })
-    .then((res) => res.json())
-    .then((token) => {
-      const email = storeToken(token);
+  });
+  const token = await response.json();
+  const email = storeToken(token);
 
-      dispatch({ ...actions.SIGN_IN, payload: { email } });
-    });
-};
+  dispatch({ ...actions.SIGN_IN, payload: { email } });
+}
+
+export { signin };

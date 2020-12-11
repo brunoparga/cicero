@@ -55,6 +55,7 @@ module.exports = {
     "import/no-unassigned-import": ["error", { allow: ["**/*.css"] }],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
+    "no-shadow": "off",
     "react/jsx-filename-extension": ["error", { extensions: [".jsx", ".tsx"] }],
     "react/prop-types": "off",
     "woke/all": "error",

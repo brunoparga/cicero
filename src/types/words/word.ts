@@ -18,7 +18,6 @@ type Properties = WordNotes &
   TranslationProperties &
   VerbProperties;
 
-// eslint-disable-next-line no-shadow
 export enum QuestionType {
   Adjective = "Adjective",
   Indeclinable = "Indeclinable",

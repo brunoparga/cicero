@@ -2,8 +2,12 @@ import { QuestionType, Word } from "../../types";
 
 import { wordsForReview } from "./wordsForReview";
 
+const oneHalf = 0.5;
+
 it("sets 1/3 of words for English to Latin translation", () => {
-  jest.spyOn(global.Math, "random").mockReturnValue(0.25);
+  const oneQuarter = 0.25;
+
+  jest.spyOn(global.Math, "random").mockReturnValue(oneQuarter);
 
   const word = { lemma: "quux" } as Word;
 
@@ -14,7 +18,7 @@ it("sets 1/3 of words for English to Latin translation", () => {
 });
 
 it("sets words as indeclinable if they have the relevant property", () => {
-  jest.spyOn(global.Math, "random").mockReturnValue(0.5);
+  jest.spyOn(global.Math, "random").mockReturnValue(oneHalf);
 
   const word = { properties: { indeclinable: true } } as Word;
 
@@ -25,7 +29,7 @@ it("sets words as indeclinable if they have the relevant property", () => {
 });
 
 it("leaves words unchanged if they are adjectives, nouns or verbs", () => {
-  jest.spyOn(global.Math, "random").mockReturnValue(0.5);
+  jest.spyOn(global.Math, "random").mockReturnValue(oneHalf);
 
   const word1 = { questionType: "Adjective" } as Word;
   const word2 = { questionType: "Noun" } as Word;
@@ -39,7 +43,7 @@ it("leaves words unchanged if they are adjectives, nouns or verbs", () => {
 // if it changes form to indicate function like a duck, that is called...
 // DUCKLENSION
 it('sets numerals and pronouns as "adjectives" if they decline as such', () => {
-  jest.spyOn(global.Math, "random").mockReturnValue(0.5);
+  jest.spyOn(global.Math, "random").mockReturnValue(oneHalf);
 
   const word1 = ({
     questionType: "Numeral",
@@ -61,7 +65,7 @@ it('sets numerals and pronouns as "adjectives" if they decline as such', () => {
 });
 
 it("sets all other words - adverbs, conjunctions, etc. - as indeclinable", () => {
-  jest.spyOn(global.Math, "random").mockReturnValue(0.5);
+  jest.spyOn(global.Math, "random").mockReturnValue(oneHalf);
 
   const word = ({ questionType: "Prefix" } as unknown) as Word;
 

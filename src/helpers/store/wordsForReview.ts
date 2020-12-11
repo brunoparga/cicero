@@ -1,9 +1,9 @@
 import { QuestionType, Word } from "../../types";
 
 export const wordsForReview = (word: Word): Word => {
-  // IDEA: write question type in the back-end (pro: easy on the front, con:
-  // hard with teach and translate)
-  if (Math.random() < 1 / 3) {
+  const translationProbability = 0.333;
+
+  if (Math.random() < translationProbability) {
     return { ...word, questionType: QuestionType.Translation };
   }
 

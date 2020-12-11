@@ -1,5 +1,4 @@
 // This leverages TS Enums to keep these categories neat and tidy.
-/* eslint-disable no-shadow */
 export enum Declension {
   First,
   Second,
@@ -21,6 +20,7 @@ export enum Gender {
 }
 
 export enum Conjugation {
+  // eslint-disable-next-line no-magic-numbers
   Irregular = -1,
   First,
   Second,
