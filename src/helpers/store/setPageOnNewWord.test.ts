@@ -4,7 +4,9 @@ import { setPageOnNewWord } from "./setPageOnNewWord";
 
 const baseExpectation = {
   status: "studying",
-  currentWordIndex: 1, // Could be any number, the fn under test uses its argument unchanged
+
+  // Could be any number, the function under test uses its argument unchanged
+  currentWordIndex: 1,
   resultsSaved: false,
   passiveSelected: false,
   pluralSelected: false,

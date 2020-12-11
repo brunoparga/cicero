@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = {
   env: {
     browser: true,
@@ -50,10 +52,10 @@ module.exports = {
   rules: {
     "inclusive-language/use-inclusive-words": "error",
     "import/extensions": "off",
+    "import/no-unassigned-import": ["error", { allow: ["**/*.css"] }],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
-    "no-use-before-define": "off",
-    "react/jsx-filename-extension": [1, { extensions: [".jsx", ".tsx"] }],
+    "react/jsx-filename-extension": ["error", { extensions: [".jsx", ".tsx"] }],
     "react/prop-types": "off",
     "woke/all": "error",
   },

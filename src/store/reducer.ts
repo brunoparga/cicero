@@ -9,7 +9,7 @@ import { crossSliceReducer, initialPageState } from ".";
 export const [combinedReducer, initialAppState] = combineReducers<AppReducer>({
   page: [page, initialPageState],
   user: [user, { message: "" }],
-  word: [word, null],
+  word: [word, undefined],
   words: [words, []],
 });
 

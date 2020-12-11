@@ -11,8 +11,6 @@ type Properties = {
   correctAnswer: string;
 };
 
-// I expect this button set to be reused for other types of quiz (Latin to English noun, verbs,
-// adjectives, invariable words)
 export const Buttons: React.FunctionComponent<Properties> = ({
   label,
   items,
@@ -44,8 +42,9 @@ export const Buttons: React.FunctionComponent<Properties> = ({
     }
   };
 
+  // This <div> element has children <button> elements that allow keyboard
+  // interaction.
   return (
-    // This <div> element has children <button> elements that allow keyboard interaction.
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div className="buttons" onClick={clickHandler} onKeyUp={keyUpHandler}>
       <div className="item label">{label}</div>

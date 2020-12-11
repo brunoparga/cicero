@@ -1,17 +1,7 @@
-/* eslint-disable no-unused-vars */
 import { AdjectiveProperties } from "./adjective";
 import { TranslationProperties } from "./translation";
 import { NounProperties } from "./noun";
 import { VerbProperties } from "./verb";
-
-// eslint-disable-next-line no-shadow
-export enum QuestionType {
-  Adjective = "Adjective",
-  Indeclinable = "Indeclinable",
-  Noun = "Noun",
-  Translation = "Translation",
-  Verb = "Verb",
-}
 
 type WordNotes = {
   indeclinable?: true;
@@ -27,6 +17,15 @@ type Properties = WordNotes &
   NounProperties &
   TranslationProperties &
   VerbProperties;
+
+// eslint-disable-next-line no-shadow
+export enum QuestionType {
+  Adjective = "Adjective",
+  Indeclinable = "Indeclinable",
+  Noun = "Noun",
+  Translation = "Translation",
+  Verb = "Verb",
+}
 
 export type Word = {
   id: number;

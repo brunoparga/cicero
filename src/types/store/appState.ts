@@ -21,6 +21,6 @@ export type PageState = {
 export type AppState = {
   page: PageState;
   user: UserState;
-  word: Word | null;
+  word?: Word;
   words: Word[];
 };

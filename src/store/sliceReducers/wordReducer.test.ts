@@ -11,8 +11,8 @@ it("sets the word to learned with the correct action", () => {
 });
 
 it("does nothing with any other action", () => {
-  // at the beginning of the session, word is null and user signs in
-  const word = null;
+  // at the beginning of the session, word is undefined and user signs in
+  const word = (undefined as unknown) as Word;
   const action = { type: "SIGN_IN" };
 
   expect(wordReducer(word, action)).toEqual(word);

@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-undef
 export const authFetch = (
   url: RequestInfo,
   options: RequestInit

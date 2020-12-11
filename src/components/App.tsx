@@ -3,7 +3,7 @@ import React from "react";
 import { store } from "../store";
 
 import { Topbar } from "./shared";
-import * as Pages from "./Pages";
+import { drill, FrontPage, Summary, Teach } from "./Pages";
 import "./App.css";
 
 // Either show a loading screen or the loaded app.
@@ -20,13 +20,13 @@ export const App: React.FunctionComponent = () => {
   if (status === "studying" && !word) {
     component = <h1>Onerans (loading)...</h1>;
   } else if (status === "studying" && word?.learned) {
-    component = Pages.Drill(word?.questionType);
+    component = drill(word?.questionType);
   } else if (status === "studying") {
-    component = <Pages.Teach />;
+    component = <Teach />;
   } else if (status === "done") {
-    component = <Pages.Summary />;
+    component = <Summary />;
   } else {
-    component = <Pages.FrontPage />;
+    component = <FrontPage />;
   }
 
   return (
