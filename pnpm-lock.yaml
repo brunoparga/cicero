@@ -10,7 +10,7 @@ dependencies:
   react: 17.0.1
   react-combine-reducers: github.com/brunoparga/react-combine-reducers/3390a38fd1bfcd904bd55feb07f7e31c7c67cde1
   react-dom: 17.0.1_react@17.0.1
-  react-hook-form: 6.12.2_react@17.0.1
+  react-hook-form: 6.13.1_react@17.0.1
   react-scripts: 4.0.1_typescript@4.1.2
   typescript: 4.1.2
 devDependencies:
@@ -9744,14 +9744,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-HvPuUQnLp5H7TouGq3kzBeioJmXms1wHy9EGjz2OURWBp4qZO6AfGEcnxts1D/CbwPLRAgTMPCEgYhA3sEM4vw==
-  /react-hook-form/6.12.2_react@17.0.1:
+  /react-hook-form/6.13.1_react@17.0.1:
     dependencies:
       react: 17.0.1
     dev: false
     peerDependencies:
       react: ^16.8.0 || ^17
     resolution:
-      integrity: sha512-O72E2DXyk7djFqyy6eYi5yESGweKe0CNHHPS0Mx4JazpLbE4Ox+66ldZ23f0J5ZN/krEjDWRD+hUfg5Shvfhtw==
+      integrity: sha512-Q0N7MYcbA8SigYufb02h9z97ZKCpIbe62rywOTPsK4Ntvh6fRTGDXSuzWuRhLHhArLoWbGrWYSNSS4tlb+OFXg==
   /react-is/16.13.1:
     resolution:
       integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
@@ -12253,7 +12253,7 @@ specifiers:
   react: 17.0.1
   react-combine-reducers: 'github:brunoparga/react-combine-reducers#replace-babel-polyfill'
   react-dom: 17.0.1
-  react-hook-form: 6.12.2
+  react-hook-form: 6.13.1
   react-refresh: 0.9.0
   react-scripts: 4.0.1
   typescript: 4.1.2
