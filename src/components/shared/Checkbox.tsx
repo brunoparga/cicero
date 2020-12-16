@@ -9,6 +9,7 @@ type Properties = {
   label: string;
 };
 
+// eslint-disable-next-line func-style
 export const Checkbox: React.FunctionComponent<Properties> = ({
   checked,
   clickHandler,

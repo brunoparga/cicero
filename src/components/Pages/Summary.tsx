@@ -4,6 +4,7 @@ import { actions, store } from "../../store";
 import { Word } from "../../types";
 import "./Summary.css";
 
+// eslint-disable-next-line func-style
 export const Summary: React.FunctionComponent = () => {
   const {
     state: {
@@ -13,18 +14,21 @@ export const Summary: React.FunctionComponent = () => {
     dispatch,
   } = React.useContext(store);
 
-  const formatWord = (word: Word): React.ReactElement => (
-    <li key={word.lemma} className="left">
-      <strong>{word.lemma}</strong>
-      {": "}
-      <em>{word.english}</em>
-      {" - "}
-      {word.questionType}
-    </li>
-  );
+  function formatWord(word: Word): React.ReactNode {
+    return (
+      <li key={word.lemma} className="left">
+        <strong>{word.lemma}</strong>
+        {": "}
+        <em>{word.english}</em>
+        {" - "}
+        {word.questionType}
+      </li>
+    );
+  }
 
-  const clickHandler = () =>
-    dispatch({ ...actions.SET_STATUS, payload: "frontPage" });
+  function clickHandler() {
+    return dispatch({ ...actions.SET_STATUS, payload: "frontPage" });
+  }
 
   return (
     <div className="answer-container">

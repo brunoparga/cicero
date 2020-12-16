@@ -1,8 +1,5 @@
-export const authFetch = (
-  url: RequestInfo,
-  options: RequestInit
-): Promise<Response> =>
-  fetch(url, {
+function authFetch(url: RequestInfo, options: RequestInit): Promise<Response> {
+  return fetch(url, {
     ...options,
 
     headers: {
@@ -10,3 +7,6 @@ export const authFetch = (
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
   });
+}
+
+export { authFetch };

@@ -1,5 +1,5 @@
 // This leverages TS Enums to keep these categories neat and tidy.
-export enum Declension {
+enum Declension {
   First,
   Second,
   Third,
@@ -7,19 +7,19 @@ export enum Declension {
   Fifth,
 }
 
-export enum GrammaticalNumber {
+enum GrammaticalNumber {
   Singular = "singular",
   Plural = "plural",
 }
 
-export enum Gender {
+enum Gender {
   Masculine = "masculine",
   Feminine = "feminine",
   Neuter = "neuter",
   "Masculine/Feminine" = "masculine/feminine",
 }
 
-export enum Conjugation {
+enum Conjugation {
   // eslint-disable-next-line no-magic-numbers
   Irregular = -1,
   First,
@@ -27,3 +27,5 @@ export enum Conjugation {
   Third,
   Fourth,
 }
+
+export { Declension, GrammaticalNumber, Gender, Conjugation };

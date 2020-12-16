@@ -5,6 +5,7 @@ import { UserState } from "../../types";
 import { SignoutButton, UserAccountForm } from "../UserAccountForm";
 import "./Topbar.css";
 
+// eslint-disable-next-line func-style
 export const Topbar: React.FunctionComponent = () => {
   const {
     state: { user },
@@ -13,14 +14,15 @@ export const Topbar: React.FunctionComponent = () => {
   const { message, email } = user as UserState;
   const text = message || email;
 
-  const toFrontPage = () =>
+  function toFrontPage() {
     dispatch({ ...actions.SET_STATUS, payload: "frontPage" });
+  }
 
-  const keyUpHandler = (event: React.KeyboardEvent) => {
+  function keyUpHandler(event: React.KeyboardEvent) {
     if (event.key === " " || event.key === "Enter") {
       toFrontPage();
     }
-  };
+  }
 
   return (
     <div className="navbar">

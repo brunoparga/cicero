@@ -6,8 +6,10 @@ import { useGenitives } from "../../../hooks/useGenitives";
 import { Buttons, Checkbox } from "../../shared";
 import { setGenitive } from "../../../helpers";
 
-// Buttons to select the genitive suffix, which indicates how the word is inflected, changing
-// according to its role in the sentence (subject, object...)
+// Buttons to select the genitive suffix, which indicates how the word is
+// inflected, changing according to its role in the sentence (subject,
+// object...)
+// eslint-disable-next-line func-style
 export const GenitiveButtons: React.FunctionComponent = () => {
   const {
     state: {
@@ -20,11 +22,11 @@ export const GenitiveButtons: React.FunctionComponent = () => {
   const correctAnswer = setGenitive(properties);
   const suffixes = useGenitives();
 
-  const keyUpHandler = (event: React.KeyboardEvent) => {
+  function keyUpHandler(event: React.KeyboardEvent) {
     if (event.key.toUpperCase() === "P") {
       dispatch(actions.TOGGLE_PLURAL);
     }
-  };
+  }
 
   return (
     <div className="buttons pink-background spaced">

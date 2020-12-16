@@ -15,7 +15,7 @@ function insertInfinitive(
   return newSuffixes.splice(pos, 0, correctInfinitive);
 }
 
-export const useInfinitives = (): string[] => {
+function useInfinitives(): string[] {
   const {
     state: {
       word,
@@ -48,4 +48,6 @@ export const useInfinitives = (): string[] => {
   }, [conjugation, correctInfinitive, passiveSelected]);
 
   return suffixes;
-};
+}
+
+export { useInfinitives };

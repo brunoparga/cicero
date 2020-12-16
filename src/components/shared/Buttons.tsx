@@ -11,6 +11,7 @@ type Properties = {
   correctAnswer: string;
 };
 
+// eslint-disable-next-line func-style
 export const Buttons: React.FunctionComponent<Properties> = ({
   label,
   items,
@@ -20,27 +21,27 @@ export const Buttons: React.FunctionComponent<Properties> = ({
   const [selected, setSelected] = React.useState("");
 
   // Ensure at most one button per row is selected
-  const clickHandler = (event: React.SyntheticEvent) => {
+  function clickHandler(event: React.SyntheticEvent) {
     const elt = event.target as HTMLElement;
 
     if (elt.tagName === "BUTTON" && elt.textContent === selected) {
       // Clicking an already selected button deselects it
       setSelected("");
     } else if (elt.tagName === "BUTTON") {
-      setSelected(elt.textContent);
+      setSelected(elt.textContent as string);
 
       const property = label.toLowerCase();
       const value = elt.textContent === correctAnswer;
 
       dispatch({ ...actions.SET_GUESS, payload: { property, value } });
     }
-  };
+  }
 
-  const keyUpHandler = (event: React.KeyboardEvent) => {
+  function keyUpHandler(event: React.KeyboardEvent) {
     if (event.key === " " || event.key === "Enter") {
       clickHandler(event as React.SyntheticEvent);
     }
-  };
+  }
 
   // This <div> element has children <button> elements that allow keyboard
   // interaction.

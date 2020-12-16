@@ -4,6 +4,7 @@ import { WordButtons } from "./private";
 
 type Properties = { header: string; label?: string };
 
+// eslint-disable-next-line func-style
 export const Question: React.FunctionComponent<Properties> = ({
   header,
   label = "Latin",

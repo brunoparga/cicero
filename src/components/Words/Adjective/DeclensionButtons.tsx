@@ -4,6 +4,7 @@ import { Buttons } from "../../shared";
 import { store } from "../../../store";
 import { Word } from "../../../types";
 
+// eslint-disable-next-line func-style
 export const DeclensionButtons: React.FunctionComponent = () => {
   const { state } = React.useContext(store) as { state: { word: Word } };
 

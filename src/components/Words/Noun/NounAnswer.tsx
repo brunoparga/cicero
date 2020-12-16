@@ -6,6 +6,7 @@ import { Answer } from "../../shared";
 import { setGenitive } from "../../../helpers";
 
 // Prepare the correct answer for presentation
+// eslint-disable-next-line func-style
 export const NounAnswer: React.FunctionComponent = () => {
   const {
     state: {

@@ -4,7 +4,9 @@ import { store } from "../../store";
 import { Answer, Question } from "../shared";
 import { Word } from "../../types";
 
-// Decide to show question or answer based on whether the word has already been guessed.
+// Decide to show question or answer based on whether the word has already been
+// guessed.
+// eslint-disable-next-line func-style
 export const Indeclinable: React.FunctionComponent = () => {
   const {
     state: {

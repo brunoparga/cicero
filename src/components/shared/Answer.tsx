@@ -11,6 +11,7 @@ type Properties = {
 };
 
 // Confirm the correct answer, which the user has already guessed.
+// eslint-disable-next-line func-style
 export const Answer: React.FunctionComponent<Properties> = ({
   teach = false,
   header,

@@ -6,6 +6,7 @@ import { Word } from "../../../types";
 import { Answer } from "../../shared";
 
 // Prepare the correct answer for presentation
+// eslint-disable-next-line func-style
 export const TranslationAnswer: React.FunctionComponent = () => {
   const { state } = React.useContext(store) as { state: { word: Word } };
 

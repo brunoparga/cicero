@@ -1,6 +1,6 @@
 import { Word } from "../../types";
 
-export const describeAdjective = (word: Word): string => {
+function describeAdjective(word: Word): string {
   const {
     lemma,
     properties: {
@@ -29,4 +29,6 @@ export const describeAdjective = (word: Word): string => {
     default:
       return `Adjective: ${lemma}, ${genitive}`;
   }
-};
+}
+
+export { describeAdjective };

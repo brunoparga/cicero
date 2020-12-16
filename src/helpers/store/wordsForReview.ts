@@ -1,6 +1,6 @@
 import { QuestionType, Word } from "../../types";
 
-export const wordsForReview = (word: Word): Word => {
+function wordsForReview(word: Word): Word {
   const translationProbability = 0.333;
 
   if (Math.random() < translationProbability) {
@@ -23,4 +23,6 @@ export const wordsForReview = (word: Word): Word => {
   }
 
   return { ...word, questionType: QuestionType.Indeclinable };
-};
+}
+
+export { wordsForReview };

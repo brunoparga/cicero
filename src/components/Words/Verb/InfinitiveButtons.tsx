@@ -8,6 +8,7 @@ import { useInfinitives } from "../../../hooks/useInfinitives";
 
 // Buttons to select the infinitive suffix, which indicates how the verb is
 // conjugated
+// eslint-disable-next-line func-style
 export const InfinitiveButtons: React.FunctionComponent = () => {
   const {
     state: {
@@ -21,11 +22,11 @@ export const InfinitiveButtons: React.FunctionComponent = () => {
   } = word as Word;
   const suffixes = useInfinitives();
 
-  const keyUpHandler = (event: React.KeyboardEvent) => {
+  function keyUpHandler(event: React.KeyboardEvent) {
     if (event.key.toUpperCase() === "P") {
       dispatch(actions.TOGGLE_DEPONENT);
     }
-  };
+  }
 
   const correctAnswer =
     correctInfinitive || (deponent ? passive : active)[conjugation];

@@ -7,6 +7,7 @@ import { drill, FrontPage, Summary, Teach } from "./Pages";
 import "./App.css";
 
 // Either show a loading screen or the loaded app.
+// eslint-disable-next-line func-style
 export const App: React.FunctionComponent = () => {
   const {
     state: {

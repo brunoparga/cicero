@@ -9,16 +9,19 @@ import {
 import "../shared/private/Button.css";
 import "./FrontPage.css";
 
+// eslint-disable-next-line func-style
 export const FrontPage: React.FunctionComponent = () => {
   const { dispatch } = React.useContext(store);
-  const learnHandler = () => {
+
+  function learnHandler() {
     beginLearnSession(dispatch);
     dispatch({ ...actions.SET_STATUS, payload: "studying" });
-  };
-  const reviewHandler = () => {
+  }
+
+  function reviewHandler() {
     beginReviewSession(dispatch);
     dispatch({ ...actions.SET_STATUS, payload: "studying" });
-  };
+  }
 
   return (
     <div className="front-page-container">

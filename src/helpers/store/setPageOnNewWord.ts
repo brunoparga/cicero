@@ -1,10 +1,7 @@
 import { PageState, Word } from "../../types";
 import { initialPageState } from "../../store";
 
-export const setPageOnNewWord = (
-  word: Word,
-  currentWordIndex: number
-): PageState => {
+function setPageOnNewWord(word: Word, currentWordIndex: number): PageState {
   const guessesByQuestionType = {
     Adjective: { latin: false, declension: false },
     Indeclinable: { latin: false },
@@ -20,4 +17,6 @@ export const setPageOnNewWord = (
     currentWordIndex,
     guess,
   };
-};
+}
+
+export { setPageOnNewWord };

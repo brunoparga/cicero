@@ -8,6 +8,7 @@ type Properties = {
 };
 
 // The button knows whether it is clicked to change its appearance accordingly.
+// eslint-disable-next-line func-style
 export const Button: React.FunctionComponent<Properties> = ({
   content,
   clicked,

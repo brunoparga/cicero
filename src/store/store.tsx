@@ -9,6 +9,7 @@ const store = React.createContext<AppStateWithDispatch>({
   dispatch: () => undefined,
 });
 
+// eslint-disable-next-line func-style
 const StateProvider: React.FunctionComponent = ({ children }) => {
   const [state, dispatch]: [
     AppState,

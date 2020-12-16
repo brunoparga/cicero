@@ -1,8 +1,8 @@
 import { QuestionType, Word } from "../../types";
 
-export const wordsForLearn = (word: Word): Word => {
-  // All words whose part of speech contains a comma (i.e., they belong to two parts of speech)
-  // are indeclinable.
+function wordsForLearn(word: Word): Word {
+  // All words whose part of speech contains a comma (i.e., they belong to two
+  // parts of speech) are indeclinable.
   const hasComma = word.questionType.includes(",");
   const indeclinables = [
     "Adverb",
@@ -22,4 +22,6 @@ export const wordsForLearn = (word: Word): Word => {
   }
 
   return word;
-};
+}
+
+export { wordsForLearn };

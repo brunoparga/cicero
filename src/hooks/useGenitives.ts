@@ -4,7 +4,7 @@ import { Word } from "../types";
 import { store } from "../store";
 import { singular, plural } from "../grammar";
 
-export const useGenitives = (): string[] => {
+function useGenitives(): string[] {
   const {
     state: {
       word,
@@ -31,4 +31,6 @@ export const useGenitives = (): string[] => {
   }, [pluralSelected, correctGenitive, declension, number]);
 
   return suffixes;
-};
+}
+
+export { useGenitives };

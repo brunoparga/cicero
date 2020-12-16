@@ -1,9 +1,6 @@
 import { Action, PageState } from "../../types";
 
-export const pageReducer = (
-  page: PageState,
-  { type, payload }: Action
-): PageState => {
+function pageReducer(page: PageState, { type, payload }: Action): PageState {
   switch (type) {
     case "FETCH_WORDS":
       return { ...page, currentWordIndex: -1 };
@@ -15,7 +12,8 @@ export const pageReducer = (
 
       guess[typedPayload.property] = typedPayload.value;
 
-      // If the current guess is correct, check if all guesses are correct and reveal answer if so
+      // If the current guess is correct, check if all guesses are correct and
+      // reveal answer if so
       if (typedPayload.value) {
         const wordIsGuessed = Object.values(page.guess).every(
           (entry: boolean) => entry
@@ -38,4 +36,6 @@ export const pageReducer = (
     default:
       return page;
   }
-};
+}
+
+export { pageReducer };

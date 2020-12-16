@@ -3,13 +3,14 @@ import { useForm } from "react-hook-form";
 
 import { UserAccountInputs } from "../../types";
 
-interface PropertyTypes {
+interface Properties {
   action: string;
   onSigninClick: () => void;
   onSignupClick: () => void;
 }
 
-export const UserAccountFormRender: React.FunctionComponent<PropertyTypes> = ({
+// eslint-disable-next-line func-style
+export const UserAccountFormRender: React.FunctionComponent<Properties> = ({
   action,
   onSigninClick,
   onSignupClick,

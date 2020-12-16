@@ -1,6 +1,6 @@
 import { Declension, Gender, GrammaticalNumber } from "../../grammar";
 
-export type NounProperties = {
+type NounProperties = {
   number: GrammaticalNumber;
   declension: Declension;
   gender: Gender;
@@ -8,8 +8,10 @@ export type NounProperties = {
   indeclinable?: boolean;
 };
 
-export type NounGuess = {
+type NounGuess = {
   latin: boolean;
   genitive: boolean;
   gender: boolean;
 };
+
+export type { NounGuess, NounProperties };

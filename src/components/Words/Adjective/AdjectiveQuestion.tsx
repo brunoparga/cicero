@@ -6,7 +6,9 @@ import { Word } from "../../../types";
 
 import { DeclensionButtons } from "./DeclensionButtons";
 
-// Present buttons for user to guess which word is the correct Latin translation, with declension.
+// Present buttons for user to guess which word is the correct Latin
+// translation, with declension.
+// eslint-disable-next-line func-style
 export const AdjectiveQuestion: React.FunctionComponent = () => {
   const { state } = React.useContext(store) as { state: { word: Word } };
 

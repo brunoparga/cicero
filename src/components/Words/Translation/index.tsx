@@ -5,7 +5,9 @@ import { store } from "../../../store";
 import { TranslationAnswer } from "./TranslationAnswer";
 import { TranslationQuestion } from "./TranslationQuestion";
 
-// Decide to show question or answer based on whether the word has already been guessed.
+// Decide to show question or answer based on whether the word has already been
+// guessed.
+// eslint-disable-next-line func-style
 export const Translation: React.FunctionComponent = () => {
   const {
     state: {

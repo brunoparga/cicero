@@ -29,5 +29,6 @@ function setWord(state: AppState): AppState {
   return { ...state, word, page };
 }
 
+// eslint-disable-next-line func-style
 export const crossSliceReducer: AppReducer = (state, { type }) =>
   type === "SET_WORD" ? setWord(state) : state;

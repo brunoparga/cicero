@@ -7,8 +7,7 @@ import { UserAccountInputs } from "../../types";
 import "./index.css";
 import { UserAccountFormRender } from "./UserAccountFormRender";
 
-export { SignoutButton } from "./SignoutButton";
-
+// eslint-disable-next-line func-style
 export const UserAccountForm: React.FunctionComponent = () => {
   const { dispatch } = React.useContext(store);
 
@@ -16,7 +15,7 @@ export const UserAccountForm: React.FunctionComponent = () => {
   const actionURL = `${process.env.REACT_APP_API_URL}/${action}`;
   const { watch } = useForm<UserAccountInputs>();
 
-  const onSigninClick = () => {
+  function onSigninClick() {
     if (action === "signin") {
       const signinData = { email: watch("email"), password: watch("password") };
 
@@ -24,9 +23,9 @@ export const UserAccountForm: React.FunctionComponent = () => {
     } else {
       setAction("signin");
     }
-  };
+  }
 
-  const onSignupClick = () => {
+  function onSignupClick() {
     if (action === "signup") {
       const signupData = {
         email: watch("email"),
@@ -38,7 +37,7 @@ export const UserAccountForm: React.FunctionComponent = () => {
     } else {
       setAction("signup");
     }
-  };
+  }
 
   return (
     <UserAccountFormRender
@@ -48,3 +47,5 @@ export const UserAccountForm: React.FunctionComponent = () => {
     />
   );
 };
+
+export { SignoutButton } from "./SignoutButton";

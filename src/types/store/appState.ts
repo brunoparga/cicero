@@ -4,9 +4,9 @@ type UserNotLoggedIn = { message: string };
 
 type UserLoggedIn = { email?: string };
 
-export type UserState = UserNotLoggedIn & UserLoggedIn;
+type UserState = UserNotLoggedIn & UserLoggedIn;
 
-export type PageState = {
+type PageState = {
   status: "frontPage" | "studying" | "done";
   currentWordIndex: number;
   resultsSaved: boolean;
@@ -18,9 +18,11 @@ export type PageState = {
   revealAnswer: boolean;
 };
 
-export type AppState = {
+type AppState = {
   page: PageState;
   user: UserState;
   word?: Word;
   words: Word[];
 };
+
+export type { AppState, PageState, UserState };

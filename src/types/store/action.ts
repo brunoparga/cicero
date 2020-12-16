@@ -2,14 +2,16 @@ import { Dispatch } from "react";
 
 import { AppState } from "./appState";
 
-export type Action = {
+type Action = {
   type: string;
   payload?: unknown;
   error?: boolean;
   meta?: unknown;
 };
 
-export type AppStateWithDispatch = {
+type AppStateWithDispatch = {
   state: AppState;
   dispatch: Dispatch<Action>;
 };
+
+export type { Action, AppStateWithDispatch };
