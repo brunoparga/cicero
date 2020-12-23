@@ -3,7 +3,7 @@ dependencies:
   '@testing-library/react': 11.2.2_react-dom@17.0.1+react@17.0.1
   '@testing-library/user-event': 12.6.0
   '@types/jest': 26.0.19
-  '@types/node': 14.14.14
+  '@types/node': 14.14.16
   '@types/react': 17.0.0
   '@types/react-combine-reducers': 1.0.0
   '@types/react-dom': 17.0.0
@@ -4185,10 +4185,10 @@ packages:
   /@types/node/14.14.10:
     resolution:
       integrity: sha512-J32dgx2hw8vXrSbu4ZlVhn1Nm3GbeCFNw2FWL8S5QKucHGY0cyNwjdQdO+KMBZ4wpmC7KhLCiNsdk1RFRIYUQQ==
-  /@types/node/14.14.14:
+  /@types/node/14.14.16:
     dev: false
     resolution:
-      integrity: sha512-UHnOPWVWV1z+VV8k6L1HhG7UbGBgIdghqF3l9Ny9ApPghbjICXkUJSd/b9gOgQfjM1r+37cipdw/HJ3F6ICEnQ==
+      integrity: sha512-naXYePhweTi+BMv11TgioE2/FXU4fSl29HAH1ffxVciNsH3rYXjNP2yM8wqmSm7jS20gM8TIklKiTen+1iVncw==
   /@types/node/14.14.7:
     resolution:
       integrity: sha512-Zw1vhUSQZYw+7u5dAwNbIA9TuTotpzY/OF7sJM9FqPOF3SPjKnxrjoTktXDZgUjybf4cWVBP7O8wvKdSaGHweg==
@@ -16535,7 +16535,7 @@ specifiers:
   '@testing-library/react': 11.2.2
   '@testing-library/user-event': 12.6.0
   '@types/jest': 26.0.19
-  '@types/node': 14.14.14
+  '@types/node': 14.14.16
   '@types/react': 17.0.0
   '@types/react-combine-reducers': 1.0.0
   '@types/react-dom': 17.0.0
