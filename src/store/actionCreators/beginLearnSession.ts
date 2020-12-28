@@ -16,7 +16,7 @@ async function beginLearnSession(
   const words = await response.json();
   const payload = words.map(wordsForLearn);
 
-  dispatch({ ...actions.FETCH_WORDS, payload });
+  dispatch({ ...actions.SET_WORDS, payload });
   dispatch(actions.SET_WORD);
 }
 

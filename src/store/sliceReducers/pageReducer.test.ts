@@ -14,7 +14,7 @@ const basePage = {
 
 it("resets the word counter when getting a new batch of words", () => {
   const page = JSON.parse(JSON.stringify(basePage));
-  const action = { type: "FETCH_WORDS" };
+  const action = { type: "SET_WORDS" };
   const expectation = { ...page, currentWordIndex: -1 } as PageState;
 
   expect(pageReducer(page, action)).toEqual(expectation);

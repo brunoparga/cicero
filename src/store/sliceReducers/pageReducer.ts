@@ -2,8 +2,6 @@ import { Action, PageState } from "../../types";
 
 function pageReducer(page: PageState, { type, payload }: Action): PageState {
   switch (type) {
-    case "FETCH_WORDS":
-      return { ...page, currentWordIndex: -1 };
     case "RESULTS_SAVED":
       return { ...page, resultsSaved: true };
     case "SET_GUESS": {
@@ -28,6 +26,8 @@ function pageReducer(page: PageState, { type, payload }: Action): PageState {
     }
     case "SET_STATUS":
       return { ...page, status: payload as "frontPage" | "studying" | "done" };
+    case "SET_WORDS":
+      return { ...page, currentWordIndex: -1 };
     case "TOGGLE_DEPONENT":
       return { ...page, passiveSelected: !page.passiveSelected };
     case "TOGGLE_PLURAL":

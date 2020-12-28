@@ -16,7 +16,7 @@ async function beginReviewSession(
   const words = await response.json();
   const payload = words.map(wordsForReview);
 
-  dispatch({ ...actions.FETCH_WORDS, payload });
+  dispatch({ ...actions.SET_WORDS, payload });
   dispatch(actions.SET_WORD);
 }
 

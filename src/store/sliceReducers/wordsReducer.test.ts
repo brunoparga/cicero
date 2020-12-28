@@ -5,7 +5,7 @@ import { wordsReducer } from "./wordsReducer";
 it("replaces the words array when necessary", () => {
   const words = [{ lemma: "foo" }, { lemma: "bar" }] as Word[];
   const action = {
-    type: "FETCH_WORDS",
+    type: "SET_WORDS",
     payload: [{ lemma: "baz" }, { lemma: "quux" }],
   };
   const expectation = [{ lemma: "baz" }, { lemma: "quux" }] as Word[];

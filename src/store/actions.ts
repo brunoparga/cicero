@@ -10,10 +10,10 @@ const types = [
   "SIGN_OUT",
 
   // Word actions
-  "FETCH_WORDS",
   "LEARN_WORD",
   "SET_GUESS",
   "SET_WORD",
+  "SET_WORDS",
   "TOGGLE_DEPONENT",
   "TOGGLE_PLURAL",
 ] as const;
