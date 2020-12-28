@@ -1,9 +1,9 @@
 /* eslint-disable no-magic-numbers */
 // eslint-disable-next-line import/no-namespace
-import * as wfr from "../../helpers/store/wordsForReview";
+import * as helpers from "../../helpers/store/wordsForReview";
+import { words } from "../testHelpers/words";
 
 import { beginReviewSession } from "./beginReviewSession";
-import { words } from "./testHelpers/words";
 
 const dispatch = jest.fn();
 const learnedWords = words.map((word) => ({ ...word, learned: true }));
@@ -37,7 +37,7 @@ it("calls the API", async () => {
 });
 
 it("calls the correct actions", async () => {
-  wfr.wordsForReview = jest.fn((word) => word);
+  helpers.wordsForReview = jest.fn((word) => word);
 
   await beginReviewSession(dispatch);
 

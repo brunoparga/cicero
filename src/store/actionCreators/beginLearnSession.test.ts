@@ -1,5 +1,5 @@
 import { beginLearnSession } from "./beginLearnSession";
-import { words } from "./testHelpers/words";
+import { words } from "../testHelpers/words";
 
 const dispatch = jest.fn();
 

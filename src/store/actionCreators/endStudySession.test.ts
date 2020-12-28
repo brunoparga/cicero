@@ -1,6 +1,6 @@
 /* eslint-disable no-magic-numbers */
 import { endStudySession } from "./endStudySession";
-import { words } from "./testHelpers/words";
+import { words } from "../testHelpers/words";
 
 const dispatch = jest.fn();
 

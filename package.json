@@ -27,7 +27,8 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
-      "!src/types/**"
+      "!src/types/**",
+      "!src/*.ts*"
     ]
   },
   "browserslist": {
