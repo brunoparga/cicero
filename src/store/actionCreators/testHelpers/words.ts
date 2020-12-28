@@ -3,7 +3,7 @@ import { Word } from "../../../types";
 export const words = [
   {
     id: 1,
-    questionType: "Pronoun",
+    questionType: "Indeclinable",
     lemma: "egō",
     english: "I",
     learned: false,
