@@ -1,17 +1,8 @@
-import combineReducers from "react-combine-reducers";
-
 import { AppReducer } from "../types";
 
-import { page, user, word, words } from "./sliceReducers";
+import { combinedReducer } from "./combinedReducer";
 
-import { crossSliceReducer, initialPageState } from ".";
-
-const [combinedReducer, initialAppState] = combineReducers<AppReducer>({
-  page: [page, initialPageState],
-  user: [user, { message: "" }],
-  word: [word, undefined],
-  words: [words, []],
-});
+import { crossSliceReducer } from ".";
 
 // eslint-disable-next-line func-style
 const rootReducer: AppReducer = (state, action) => {
@@ -20,4 +11,4 @@ const rootReducer: AppReducer = (state, action) => {
   return crossSliceReducer(intermediateState, action);
 };
 
-export { combinedReducer, initialAppState, rootReducer };
+export { rootReducer };
