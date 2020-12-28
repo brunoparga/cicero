@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-import { signin, signup, store } from "../../store";
+import { signin, store } from "../../store";
 import { UserAccountInputs } from "../../types";
 
 import "./index.css";
@@ -33,7 +33,7 @@ export const UserAccountForm: React.FunctionComponent = () => {
         confirmPassword: watch("confirmPassword"),
       };
 
-      signup(actionURL, signupData, dispatch);
+      signin(actionURL, signupData, dispatch);
     } else {
       setAction("signup");
     }
