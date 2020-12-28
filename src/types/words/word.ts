@@ -12,11 +12,12 @@ type WordNotes = {
   quodNote?: string;
 };
 
-type Properties = WordNotes &
-  AdjectiveProperties &
-  NounProperties &
-  TranslationProperties &
-  VerbProperties;
+type Properties =
+  | WordNotes
+  | AdjectiveProperties
+  | NounProperties
+  | TranslationProperties
+  | VerbProperties;
 
 export enum QuestionType {
   Adjective = "Adjective",
