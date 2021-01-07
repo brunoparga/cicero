@@ -1,5 +1,5 @@
 import { setPageOnNewWord, setWordOptions } from "../helpers";
-import { AppReducer, AppState } from "../types";
+import { AppReducer, AppState, Word } from "../types";
 
 import { initialPageState } from "./initialPageState";
 
@@ -12,7 +12,7 @@ function setWord(state: AppState): AppState {
   if (!word) {
     return {
       ...state,
-      word: undefined,
+      word: (undefined as unknown) as Word,
       page: { ...initialPageState, status: "done" },
     };
   }

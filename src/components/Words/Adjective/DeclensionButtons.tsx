@@ -2,13 +2,17 @@ import React from "react";
 
 import { Buttons } from "../../shared";
 import { store } from "../../../store";
-import { Word } from "../../../types";
+import { AdjectiveProperties } from "../../../types";
 
 // eslint-disable-next-line func-style
 export const DeclensionButtons: React.FunctionComponent = () => {
-  const { state } = React.useContext(store) as { state: { word: Word } };
-
-  const { word } = state;
+  const {
+    state: {
+      word: { properties },
+    },
+  } = React.useContext(store) as {
+    state: { word: { properties: AdjectiveProperties } };
+  };
 
   const items = [
     "1st/2nd (-us)",
@@ -23,7 +27,7 @@ export const DeclensionButtons: React.FunctionComponent = () => {
       <Buttons
         label="Declension"
         items={items}
-        correctAnswer={word.properties.suffixes}
+        correctAnswer={properties.suffixes}
       />
     </div>
   );

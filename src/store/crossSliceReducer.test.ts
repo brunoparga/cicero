@@ -1,4 +1,4 @@
-import { AppState } from "../types";
+import { AppState, Word } from "../types";
 import { setPageOnNewWord } from "../helpers";
 
 import { words } from "./testHelpers/words";
@@ -21,7 +21,7 @@ it("sets the page status to done when there are no more words to study", () => {
 
   const expectedState = {
     ...givenState,
-    word: undefined,
+    word: (undefined as unknown) as Word,
     page: { ...initialPageState, status: "done" },
   } as AppState;
 

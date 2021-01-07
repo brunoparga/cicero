@@ -1,6 +1,8 @@
-import { Word } from "../../types";
+import { AdjectiveProperties, Word } from "../../types";
 
-function describeAdjective(word: Word): string {
+function describeAdjective(
+  word: Word & { properties: AdjectiveProperties }
+): string {
   const {
     lemma,
     properties: {

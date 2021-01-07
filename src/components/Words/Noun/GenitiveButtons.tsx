@@ -1,7 +1,7 @@
 import React from "react";
 
 import { actions, store } from "../../../store";
-import { NounProperties, Word } from "../../../types";
+import { Action, NounProperties, PageState } from "../../../types";
 import { useGenitives } from "../../../hooks/useGenitives";
 import { Buttons, Checkbox } from "../../shared";
 import { setGenitive } from "../../../helpers";
@@ -13,12 +13,17 @@ import { setGenitive } from "../../../helpers";
 export const GenitiveButtons: React.FunctionComponent = () => {
   const {
     state: {
-      word,
+      word: { properties },
       page: { pluralSelected },
     },
     dispatch,
-  } = React.useContext(store);
-  const { properties }: { properties: NounProperties } = word as Word;
+  } = React.useContext(store) as {
+    state: {
+      word: { properties: NounProperties };
+      page: PageState;
+    };
+    dispatch: React.Dispatch<Action>;
+  };
   const correctAnswer = setGenitive(properties);
   const suffixes = useGenitives();
 

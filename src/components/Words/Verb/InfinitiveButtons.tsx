@@ -2,7 +2,7 @@ import React from "react";
 
 import { actions, store } from "../../../store";
 import { active, passive } from "../../../grammar";
-import { Word } from "../../../types";
+import { Action, PageState, VerbProperties } from "../../../types";
 import { Buttons, Checkbox } from "../../shared";
 import { useInfinitives } from "../../../hooks/useInfinitives";
 
@@ -12,14 +12,19 @@ import { useInfinitives } from "../../../hooks/useInfinitives";
 export const InfinitiveButtons: React.FunctionComponent = () => {
   const {
     state: {
-      word,
+      word: {
+        properties: { conjugation, deponent, correctInfinitive },
+      },
       page: { passiveSelected },
     },
     dispatch,
-  } = React.useContext(store);
-  const {
-    properties: { conjugation, deponent, correctInfinitive },
-  } = word as Word;
+  } = React.useContext(store) as {
+    state: {
+      word: { properties: VerbProperties };
+      page: PageState;
+    };
+    dispatch: React.Dispatch<Action>;
+  };
   const suffixes = useInfinitives();
 
   function keyUpHandler(event: React.KeyboardEvent) {

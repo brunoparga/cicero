@@ -1,7 +1,7 @@
 import { active, passive } from "../../grammar";
-import { Word } from "../../types";
+import { VerbProperties, Word } from "../../types";
 
-function describeVerb(word: Word): string {
+function describeVerb(word: Word & { properties: VerbProperties }): string {
   const {
     lemma,
     properties: { conjugation, perfect, supine, deponent, correctInfinitive },

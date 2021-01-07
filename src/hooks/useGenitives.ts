@@ -1,19 +1,20 @@
 import React from "react";
 
-import { Word } from "../types";
+import { AppState, NounProperties, Word } from "../types";
 import { store } from "../store";
 import { singular, plural } from "../grammar";
 
 function useGenitives(): string[] {
   const {
     state: {
-      word,
+      word: {
+        properties: { correctGenitive, declension, number },
+      },
       page: { pluralSelected },
     },
-  } = React.useContext(store);
-  const {
-    properties: { correctGenitive, declension, number },
-  } = word as Word;
+  } = React.useContext(store) as {
+    state: AppState & { word: Word & { properties: NounProperties } };
+  };
 
   const [suffixes, setSuffixes] = React.useState(singular);
 

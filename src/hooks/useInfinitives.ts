@@ -1,7 +1,7 @@
 import React from "react";
 
 import { store } from "../store";
-import { Word } from "../types";
+import { AppState, VerbProperties, Word } from "../types";
 import { active, Conjugation, passive } from "../grammar";
 
 function insertInfinitive(
@@ -18,13 +18,14 @@ function insertInfinitive(
 function useInfinitives(): string[] {
   const {
     state: {
-      word,
+      word: {
+        properties: { conjugation, correctInfinitive },
+      },
       page: { passiveSelected },
     },
-  } = React.useContext(store);
-  const {
-    properties: { conjugation, correctInfinitive },
-  } = word as Word;
+  } = React.useContext(store) as {
+    state: AppState & { word: Word & { properties: VerbProperties } };
+  };
   const [suffixes, setSuffixes] = React.useState(active);
 
   React.useEffect(() => {

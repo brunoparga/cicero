@@ -14,7 +14,7 @@ function wordsForLearn(word: Word): Word {
   ];
 
   if (
-    word.properties?.indeclinable ||
+    word.properties.indeclinable ||
     hasComma ||
     indeclinables.includes(word.questionType)
   ) {

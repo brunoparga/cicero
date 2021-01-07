@@ -21,7 +21,7 @@ type PageState = {
 type AppState = {
   page: PageState;
   user: UserState;
-  word?: Word;
+  word: Word;
   words: Word[];
 };
 

@@ -7,19 +7,16 @@ function wordsForReview(word: Word): Word {
     return { ...word, questionType: QuestionType.Translation };
   }
 
-  if (word.properties?.indeclinable) {
+  if (word.properties.indeclinable) {
     return { ...word, questionType: QuestionType.Indeclinable };
+  }
+
+  if ("suffixes" in word.properties) {
+    return { ...word, questionType: QuestionType.Adjective };
   }
 
   if (["Adjective", "Noun", "Verb"].includes(word.questionType)) {
     return word;
-  }
-
-  if (
-    ["Numeral", "Pronoun"].includes(word.questionType) &&
-    word.properties.suffixes
-  ) {
-    return { ...word, questionType: QuestionType.Adjective };
   }
 
   return { ...word, questionType: QuestionType.Indeclinable };

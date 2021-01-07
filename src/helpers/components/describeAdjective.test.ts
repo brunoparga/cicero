@@ -1,11 +1,13 @@
-import { Word } from "../../types";
+import { AdjectiveProperties, Word } from "../../types";
 
 import { describeAdjective } from "./describeAdjective";
+
+type Adjective = Word & { properties: AdjectiveProperties }
 
 const necesse = {
   lemma: "necesse",
   properties: { indeclinable: true },
-} as Word;
+} as Adjective;
 const bonus = {
   lemma: "bonus",
 
@@ -15,7 +17,7 @@ const bonus = {
     neuter: "bonum, -ī",
     suffixes: "1st/2nd (-us)",
   },
-} as Word;
+} as Adjective;
 const ater = {
   lemma: "āter",
 
@@ -25,7 +27,7 @@ const ater = {
     neuter: "-trum",
     suffixes: "1st/2nd (-er)",
   },
-} as Word;
+} as Adjective;
 const celer = {
   lemma: "celer",
 
@@ -35,7 +37,7 @@ const celer = {
     feminine: "-ris",
     neuter: "-e",
   },
-} as Word;
+} as Adjective;
 const viridis = {
   lemma: "viridis",
 
@@ -44,7 +46,7 @@ const viridis = {
     suffixes: "3rd (-is/-e)",
     neuter: "-e",
   },
-} as Word;
+} as Adjective;
 const velox = {
   lemma: "vēlōx",
 
@@ -52,7 +54,7 @@ const velox = {
     genitive: "-ōcis",
     suffixes: "3rd (all equal)",
   },
-} as Word;
+} as Adjective;
 
 it("describes indeclinable adjectives", () => {
   expect(describeAdjective(necesse)).toEqual("Indeclinable adjective");

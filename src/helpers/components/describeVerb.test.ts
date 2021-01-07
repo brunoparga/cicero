@@ -1,6 +1,8 @@
-import { Word } from "../../types";
+import { VerbProperties, Word } from "../../types";
 
 import { describeVerb } from "./describeVerb";
+
+type Verb = Word & { properties: VerbProperties }
 
 const edo = {
   lemma: "edō",
@@ -12,7 +14,7 @@ const edo = {
     supine: "ēsum",
     deponent: false,
   },
-} as Word;
+} as Verb;
 const fateor = {
   lemma: "fateor",
 
@@ -21,7 +23,7 @@ const fateor = {
     perfect: "fassus sum",
     deponent: true,
   },
-} as Word;
+} as Verb;
 
 it("describes common (non-deponent) verb", () => {
   const description = "Verb: edō, -ere (or ēsse), ēdī, ēsum";
