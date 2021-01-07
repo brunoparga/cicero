@@ -14,10 +14,15 @@ async function signin(
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
   });
-  const token = await response.json();
-  const email = storeToken(token);
+  const payload = await response.json();
 
-  dispatch({ ...actions.SIGN_IN, payload: { email } });
+  if (payload.email) {
+    const email = storeToken(payload);
+
+    dispatch({ ...actions.SIGN_IN, payload: { email } });
+  }
+
+  dispatch({ ...actions.SIGN_IN, payload });
 }
 
 export { signin };
