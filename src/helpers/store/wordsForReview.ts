@@ -1,12 +1,6 @@
 import { QuestionType, Word } from "../../types";
 
 function wordsForReview(word: Word): Word {
-  const translationProbability = 0.333;
-
-  if (Math.random() < translationProbability) {
-    return { ...word, questionType: QuestionType.Translation };
-  }
-
   if (word.properties.indeclinable) {
     return { ...word, questionType: QuestionType.Indeclinable };
   }
@@ -15,7 +9,9 @@ function wordsForReview(word: Word): Word {
     return { ...word, questionType: QuestionType.Adjective };
   }
 
-  if (["Adjective", "Noun", "Verb"].includes(word.questionType)) {
+  if (
+    ["Adjective", "Noun", "Translation", "Verb"].includes(word.questionType)
+  ) {
     return word;
   }
 
