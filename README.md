@@ -1,3 +1,3 @@
 ## Cicero ##
 
-Cicero is a flashcard system for learning Latin. A live version can be found at https://bp-cicero.xyz.
+Cicero is a flashcard system for learning Latin. There is currently no live version.
